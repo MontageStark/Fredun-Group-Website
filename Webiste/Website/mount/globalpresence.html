@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+    ============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mount is a pixel perfect creative multi purpose html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+<!-- Fonts
+    ============================================= -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet/less" type="text/css" href="assets/less/style.less" />
+<script src="assets/js/less.js" type="text/javascript"></script>
+<link href="assets/css/style.css" rel="stylesheet">
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+
+
+<style>
+
+
+ #worldMap {
+    height: 600px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+
+   .custom-tooltip {
+    background: #0071bb;
+    color: #fff;
+    border-radius: 4px;
+    padding: 6px 10px;			
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+
+  .leaflet-container {
+    cursor: grab;
+  }
+
+  .leaflet-marker-icon.floating-logo-marker {
+    border-radius: 0%;
+    background: transparent;
+    padding: 2px;
+    box-shadow: none;
+    object-fit: cover;
+  }
+
+
+
+  @media (max-width: 768px) {
+    #worldMap {
+      height: 400px;
+    }
+  }
+  
+
+	  .career-slider {
+    position: relative;
+    max-width: auto;
+    margin: auto;
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 0px; /* Add space for dots */
+    z-index: 1;
+
+  }
+
+  .career-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps proportions, fills the space */
+    display: block;
+  }
+
+  
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .career-slider {
+      height: auto; /* Let image height adjust naturally */
+    }
+    .career-slider-img {
+		padding-top: 10%;
+      width: 100%;
+      height: auto; /* Keep aspect ratio */
+      object-fit: contain; /* Avoid cropping on small screens */
+    }
+  }
+
+.navbar-nav li a
+
+ {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+    padding: 45px 0 8px;
+}
+</style>
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Mount | Multi-purpose Business Html5 Template</title>
+</head>
+<body>
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<!-- Document Wrapper
+	============================================= -->
+	
+	<div id="wrapper" class="wrapper clearfix">
+<header id="navbar-spy" class="header ">
+	<nav id="primary-menu" class="navbar navbar-fixed-top" 
+     style="background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2);">
+
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+<!-- Headphone Icon (always visible, even on mobile) -->
+  
+        <!-- Headphone Icon (always visible, even on mobile) -->
+ 
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="inactive" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+		   <li><a href="listofproducts1.html">Allophatic Formulations</li>
+        <li><a href="surgifre.html">Surgifre</a></li>
+		
+			<li>
+				<a href="fredunapilist.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="fredundcgranules.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="fredunpellets.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+		   <li><a href="healthcareallopathicformulations.html">Allophatic Formulations</li>
+        <li><a href="fredunvet.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="fredunaqua.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="nutraceuticals.html">Nutraceuticals</a>
+			</li>
+			<!--<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>-->
+			
+		</ul>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
+		<ul class="dropdown-menu">
+		  <li><a href="frednavet.html">Fredna Vet Diagnostics</a></li>
+      <li><a href="fredunnutrition.html">Fredun Nutrition</a></li>
+			<li><a href="fredunmobility.html">Fredun Mobility</a></li>
+      <li><a href="fremorglobal.html">Fremor Global</a></li>
+      <li><a href="frednadentalsystems.html">FDS</a></li>
+			<li><a href="chuubalm.html">Chuu Balm</a></li>
+			<li><a href="beautyfred.html">Beauty Fred</a></li>
+      <li><a href="farstore.html">FAR Store</a></li>
+			<li><a href="inklingindia.html">Inkling India</a></li>
+      <li><a href="Iteeha.html">Iteeha</a></li>
+		</ul>
+	</li>
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+							
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Annual reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#news">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors2.html">Board of Directors</a>
+								</li>
+								<li>
+									<!--<a href="portfolio-masonry-2.html">Investors Presentation</a> -->
+								</li>
+								<li>
+									<a href="investorsrelation.html#corporategovernance">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#infoforshareholders">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#shareholdingpattern">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#generalinformation">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#extractofannualreturn">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial Results</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#audited">Audited</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unaudited">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#otherfillingswithstockexchanges">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#statutorydocumentsandinformation">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unclaimeddividend">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="active" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+
+	
+
+  <li class="has-dropdown">
+		<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="about ">About </a>
+		<ul class="dropdown-menu">
+		   <li><a href="investorsrelation.html">Investors Relations</li>
+        <li><a href="companyprofile.html">Company Profile</a></li>
+				<li><a href="boardofdirectors2.html">Board of Directors</a></li>
+		    <li><a href="ourhistory.html">Our History</a></li>
+		
+			
+		</ul>
+	</li>
+
+	 <li class="inactive" >
+		<a href="./contactus.html"  class="#" data-hover="Career">Contact Us</a>
+	</li>
+
+	
+	<!-- li end -->
+	<!-- Elements Menu -->
+
+	<!-- li end -->
+</ul>
+
+<div class="nav navbar-nav navbar-right">
+  <button id="play-audio" class="nav-link" 
+    style="background:none; border:none; cursor:pointer; font-size:20px; color:#000; align-items: center;" >
+    <i class="fa fa-headphones"></i>
+  </button>
+</div>
+
+
+
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+<div class="module module-search pull-left" id="searchModule">
+  <div class="module-icon search-icon" onclick="toggleSearchBox()">
+    <i class="fa fa-search" style="color: #000;"></i>
+    <span class="title">Search</span>
+  </div>
+
+  <!-- Search results go here -->
+  <div id="searchResults" style="margin-bottom: 20px;"></div>
+</div>
+
+
+
+  <!-- .module-search-box end -->			
+
+  <audio id="company-audio" src="assets/audios/Speechoncompany.mp3"></audio>
+
+</header>
+
+
+<!-- SEARCH BOX BELOW NAV -->
+<div class="module-search-box" style="display: none;">
+  <div class="module-content search-box"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form class="search-form" onsubmit="performSearch(); return false;">
+            <input type="text" id="searchInput" class="form-control" placeholder="Type Search Words Then Enter">
+            <a class="search-cancel" href="#" onclick="toggleSearchBox()"><i class="fa fa-close"></i></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="career-slider">
+   
+
+    <div class="mySlides">
+    <img src="assets/images/banners/fredun group banner global presence-new - op.jpg"  class="career-slider-img">
+  </div>
+
+  
+
+
+
+
+<!-- Section
+============================================= -->
+
+<section id="presence" class="brands-section" style="background: #eef6fa;">
+  <div class="container">
+    <h2 data-aos="fade-up" style="margin-bottom: 30px;">🌍 Our Global Presence</h2>
+    <p data-aos="fade-up" style="max-width: 800px; margin: auto; color: #444; font-size: 1rem; text-align: center;">
+      We are proudly present in 30+ countries across Asia, Europe, Africa, and the Americas through strong distributor networks and regulatory approvals.
+    </p>
+    <div id="worldMap" data-aos="zoom-in"></div>
+  </div>
+
+  <script>
+    // Initialize the map
+    var map = L.map('worldMap', {
+      center: [20, 0],
+      zoom: window.innerWidth < 768 ? 2 : 3,
+      scrollWheelZoom: false,
+      dragging: true
+    });
+
+    // Add OpenStreetMap tiles
+   L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
+}).addTo(map);
+   // Marker icon using your logo
+const customIcon = L.icon({
+  iconUrl: 'assets/images/favicon/favicon-32x32.png',
+  iconSize: [32, 32],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -30],
+  className: 'floating-logo-marker'
+});
+
+const indiaBounds = [
+  [6.5546079, 68.1113787],     // Southwest corner (Tamil Nadu/Kerala)
+  [35.6745457, 97.395561],     // Northeast corner (Ladakh/Arunachal)
+];
+
+
+
+ // Load India GeoJSON overlay
+  fetch('assets/data/india-borders.geojson')
+    .then(res => res.json())
+    .then(geojson => {
+      L.geoJSON(geojson, {
+        style: {
+          color: "#0071bb",
+          weight: 2,
+          fillOpacity: 0.05
+        }
+      }).addTo(map);
+    })
+    .catch(err => {
+      console.error("Failed to load India borders:", err);
+    });
+
+    // Locations array (your existing list)
+    const locations = [
+      // LATAM REGION COORDINATES
+        { name: "Brazil", coords: [-14.2350, -51.9253] },
+        { name: "Central America and Mexico Regional Program", coords: [15.7835, -90.2308] },
+        { name: "Colombia", coords: [4.5709, -74.2973] },
+        { name: "Cuba", coords: [21.5218, -77.7812] },
+        { name: "Dominican Republic", coords: [18.7357, -70.1627] },
+        { name: "Eastern and Southern Caribbean", coords: [13.1625, -59.6252] },
+        { name: "Ecuador", coords: [-1.8312, -78.1834] },
+        { name: "El Salvador", coords: [13.7942, -88.8965] },
+        { name: "Guatemala", coords: [15.7835, -90.2308] },
+        { name: "Haiti", coords: [18.9712, -72.2852] },
+        { name: "Honduras", coords: [15.1990, -86.2419] },
+        { name: "Jamaica", coords: [18.1096, -77.2975] },
+        { name: "Mexico", coords: [23.6345, -102.5528] },
+        { name: "Nicaragua", coords: [12.8654, -85.2072] },
+        { name: "Panama", coords: [8.5378, -80.7821] },
+        { name: "Paraguay", coords: [-23.4425, -58.4438] },
+        { name: "Peru", coords: [-9.1899, -75.0152] },
+        { name: "Venezuela", coords: [6.4238, -66.5897] },
+  
+        // MENA REGION
+        { name: "United Arab Emirates", coords: [23.4241, 53.8478] },
+        { name: "Bahrain", coords: [26.0667, 50.5577] },
+        { name: "Djibouti", coords: [11.8251, 42.5903] },
+        { name: "Algeria", coords: [28.0339, 1.6596] },
+        { name: "Egypt", coords: [26.8206, 30.8025] },
+        { name: "Iran", coords: [32.4279, 53.6880] },
+        { name: "Iraq", coords: [33.2232, 43.6793] },
+        { name: "Israel", coords: [31.0461, 34.8516] },
+        { name: "Jordan", coords: [30.5852, 36.2384] },
+        { name: "Kuwait", coords: [29.3759, 47.9774] },
+        { name: "Lebanon", coords: [33.8547, 35.8623] },
+        { name: "Libya", coords: [26.3351, 17.2283] },
+        { name: "Morocco", coords: [31.7917, -7.0926] },
+        { name: "Malta", coords: [35.8997, 14.5146] },
+        { name: "Oman", coords: [21.4735, 55.9754] },
+        { name: "Qatar", coords: [25.3548, 51.1839] },
+        { name: "Saudi Arabia", coords: [23.8859, 45.0792] },
+        { name: "Syrian Arab Republic", coords: [34.8021, 38.9968] },
+        { name: "Tunisia", coords: [33.8869, 9.5375] },
+        { name: "Yemen", coords: [15.5527, 48.5164] },
+  
+        // CIS REGION
+        { name: "Armenia", coords: [40.0691, 45.0382] },
+        { name: "Azerbaijan", coords: [40.1431, 47.5769] },
+        { name: "Belarus", coords: [53.7098, 27.9534] },
+        { name: "Georgia", coords: [42.3154, 43.3569] },
+        { name: "Kazakhstan", coords: [48.0196, 66.9237] },
+        { name: "Kyrgyzstan", coords: [41.2044, 74.7661] },
+        { name: "Moldova", coords: [47.4116, 28.3699] },
+        { name: "Russia", coords: [61.5240, 105.3188] },
+		{ name: "Srilanka", coords: [6.885144, 79.907143] },
+		{ name: "India", coords: [18.9582, 72.8321] },
+        { name: "Tajikistan", coords: [38.8610, 71.2761] },
+        { name: "Turkmenistan", coords: [38.9697, 59.5563] },
+        { name: "Ukraine", coords: [48.3794, 31.1656] },
+        { name: "Uzbekistan", coords: [41.3775, 64.5853] }
+        // Add more locations as needed
+      ];
+
+    // Loop through each location and place a marker
+    locations.forEach(loc => {
+      L.marker(loc.coords, { icon: customIcon })
+        .addTo(map)
+        .bindTooltip(loc.name, { direction: 'top', className: 'custom-tooltip' });
+    });
+
+    // Adjust view dynamically
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < 768) {
+        map.setView([20, 0], 2);
+      } else {
+        map.setView([20, 0], 3);
+      }
+    });
+  </script>
+
+
+
+
+</section>
+
+
+<div id="section-full-width" style="width:100%; display:block; padding:40px 0; background:#fff;">
+	<div class="container" style="max-width:1200px; margin:0 auto;">
+		<div class="row" style="display:flex; flex-wrap:wrap;">
+			<div class="col-xs-12 col-sm-12 col-md-12" style="flex:1 1 100%;">
+				
+				<p>Fredun Group, our mission transcends borders. As a globally recognized pharmaceutical and healthcare organization, we have built a robust network that extends across continents, establishing a strong footprint in key international markets. With decades of dedication to improving global health, Fredun Group has strategically aligned with clients, distributors, and partners in over 50 countries. Our commitment to quality, innovation, and reliability has earned us a solid reputation as a preferred pharmaceutical supplier and exporter in regions including North America, South America, Europe, Africa, the Middle East, Southeast Asia, and the Pacific.</p>
+
+				<p>Fredun Group’s global presence is the result of a meticulously developed export and distribution network that ensures timely delivery of high-quality pharmaceutical products, nutraceuticals, herbal formulations, veterinary medicines, and health supplements. We comply with internationally accepted manufacturing standards and regulatory guidelines including WHO-GMP, US FDA, UK MHRA, and other country-specific certifications, enabling seamless entry and sustainability in diverse global markets. Our manufacturing units are equipped with advanced technologies and are continually upgraded to meet the evolving needs of international healthcare.</p>
+
+				<p>Our export capabilities are supported by a highly efficient supply chain, robust packaging systems, and dedicated international business development teams. We are committed to maintaining uninterrupted product availability through dependable logistics partners and strategically located distribution hubs. By leveraging sea, air, and land freight options, we are capable of delivering pharmaceutical solutions rapidly and cost-effectively to any part of the world. This logistical efficiency ensures that Fredun Group remains a reliable partner for healthcare providers, wholesalers, government agencies, and private brands globally.</p>
+
+				<p>Success of Fredun Group on the global stage is driven by our unwavering focus on trust, transparency, and long-term collaboration. We believe that health is a universal right and strive to make essential medicines affordable and accessible for populations across economic strata. Our product lines include essential drugs, specialized treatments, preventive healthcare supplements, and wellness solutions – all developed with a commitment to safety, efficacy, and affordability.</p>
+
+				<p>With a legacy of trust, a commitment to quality, and a passion for global wellness, Fredun Group remains steadfast in its mission connecting science with care, across borders. We welcome collaborations with global partners who share our vision and invite them to be part of our journey toward healthier communities worldwide.</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- #section-full-width end -->
+
+
+
+
+
+
+
+
+<!-- Footer #5
+============================================= -->
+<footer id="footer" class="footer-5">	
+	<!-- Widget Section
+	============================================= -->
+	<div class="footer-widget">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-4 footer-widget-about">
+					<div class="footer-widget-title">
+						<h5>Contact Us</h5>
+					</div>
+					<div class="footer-widget-content">
+						<p class="mb-0">Lorem ipsum dolor sit amet, adipiscing condimentum tristique vel, eleifend sed turpis. Amet, consectetur adipising elit Integer.</p>
+						<div class="footer-widget-contact-link mt-md">
+							<div class="col-xs-12 col-sm-12 col-md-6 mb-30-xs mb-30-sm">
+								<h6>Phone :</h6>
+								<p><i class="fa fa-phone"></i>+ 2 01065370701</p>
+								<p class="mb-0"><i class="fa fa-fax"></i>+ 2 01065370701</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<h6>Email :</h6>
+								<p class="mb-0"><i class="fa fa-envelope"></i>7oroof@7oroof.com</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12  col-md-12 mt-30 mb-30-xs mb-30-sm">
+								<h6>Address :</h6>
+								<p class="mb-0"><i class="fa fa-map-marker"></i>2 AlBahr St, Tanta , AlGharbia, Egypt.</p>
+							</div><!-- .col-md-12 end -->
+						</div>
+					</div>
+				</div><!-- .col-md-4 end -->
+				
+				<div class="col-xs-12 col-sm-12  col-md-8">
+					
+					<div class="row mb-60">
+						<!-- Myaccount Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>My Account</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>My Account</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Order History</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Wish List</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Newsletter</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Service Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Customer Service</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Contact Us</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Returns</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Site Map</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Newsletter</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Newsletter -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-newsletter newsletter-widget">
+								<div class="footer-widget-title">
+									<h5>Newsletter</h5>
+								</div>
+								<div class="footer-widget-content">
+									<p class="mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</p>
+									<form class="mailchimp">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="E-mail Address">
+											<span class="input-group-btn">
+											<button class="btn text-capitalize" type="button">join</button>
+											</span>
+										</div>
+										<!-- /input-group -->
+										<div class="subscribe-alert"></div>
+									</form>
+									<!--Mailchimp Form End-->
+								</div>
+							</div><!-- .newsletter-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+						
+					<div class="row">
+						<!-- Information Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Information</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>About Us</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Delivery Information</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Privacy Policy</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Extras Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Extras</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Brands</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Gift Vouchers</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Affiliates</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Specials</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-tweets tweets-widget">
+								<div class="footer-widget-title">
+									<h5>Latest Tweets</h5>
+								</div>
+								<div class="footer-widget-content">
+									<div id="twitter-feed"></div>
+								</div>
+							</div><!-- .tweets-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+					
+				</div><!-- .col-md-8 end -->
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-widget end -->
+	
+	<!-- Copyrights
+	============================================= -->
+	<div class="footer-copyright bg-dark3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-12">
+					<div class="powered text-uppercase pull-left pull-none-xs mb-15-xs">
+						<p><span class="text-white">Mount.</span> Made With Love By <a href="http://themeforest.net/user/7oroof/portfolio?ref=7oroof">7oroof.com</a></p>
+					</div>
+					<div class="copyright pull-right pull-none-xs">
+						<p class="text-capitalize">
+							<span class="text-uppercase">&copy; 2016. All Rights Reserved</span>
+							<a href="privacy.html">Privacy Policy</a> &ndash; <a href="terms.html">Terms of Use</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-copyright end -->
+</footer>
+ </div><!-- #wrapper end -->
+ <div id="back-to-top" class="backtop">
+ 	<i class="fa fa-angle-up" aria-hidden="true"></i>
+ </div>
+ <div class="hamburger-panel">
+ 	<ul class="list-unstyled list-links">
+		<li><a class="active" href="#">Home</a></li>
+		<li><a href="#">Features</a></li>
+		<li><a href="#">Pages</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Shop</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<div class="social-share">
+		<a class="share-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-facebook"></i></a>
+		<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
+		<a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+		<a class="share-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+		<a class="share-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+	</div>
+	
+	<div class="copywright">
+		<span class="text-white">Mount.</span> Made By <a href="#">zytheme.com</a>
+		<p>© 2016. All Rights Reserved</p>
+	</div>
+
+ </div>
+<!-- Footer Scripts
+============================================= -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
+</body>
+</html> 

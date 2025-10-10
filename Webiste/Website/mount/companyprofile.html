@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mount is a pixel perfect creative multi purpose html5 template  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+<!-- Fonts
+    ============================================= -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700%7CRaleway%3A800%2C500%2C400' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- RS5.0 Main Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+
+<!-- LOAD JQUERY LIBRARY -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<!-- REVOLUTION JS FILES -->
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+<!-- PARTICLES ADD-ON FILES -->
+		<link rel='stylesheet' href='assets/revolution/revolution-addons/particles/css/revolution.addon.particles.css?ver=1.0.3' type='text/css' media='all' />
+		<script type='text/javascript' src='assets/revolution/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+	(Load Extensions only on Local File Systems !  
+	The following part can be removed on Server for On Demand Loading) -->	
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Mount | Multi-purpose Business Html5 Template</title>
+
+<style>
+    /* ========== RESET + BASE ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f9fd;
+      color: #1d2a35;
+    }
+
+     .disaster-hero {
+      background: url('https://img.freepik.com/free-photo/medicines-medical-supplies-placed-blue_1150-19136.jpg') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .disaster-hero-overlay {
+      
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+    }
+    /* ========== GENERAL STYLING ========== */
+
+
+/* Slide from right */
+.fredun-right {
+  transform: translateX(50px);
+}
+.fredun-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Slide from left */
+.fredun-left {
+  transform: translateX(-50px);
+}
+.fredun-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delays */
+.fredun-delay-1 {
+  animation-delay: 0.4s;
+}
+.fredun-delay-2 {
+  animation-delay: 0.7s;
+}
+.fredun-delay-3 {
+  animation-delay: 0.9s;
+}
+.fredun-delay-4 {
+  animation-delay: 1.2s;
+}
+.fredun-delay-5 {
+  animation-delay: 1.5s;
+}
+
+
+    .fredun-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 0;
+    }
+    .fredun-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateX(30px);
+      
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fredun-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+    .fredun-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .fredun-img-box {
+      flex: 1;
+    }
+    .fredun-img-box img {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .fredun-content-box {
+      flex: 2;
+    }
+
+    .fredun-content-box h2 {
+      font-size: 28px;
+      color: #136ca8;
+      margin-bottom: 10px;
+    }
+
+    .fredun-content-box p {
+      font-size: 16px;
+      color: #2d3a47;
+      margin-bottom: 10px;
+    }
+
+    /* ========== SECTION HEADING ========== */
+    .fredun-heading {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 60px;
+      color: #0e3d66;
+      position: relative;
+    }
+
+    .fredun-heading::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background-color: #136ca8;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -15px;
+    }
+
+
+.fredun-core-values-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #fefefe, #f4f9fd);
+}
+
+.fredun-core-values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.fredun-core-value-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 280px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  opacity: 0;
+  transform: translateX(50px); /* Default: fade-in from right */
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  animation: fadeInUp 0.7s ease both;
+}
+
+/* Slide-in left version */
+.fredun-core-value-card.left {
+  transform: translateX(-50px);
+}
+
+/* Animate into view */
+.fredun-core-value-card.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fredun-core-value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fredun-core-value-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.fredun-core-value-card h4 {
+  font-size: 20px;
+  color: #136ca8;
+  margin-bottom: 10px;
+}
+
+.fredun-core-value-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fredun-core-value-card {
+    max-width: 100%;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+/* (fadeInUp keyframes consolidated above) */
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .fredun-section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .fredun-content-box h2 {
+        font-size: 24px;
+      }
+      .fredun-container {
+        padding: 30px 0;
+      }
+    }
+
+    .fredun-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .fredun-img-box {
+      flex: 1;
+    }
+    .fredun-img-box img {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .fredun-content-box {
+      flex: 2;
+    }
+    .fredun-content-box h2 {
+      font-size: 28px;
+      color: #136ca8;
+      margin-bottom: 10px;
+    }
+    .fredun-content-box p {
+      font-size: 16px;
+      color: #2d3a47;
+      margin-bottom: 10px;
+    }
+    .fredun-subheading {
+      text-align: center;
+      font-size: 30px;
+      margin: 40px 0 20px;
+      color: #136ca8;
+    }
+    .fredun-core-values, .fredun-certifications ul, .fredun-timeline-list {
+      list-style: none;
+      padding-left: 20px;
+    }
+    .fredun-core-values li, .fredun-certifications li, .fredun-timeline-list li {
+      margin-bottom: 8px;
+    }
+    .fredun-services-grid, .fredun-testimonials-grid, .fredun-leaders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .fredun-service-box, .fredun-testimonial-card, .fredun-leader-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .fredun-service-box img, .fredun-leader-card img {
+      max-width: 60px;
+      margin-bottom: 10px;
+    }
+    .fredun-contact-cta {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #eaf4fb;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+    .fredun-btn {
+      padding: 10px 20px;
+      background-color: #136ca8;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+
+
+    /*======Extra Contents=======*/
+    /* Common styling - desktop default */
+.holderCircle {
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  margin: 60px auto;
+  position: relative;
+}
+
+.dotCircle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  z-index: 20;
+}
+
+.dotCircle .itemDot {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: #ffffff;
+  color: #136ca8;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 30px;
+  z-index: 3;
+  cursor: pointer;
+  border: 2px solid #e6e6e6;
+  transition: 0.5s;
+}
+
+.dotCircle .itemDot .forActive {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.dotCircle .itemDot .forActive::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border: 3px solid #136ca8;
+  bottom: -31px;
+  left: -14px;
+  filter: blur(1px);
+  position: absolute;
+  border-radius: 100%;
+}
+
+.dotCircle .itemDot .forActive::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  filter: blur(5px);
+  top: -15px;
+  position: absolute;
+  transform: rotate(-45deg);
+  border: 6px solid #136ca8;
+  right: -39px;
+}
+
+.dotCircle .itemDot.active .forActive {
+  display: block;
+}
+
+.round {
+  position: absolute;
+  left: 40px;
+  top: 45px;
+  width: 410px;
+  height: 410px;
+  border: 2px dotted #136ca8;
+  border-radius: 100%;
+  animation: rotation 100s infinite linear;
+}
+
+.dotCircle .itemDot:hover,
+.dotCircle .itemDot.active {
+  color: #ffffff;
+  background: linear-gradient(to right, #136ca8 0%, #136ca8 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .13);
+}
+
+.dotCircle .itemDot {
+  font-size: 40px;
+}
+
+.contentCircle {
+  width: 250px;
+  border-radius: 100%;
+  color: #222222;
+  position: relative;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contentCircle .CirItem {
+  border-radius: 100%;
+  color: #222222;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s;
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  margin: auto;
+  line-height: 250px;
+}
+
+.CirItem.active {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.contentCircle .CirItem i {
+  font-size: 180px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -90px;
+  color: #000000;
+  opacity: 0.1;
+}
+
+/* === Responsive Styling === */
+
+@media (max-width: 1024px) {
+  .holderCircle {
+    width: 400px;
+    height: 400px;
+  }
+
+  .round {
+    width: 310px;
+    height: 310px;
+    left: 45px;
+    top: 45px;
+  }
+
+  .dotCircle .itemDot {
+    width: 65px;
+    height: 65px;
+    font-size: 22px;
+    line-height: 65px;
+  }
+
+  .contentCircle {
+    width: 200px;
+    top: 130px;
+  }
+
+  .contentCircle .CirItem {
+    font-size: 14px;
+    line-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .holderCircle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .round {
+    width: 260px;
+    height: 260px;
+    left: 30px;
+    top: 30px;
+  }
+
+  .dotCircle .itemDot {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+  }
+
+  .contentCircle {
+    width: 180px;
+    top: 100px;
+  }
+
+  .contentCircle .CirItem {
+    font-size: 13px;
+    line-height: 180px;
+  }
+
+  .contentCircle .CirItem i {
+    font-size: 100px;
+    margin-left: -50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .holderCircle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .round {
+    width: 210px;
+    height: 210px;
+    left: 25px;
+    top: 25px;
+  }
+
+  .dotCircle .itemDot {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 42px;
+  }
+
+  .contentCircle {
+    width: 150px;
+    top: 80px;
+  }
+
+  .contentCircle .CirItem {
+    font-size: 12px;
+    line-height: 150px;
+  }
+
+  .contentCircle .CirItem i {
+    font-size: 80px;
+    margin-left: -40px;
+  }
+}
+
+.career-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 100vh;
+    margin-bottom: 0px; /* Add space for dots */
+    z-index: 1;
+
+  }
+
+  .career-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps proportions, fills the space */
+    display: block;
+  }
+
+  
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .career-slider {
+      height: auto; /* Let image height adjust naturally */
+    }
+    .career-slider-img {
+      width: 100%;
+      height: auto; /* Keep aspect ratio */
+      object-fit: contain; /* Avoid cropping on small screens */
+    }
+  }
+
+    .career-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 100vh;
+    margin-bottom: 0px; /* Add space for dots */
+    z-index: 1;
+
+  }
+
+  .career-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps proportions, fills the space */
+    display: block;
+  }
+
+  
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .career-slider {
+      height: auto; /* Let image height adjust naturally */
+    }
+    .career-slider-img {
+      width: 100%;
+      height: auto; /* Keep aspect ratio */
+      object-fit: contain; /* Avoid cropping on small screens */
+    }
+  }
+
+  
+.navbar-nav li a
+
+ {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+    padding: 45px 0 8px;
+}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+<header id="navbar-spy" class="header ">
+	<nav id="primary-menu" class="navbar navbar-fixed-top" 
+     style="background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2);">
+
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+<!-- Headphone Icon (always visible, even on mobile) -->
+  
+        <!-- Headphone Icon (always visible, even on mobile) -->
+ 
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="inactive" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+       <li><a href="listofproducts1.html">Allophatic Formulations</a></li>
+        <li><a href="surgifre.html">Surgifre</a></li>
+		
+			<li>
+				<a href="fredunapilist.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="fredundcgranules.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="fredunpellets.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+       <li><a href="healthcareallopathicformulations.html">Allophatic Formulations</a></li>
+        <li><a href="fredunvet.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="fredunaqua.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="nutraceuticals.html">Nutraceuticals</a>
+			</li>
+			<!--<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>-->
+			
+		</ul>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
+		<ul class="dropdown-menu">
+		  <li><a href="frednavet.html">Fredna Vet Diagnostics</a></li>
+      <li><a href="fredunnutrition.html">Fredun Nutrition</a></li>
+			<li><a href="fredunmobility.html">Fredun Mobility</a></li>
+      <li><a href="fremorglobal.html">Fremor Global</a></li>
+      <li><a href="frednadentalsystems.html">FDS</a></li>
+			<li><a href="chuubalm.html">Chuu Balm</a></li>
+			<li><a href="beautyfred.html">Beauty Fred</a></li>
+      <li><a href="farstore.html">FAR Store</a></li>
+			<li><a href="inklingindia.html">Inkling India</a></li>
+      <li><a href="Iteeha.html">Iteeha</a></li>
+		</ul>
+	</li>
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+							
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Annual reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#news">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors2.html">Board of Directors</a>
+								</li>
+								<li>
+									<!--<a href="portfolio-masonry-2.html">Investors Presentation</a> -->
+								</li>
+								<li>
+									<a href="investorsrelation.html#corporategovernance">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#infoforshareholders">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#shareholdingpattern">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#generalinformation">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#extractofannualreturn">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial Results</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#audited">Audited</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unaudited">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#otherfillingswithstockexchanges">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#statutorydocumentsandinformation">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unclaimeddividend">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="inactive" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+
+	
+
+  <li class="has-dropdown active">
+		<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="about ">About </a>
+		<ul class="dropdown-menu">
+       <li><a href="investorsrelation.html">Investors Relations</a></li>
+        <li><a href="companyprofile.html">Company Profile</a></li>
+				<li><a href="boardofdirectors2.html">Board of Directors</a></li>
+		    <li><a href="ourhistory.html">Our History</a></li>
+		
+			
+		</ul>
+	</li>
+
+	 <li class="inactive" >
+		<a href="./contactus.html"  class="#" data-hover="Career">Contact Us</a>
+	</li>
+
+	
+	<!-- li end -->
+	<!-- Elements Menu -->
+
+	<!-- li end -->
+</ul>
+
+<div class="nav navbar-nav navbar-right">
+  <button id="play-audio" class="nav-link" 
+    style="background:none; border:none; cursor:pointer; font-size:20px; color:#000; align-items: center;" >
+    <i class="fa fa-headphones"></i>
+  </button>
+</div>
+
+
+
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+<div class="module module-search pull-left" id="searchModule">
+  <div class="module-icon search-icon" onclick="toggleSearchBox()">
+    <i class="fa fa-search" style="color: #000;"></i>
+    <span class="title">Search</span>
+  </div>
+
+  <!-- Search results go here -->
+  <div id="searchResults" style="margin-bottom: 20px;"></div>
+</div>
+
+
+
+  <!-- .module-search-box end -->			
+
+  <audio id="company-audio" src="assets/audios/Speechoncompany.mp3"></audio>
+
+</header>
+
+
+<!-- SEARCH BOX BELOW NAV -->
+<div class="module-search-box" style="display: none;">
+  <div class="module-content search-box"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form class="search-form" onsubmit="performSearch(); return false;">
+            <input type="text" id="searchInput" class="form-control" placeholder="Type Search Words Then Enter">
+            <a class="search-cancel" href="#" onclick="toggleSearchBox()"><i class="fa fa-close"></i></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+  <section class="career-slider">
+   
+
+    <div class="mySlides">
+    <img src="assets/images/banners/fredun group banner company profile-new.jpg"  class="career-slider-img">
+  </div>
+
+  
+  </section>      
+                
+
+
+<section class="fredun-container">
+    <h1 class="fredun-heading">Our Company Profile</h1>
+
+    <!-- Fredun Pharmaceuticals -->
+    <div class="fredun-section fredun-right fredun-delay-1">
+      <div class="fredun-img-box">
+        <img src="https://img.freepik.com/premium-photo/chemistry-experiment_1147429-127921.jpg" alt="Fredun Pharmaceuticals">
+      </div>
+      <div class="fredun-content-box">
+        <h2>Fredun Pharmaceuticals & Limited</h2>
+        <h2>Fredun Pharmaceuticals Limited</h2>
+        <p>We aim to redefine wellness by making safe and effective medicines accessible across continents, empowering lives every day.</p>
+      </div>
+    </div>
+
+    <!-- Fredun Granules -->
+    <div class="fredun-section fredun-left fredun-delay-2">
+      <div class="fredun-img-box">
+        <img src="https://img.freepik.com/free-photo/top-view-open-pills_23-2148021420.jpg" alt="Fredun Granules">
+      </div>
+      <div class="fredun-content-box">
+        <h2>Fredun Granules</h2>
+        <p>Specializing in effervescent granule formulations, Fredun Granules crafts innovative healthcare solutions for easier administration and faster absorption. Our R&D-backed process delivers customized granules for energy, hydration, and therapeutic use.</p>
+        <p>We are a trusted partner for many global brands in customized pharma packaging and B2B production.</p>
+      </div>
+    </div>
+
+    <!-- Chuu Balm -->
+    <div class="fredun-section fredun-right fredun-delay-3">
+      <div class="fredun-img-box">
+        <img src="https://chuubalm.com/cdn/shop/files/Untitled-425.png?v=1743054080" alt="Chuu Balm">
+      </div>
+      <div class="fredun-content-box">
+        <h2>Chuu Balm</h2>
+        <p>A modern twist to traditional relief, Chuu Balm is our signature balm product designed for muscular relief, headaches, and nasal congestion. Its herbal formula is enriched with menthol, camphor, and essential oils.</p>
+        <p>Chuu Balm is known for its quick relief and is exported to over 15 countries worldwide.</p>
+      </div>
+    </div>
+
+    <!-- Fredun Mobility -->
+    <div class="fredun-section fredun-left fredun-delay-4">
+      <div class="fredun-img-box">
+        <img src="https://fredunmobility.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-10-at-4.34.13-PM-770x513.webp" alt="Fredun Mobility">
+      </div>
+      <div class="fredun-content-box">
+        <h2>Fredun Mobility</h2>
+        <p>Focused on joint and muscular care, Fredun Mobility offers premium nutraceuticals, topical oils, and herbal blends to support active lifestyles. Especially beneficial for athletes and seniors, our products are clinically tested and internationally certified.</p>
+        <p>We believe mobility is freedom, and our mission is to help everyone move pain-free.</p>
+      </div>
+    </div>
+
+    <!-- Freossi (Pet Division) -->
+    <div class="fredun-section fredun-right fredun-delay-5">
+      <div class="fredun-img-box">
+        <img src="https://freossi.com/cdn/shop/files/ComboPack_GR_DP_SR_MCHC_-01.png?v=1690039063&width=1680" alt="Freossi Pet Care">
+      </div>
+      <div class="fredun-content-box">
+        <h2>Freossi – Pet Care by Fredun</h2>
+        <p>Freossi is our dedicated sub-brand for pets, offering high-quality medicines, nutritional supplements, shampoos, and wellness products for dogs and cats. Made with safe, vet-approved ingredients, Freossi ensures your furry companions live healthier and happier lives.</p>
+        <p>Our commitment to animal care is as strong as our dedication to human wellness.</p>
+      </div>
+    </div>
+
+
+
+
+    <section class="iq-features">
+<div class="container">
+    <h2 class="fredun-subheading">Our Services</h2>
+<div class="row align-items-center">
+<div class="col-lg-3 col-md-12"></div>
+<div class="col-lg-6 col-md-12">
+ <div class="holderCircle">
+<div class="round"></div>
+<div class="dotCircle">
+<span class="itemDot active itemDot1" data-tab="1">
+ <i class="fa fa-clock-o"></i>
+ <span class="forActive"></span>
+</span>
+<span class="itemDot itemDot2" data-tab="2">
+<i class="fa fa-comments"></i>
+<span class="forActive"></span>
+</span>
+<span class="itemDot itemDot3" data-tab="3">
+<i class="fa fa-user"></i>
+<span class="forActive"></span>
+</span>
+<span class="itemDot itemDot4" data-tab="4">
+<i class="fa fa-tags"></i>
+<span class="forActive"></span>
+</span>
+<span class="itemDot itemDot5" data-tab="5">
+ <i class="fa fa-upload"></i>
+<span class="forActive"></span>
+</span>
+<span class="itemDot itemDot6" data-tab="6">
+<i class="fa fa-briefcase"></i>
+<span class="forActive"></span>
+</span>
+</div>
+<div class="contentCircle">
+<div class="CirItem title-box active CirItem1">
+<h2 class="title"><span>Automate</span></h2>
+<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
+<i class="fa fa-clock-o"></i>
+</div>
+<div class="CirItem title-box CirItem2">
+<h2 class="title"><span>Chat </span></h2>
+<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
+<i class="fa fa-comments"></i>
+</div>
+<div class="CirItem title-box CirItem3">
+<h2 class="title"><span>Responses</span></h2>
+<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
+<i class="fa fa-user"></i>
+</div>
+<div class="CirItem title-box CirItem4">
+<h2 class="title"><span>Tags</span></h2>
+<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
+<i class="fa fa-tags"></i>
+</div>
+<div class="CirItem title-box CirItem5">
+<h2 class="title"><span>Sharing</span></h2>
+<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
+<i class="fa fa-upload"></i>
+</div>
+<div class="CirItem title-box CirItem6">
+<h2 class="title"><span>Support</span></h2>
+<p>tfhdfghfghfghfgjtyjtyhfg ftgfthtyjyutg rthtryjdrhrt tyjdrytyjuty tjtyjtyjtdy</p>
+<i class="fa fa-briefcase"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-12"></div>
+               </div>
+            </div>
+        </section>
+
+
+
+     
+    <!-- Core Values -->
+    <!-- Core Values -->
+<section class="fredun-core-values-section">
+  <h2 class="fredun-subheading">Our Core Values</h2>
+  <div class="fredun-core-values-grid ">
+    <div class="fredun-core-value-card fredun-delay-1">
+      <img src="https://img.freepik.com/premium-photo/man-medical-suit-is-playing-video-game-with-many-pills_1150774-322.jpg" alt="Innovation" />
+      <h4>Innovation</h4>
+      <p>We push boundaries in pharma and pet care through continuous R&D.</p>
+    </div>
+    <div class="fredun-core-value-card fredun-delay-2">
+      <img src="https://img.freepik.com/premium-photo/midsection-woman-holding-hands_1048944-21598340.jpg" alt="Integrity" />
+      <h4>Integrity</h4>
+      <p>Ethics guide every action—from manufacturing to customer relationships.</p>
+    </div>
+    <div class="fredun-core-value-card fredun-delay-3">
+      <img src="https://img.freepik.com/premium-photo/tick-quality-assurance_698953-2810.jpg" alt="Quality First" />
+      <h4>Quality First</h4>
+      <p>We meet and exceed global standards in every formulation we deliver.</p>
+    </div>
+    <div class="fredun-core-value-card fredun-delay-4">
+      <img src="https://img.freepik.com/free-photo/dog-veterinary-equipment_23-2147787337.jpg" alt="Animal Welfare" />
+      <h4>Animal Welfare</h4>
+      <p>Our Freossi division is rooted in compassion and vet-approved care.</p>
+    </div>
+    <div class="fredun-core-value-card fredun-delay-5">
+      <img src="https://img.freepik.com/premium-photo/world-health-day_1064589-61181.jpg" alt="Sustainability" />
+      <h4>Sustainability</h4>
+      <p>Eco-conscious production to protect the planet for future generations.</p>
+    </div>
+  </div>
+</section>
+
+
+    
+
+   
+
+   
+
+  
+
+    
+
+    <!-- Contact CTA -->
+    <div class="fredun-contact-cta">
+      <h2 class="fredun-subheading">Partner With Us</h2>
+      <p>Interested in distribution, third-party manufacturing, or bulk supply?</p>
+      <a href="contactus.html" class="fredun-btn">Contact Us</a>
+    </div>
+  </section>
+
+<!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer-5">	
+	<!-- Widget Section
+	============================================= -->
+	<div class="footer-widget">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-4 footer-widget-about">
+					<div class="footer-widget-title">
+						<h5>Contact Us</h5>
+					</div>
+					<div class="footer-widget-content">
+						<p class="mb-0"></p>
+						<div class="footer-widget-contact-link mt-md">
+							<div class="col-xs-12 col-sm-12 col-md-6 mb-30-xs mb-30-sm">
+								<h6>Phone :</h6>
+								<p><i class="fa fa-phone"></i>+91-22-40318111 </p>
+								<p class="mb-0"><i class="fa fa-fax"></i>+91-22-40318133</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<h6>Email :</h6>
+								<p class="mb-0"><i class="fa fa-envelope"></i>business@fredungroup.com</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12  col-md-12 mt-30 mb-30-xs mb-30-sm">
+								<h6>Address :</h6>
+								<p class="mb-0"><i class="fa fa-map-marker"></i>11th Floor, Tower A, Urmi Estate 95, Ganpatrao Kadam Marg, Lower Parel (W), Mumbai 400013</p>
+							</div><!-- .col-md-12 end -->
+						</div>
+					</div>
+				</div><!-- .col-md-4 end -->
+				
+				<div class="col-xs-12 col-sm-12  col-md-8">
+					
+					<div class="row mb-60">
+						<!-- Myaccount Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Pharmaceutical</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="listofproducts1.html"><i class="fa fa-angle-double-right"></i>Formulations</a>
+									</li>
+									<li>
+										<a href="surgifre.html"><i class="fa fa-angle-double-right"></i>Surgifre</a>
+									</li>
+									<li>
+										<a href="fredunapilist.html"><i class="fa fa-angle-double-right"></i>Fredun API</a>
+									</li>
+									<li>
+										<a href="fredundcgranules.html"><i class="fa fa-angle-double-right"></i>Fredun DC</a>
+									</li>
+									<li>
+										<a href="fredunpellets.html"><i class="fa fa-angle-double-right"></i>Fredun Pellets</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Service Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Healthcare</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Allophatic</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredunvet</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun Aqua</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Neutraceuticals</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Niche</a>		
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Newsletter -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-newsletter newsletter-widget">
+								<div class="footer-widget-title">
+									<h5>Newsletter</h5>
+								</div>
+								<div class="footer-widget-content">
+									<p class="mb-30"></p>
+									<form class="mailchimp">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="E-mail Address">
+											<span class="input-group-btn">
+											<button class="btn text-capitalize" type="button">join</button>
+											</span>
+										</div>
+										<!-- /input-group -->
+										<div class="subscribe-alert"></div>
+									</form>
+									<!--Mailchimp Form End-->
+								</div>
+							</div><!-- .newsletter-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+						
+					<div class="row">
+						<!-- Information Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Information</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="contactus.html"><i class="fa fa-angle-double-right"></i>Contact Us</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Delivery Information</a>
+									</li>
+									<li>
+										<a href="privacypolicy.html"><i class="fa fa-angle-double-right"></i>Privacy Policy</a>
+									</li>
+									<li>
+										<a href="termsandconditions.html"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Extras Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Company Profile</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+								  <li><a href="fremorglobal.html"><i class="fa fa-angle-double-right"> </i>Fremor Global</a></li>
+                  <li><a href="frednadentalsystems.html"><i class="fa fa-angle-double-right"> </i>FDS</a></li>
+                  <li><a href="https://chuubalm.com/"><i class="fa fa-angle-double-right"> </i>Chuu Balm</a></li>
+                  <li><a href="beautyfred.html"><i class="fa fa-angle-double-right"> </i>Beauty Fred</a></li>
+                  <li><a href="farstore.html"><i class="fa fa-angle-double-right"> </i>FAR Store</a></li>
+                  <li><a href="Iteeha.html"><i class="fa fa-angle-double-right"> </i>Iteeha</a></li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+								<div class="footer-widget-title">
+									<h5>Investors </h5>
+								</div>
+								<div class="footer-widget-content">
+									<ul class="list-unstyled mb-0">
+                    <li><a href="investorsrelation.html#quarterly-2023"><i class="fa fa-angle-double-right"> </i>Annual report</a></li>
+                    <li><a href="boardofdirectors.html"><i class="fa fa-angle-double-right"> </i>Board of Directors</a></li>
+                    <li><a href="investorsrelation.html#news"><i class="fa fa-angle-double-right"> </i>News & Announcements</a></li>
+                    <li><a href="investorsrelation.html#infoforshareholders"><i class="fa fa-angle-double-right"> </i>Info for Shareholders</a></li>
+                  </ul>
+                </div>
+              </div><!-- .tweets-widget end -->
+            </div><!-- .col-md-6 end -->
+          </div>
+					
+				</div><!-- .col-md-8 end -->
+			</div>
+		</div><!-- .container end -->
+	</div>
+  
+  <!-- .footer-widget end -->
+	
+	<!-- Copyrights
+	============================================= -->
+	<div class="footer-copyright bg-dark3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-12">
+					<div class="powered text-uppercase pull-left pull-none-xs mb-15-xs">
+						<p><span class="text-white">Fredun</span> Group <a href="http://themeforest.net/user/7oroof/portfolio?ref=7oroof"></a></p>
+					</div>
+					<div class="copyright pull-right pull-none-xs">
+						<p class="text-capitalize">
+              <span class="text-uppercase">&copy; <span id="copyright-year"></span>. All Rights Reserved</span>
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-copyright end -->
+</footer>
+
+
+ </div><!-- #wrapper end -->
+ <div id="back-to-top" class="backtop">
+ 	<i class="fa fa-angle-up" aria-hidden="true"></i>
+ </div>
+ <div class="hamburger-panel">
+ 	<ul class="list-unstyled list-links">
+		<li><a class="active" href="#">Home</a></li>
+		<li><a href="#">Features</a></li>
+		<li><a href="#">Pages</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Shop</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<div class="social-share">
+		<a class="share-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-facebook"></i></a>
+		<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
+		<a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+		<a class="share-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+		<a class="share-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+	</div>
+	
+	<div class="copywright">
+		<span class="text-white">Mount.</span> Made By <a href="#">zytheme.com</a>
+		<p>© 2016. All Rights Reserved</p>
+	</div>
+
+ </div>
+<!-- Footer Scripts
+============================================= --> 
+<script>
+  
+  $(document).ready(function(){
+    var radius = 200;
+    var fields = $('.itemDot');
+    let i = 2;
+		var container = $('.dotCircle');
+		var width = container.width();
+ radius = width/2.5;
+ 
+		 var height = container.height();
+		var angle = 0, step = (2*Math.PI) / fields.length;
+		fields.each(function() {
+			var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+			var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+			if(window.console) {
+				console.log($(this).text(), x, y);
+			}
+			
+			$(this).css({
+				left: x + 'px',
+				top: y + 'px'
+			});
+			angle += step;
+		});
+		
+		
+		$('.itemDot').click(function(){
+			
+			var dataTab= $(this).data("tab");
+			$('.itemDot').removeClass('active');
+			$(this).addClass('active');
+			$('.CirItem').removeClass('active');
+			$( '.CirItem'+ dataTab).addClass('active');
+			i=dataTab;
+			
+			$('.dotCircle').css({
+				"transform":"rotate("+(360-(i-1)*36)+"deg)",
+				"transition":"2s"
+			});
+			$('.itemDot').css({
+				"transform":"rotate("+((i-1)*36)+"deg)",
+				"transition":"1s"
+			});
+			
+			
+		});
+		
+		setInterval(function(){
+			var dataTab= $('.itemDot.active').data("tab");
+			if(dataTab>6||i>6){
+			dataTab=1;
+			i=1;
+			}
+			$('.itemDot').removeClass('active');
+			$('[data-tab="'+i+'"]').addClass('active');
+			$('.CirItem').removeClass('active');
+			$( '.CirItem'+i).addClass('active');
+			i++;
+			
+			
+			$('.dotCircle').css({
+				"transform":"rotate("+(360-(i-2)*36)+"deg)",
+				"transition":"2s"
+			});
+			$('.itemDot').css({
+				"transform":"rotate("+((i-2)*36)+"deg)",
+				"transition":"1s"
+			});
+			
+			}, 5000);
+		
+	});
+
+
+
+</script>
+
+
+ <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      } else {
+        entry.target.classList.remove('animate'); // Optional: re-animate on scroll out/in
+      }
+    });
+  });
+
+  // Observe all .fredun-section elements
+  document.querySelectorAll('.fredun-section').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Observe all .fredun-core-value-card elements
+  document.querySelectorAll('.fredun-core-value-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+
+
+
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
+<script>
+  // Dynamically set copyright year
+  document.addEventListener('DOMContentLoaded', function() {
+    var yearSpan = document.getElementById('copyright-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  });
+</script>
+</body>
+</html>

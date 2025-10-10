@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+    ============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mount is a pixel perfect creative multi purpose html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+
+<!-- Fonts
+    ============================================= -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700%7CRaleway%3A800%2C500%2C400' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- RS5.0 Main Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+<!-- AOS Library -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+<!-- LOAD JQUERY LIBRARY -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<!-- REVOLUTION JS FILES -->
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+<!-- PARTICLES ADD-ON FILES -->
+		<link rel='stylesheet' href='assets/revolution/revolution-addons/particles/css/revolution.addon.particles.css?ver=1.0.3' type='text/css' media='all' />
+		<script type='text/javascript' src='assets/revolution/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+	(Load Extensions only on Local File Systems !  
+	The following part can be removed on Server for On Demand Loading) -->	
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Mount | Multi-purpose Business Html5 Template</title>
+
+</head>
+<style>
+    body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+.section {
+  padding: 4rem 2rem;
+}
+
+
+
+
+.image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.health-hero {
+  background: url('https://img.freepik.com/free-photo/coronavirus-sample-procedure_23-2148709136.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.health-hero .overlay {
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  padding: 2rem;
+  color: #fff;
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+.health-hero h1 {
+  font-size: 3rem;
+}
+
+.health-hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+
+/* History */
+
+:root {
+    --primary: #6d7275;
+    --primary-gradient: linear-gradient(45deg, #72131d 0%, #6d7275 100%);
+}
+/* bootstrap  container*/
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Background Logo */
+.timeline-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-bg-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  opacity: 0.05;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Push timeline content above background */
+.bg-gradient_solid {
+  position: relative;
+  z-index: 2;
+}
+
+
+@media (min-width: 576px)
+{
+.container {
+    max-width: 540px;
+}
+}
+@media (min-width: 768px)
+{
+.container {
+    max-width: 720px;
+}
+}
+@media (min-width: 992px)
+{
+.container {
+    max-width: 960px;
+}
+}
+@media (min-width: 1200px)
+{
+.container {
+    max-width: 1200px;
+}
+}
+/* bootstrap  container*/
+.section-header {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #2f2f2f;
+}
+
+.section-header hr {
+    border: 1px solid #2f2f2f;
+    width: 56px;
+    margin: auto;
+}
+
+.bg-gradient_solid {
+    /* background: var(--primary-gradient); */
+    color: #343434;
+    padding: 48px 0;
+}
+
+.steps {
+    position: relative;
+    margin-top: 32px;
+}
+
+.steps::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #343434;
+    opacity: 0.4;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.steps .content p {
+    color: #676767;
+    font-size: 16px;
+}
+
+.steps .content h2 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #6d7275;
+}
+
+.steps-container {
+    position: relative;
+    background-color: inherit;
+    width: calc(50% + 32px);
+}
+
+.steps-container .content {
+    padding: 32px;
+    background-color: white;
+    position: relative;
+    border-radius: 0px 0px 80px 0px;
+    box-shadow: 0px 16px 27px rgb(0 11 30 / 10%);
+    width: 100%;
+}
+
+.steps .steps-container:nth-child(even) {
+    left: calc(50% - 32px);
+    flex-direction: row-reverse;
+}
+
+.steps-container {
+    display: flex;
+}
+
+.steps .steps-container .date {
+    font-weight: 900;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    width: 62px;
+    height: 62px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 777;
+}
+
+.step-line {
+    width: 40px;
+    background-color: #343434;
+    height: 1px;
+    margin-top: 31px;
+    opacity: 0.4;
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    .steps::after {
+        left: 32px;
+    }
+    .steps-container {
+        left: 0;
+        flex-direction: row-reverse;
+        width: auto;
+        margin-bottom: 16px;
+    }
+    .steps .steps-container:nth-child(even) {
+        left: 0;
+    }
+    .steps-container[data-aos="fade-right"],
+  .steps-container[data-aos="fade-left"] {
+    [data-aos] {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+}
+
+.career-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 100vh;
+    margin-bottom: 0px; /* Add space for dots */
+    z-index: 1;
+
+  }
+
+  .career-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps proportions, fills the space */
+    display: block;
+  }
+
+  
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .career-slider {
+      height: auto; /* Let image height adjust naturally */
+    }
+    .career-slider-img {
+      width: 100%;
+      height: auto; /* Keep aspect ratio */
+      object-fit: contain; /* Avoid cropping on small screens */
+    }
+  }
+
+	  .career-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 100vh;
+    margin-bottom: 0px; /* Add space for dots */
+    z-index: 1;
+
+  }
+
+  .career-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps proportions, fills the space */
+    display: block;
+  }
+
+  
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .career-slider {
+      height: auto; /* Let image height adjust naturally */
+    }
+    .career-slider-img {
+      width: 100%;
+      height: auto; /* Keep aspect ratio */
+      object-fit: contain; /* Avoid cropping on small screens */
+    }
+  }
+
+
+
+</style>
+<body>
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+<header id="navbar-spy" class="header ">
+	<nav id="primary-menu" class="navbar navbar-fixed-top" 
+     style="background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2);">
+
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+<!-- Headphone Icon (always visible, even on mobile) -->
+  
+        <!-- Headphone Icon (always visible, even on mobile) -->
+ 
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="inactive" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+		   <li><a href="listofproducts1.html">Allophatic Formulations</li>
+        <li><a href="surgifre.html">Surgifre</a></li>
+		
+			<li>
+				<a href="fredunapilist.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="fredundcgranules.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="fredunpellets.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+		   <li><a href="healthcareallopathicformulations.html">Allophatic Formulations</li>
+        <li><a href="fredunvet.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="fredunaqua.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="nutraceuticals.html">Nutraceuticals</a>
+			</li>
+			<!--<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>-->
+			
+		</ul>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
+		<ul class="dropdown-menu">
+		  <li><a href="frednavet.html">Fredna Vet Diagnostics</a></li>
+      <li><a href="fredunnutrition.html">Fredun Nutrition</a></li>
+			<li><a href="fredunmobility.html">Fredun Mobility</a></li>
+      <li><a href="fremorglobal.html">Fremor Global</a></li>
+      <li><a href="frednadentalsystems.html">FDS</a></li>
+			<li><a href="chuubalm.html">Chuu Balm</a></li>
+			<li><a href="beautyfred.html">Beauty Fred</a></li>
+      <li><a href="farstore.html">FAR Store</a></li>
+			<li><a href="inklingindia.html">Inkling India</a></li>
+      <li><a href="Iteeha.html">Iteeha</a></li>
+		</ul>
+	</li>
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+							
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Annual reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#news">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors2.html">Board of Directors</a>
+								</li>
+								<li>
+									<!--<a href="portfolio-masonry-2.html">Investors Presentation</a> -->
+								</li>
+								<li>
+									<a href="investorsrelation.html#corporategovernance">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#infoforshareholders">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#shareholdingpattern">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#generalinformation">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#extractofannualreturn">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial Results</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#audited">Audited</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unaudited">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#otherfillingswithstockexchanges">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#statutorydocumentsandinformation">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unclaimeddividend">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="inactive" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+
+	
+
+  <li class="has-dropdown active">
+		<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="about ">About </a>
+		<ul class="dropdown-menu">
+		   <li><a href="investorsrelation.html">Investors Relations</li>
+        <li><a href="companyprofile.html">Company Profile</a></li>
+				<li><a href="boardofdirectors2.html">Board of Directors</a></li>
+		    <li><a href="ourhistory.html">Our History</a></li>
+		
+			
+		</ul>
+	</li>
+
+	 <li class="inactive" >
+		<a href="./contactus.html"  class="#" data-hover="Career">Contact Us</a>
+	</li>
+
+	
+	<!-- li end -->
+	<!-- Elements Menu -->
+
+	<!-- li end -->
+</ul>
+
+<div class="nav navbar-nav navbar-right">
+  <button id="play-audio" class="nav-link" 
+    style="background:none; border:none; cursor:pointer; font-size:20px; color:#000; align-items: center;" >
+    <i class="fa fa-headphones"></i>
+  </button>
+</div>
+
+
+
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+<div class="module module-search pull-left" id="searchModule">
+  <div class="module-icon search-icon" onclick="toggleSearchBox()">
+    <i class="fa fa-search" style="color: #000;"></i>
+    <span class="title">Search</span>
+  </div>
+
+  <!-- Search results go here -->
+  <div id="searchResults" style="margin-bottom: 20px;"></div>
+</div>
+
+
+
+  <!-- .module-search-box end -->			
+
+  <audio id="company-audio" src="assets/audios/Speechoncompany.mp3"></audio>
+
+</header>
+
+
+<!-- SEARCH BOX BELOW NAV -->
+<div class="module-search-box" style="display: none;">
+  <div class="module-content search-box"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form class="search-form" onsubmit="performSearch(); return false;">
+            <input type="text" id="searchInput" class="form-control" placeholder="Type Search Words Then Enter">
+            <a class="search-cancel" href="#" onclick="toggleSearchBox()"><i class="fa fa-close"></i></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+  <section class="career-slider">
+   
+
+    <div class="mySlides">
+    <img src="assets/images/banners/fredun group banner our history-new.jpg"  class="career-slider-img">
+  </div>
+
+  
+  </section>      
+                
+
+
+ <!-- Hero Section -->
+  <!-- Hero Banner -->
+
+
+  <!-- Timeline Section with Background Logo -->
+<div class="timeline-section">
+  <img src="assets/images/logo/logo1.png" alt="Company Logo Background" class="timeline-bg-logo" />
+  
+  <div class="bg-gradient_solid">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Story</h2>
+        <hr>
+      </div>
+      <div class="steps">
+        <!-- Example Step Item -->
+        <div class="steps-container" data-aos="fade-right">
+          <div class="content">
+            <h2>Company was founded</h2>
+            <p></p>
+          </div>
+          <i class="step-line"></i>
+          <div class="date">1978</div>
+        </div>
+
+        <div class="steps-container" data-aos="fade-left">
+          <div class="content">
+            <h2>AFA acquired BMW license for Egypt</h2>
+            <p></p>
+          </div>
+          <i class="step-line"></i>
+          <div class="date">1978</div>
+        </div>
+
+            <div class="steps-container" data-aos="fade-right">
+                <div class="content">
+                    <h2>AFA acquired Bombardier recreational product and vehicles franchise in Egypt</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">1992</div>
+            </div>
+            <div class="steps-container" data-aos="fade-left">
+                <div class="content">
+                    <h2>AFA acquired the Daewoo franchise for Egypt</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">1994</div>
+            </div>
+            <div class="steps-container" data-aos="fade-right">
+                <div class="content">
+                    <h2>Produced the first locally assembled BMW on a rented assembly line</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">1997</div>
+            </div>
+            <div class="steps-container" data-aos="fade-left">
+                <div class="content">
+                    <h2>AFA produced the first locally assembled Daewoo in owned plant</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">1998</div>
+            </div>
+            <div class="steps-container" data-aos="fade-right">
+                <div class="content">
+                    <h2>The first BMW was assembled in AFA owned Plant</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">1999</div>
+            </div>
+            <div class="steps-container" data-aos="fade-left">
+                <div class="content">
+                    <h2>The first Chery (Speranza) range came out of the production line</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">2006</div>
+            </div>
+            <div class="steps-container" data-aos="fade-right">
+                <div class="content">
+                    <h2>The first Chery (Speranza) range came out of the production line</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">2006</div>
+            </div>
+            <div class="steps-container" data-aos="fade-left">
+                <div class="content">
+                    <h2>The first Chery (Speranza) range came out of the production line</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">2006</div>
+            </div>
+			 <div class="steps-container" data-aos="fade-right">
+                <div class="content">
+                    <h2>The first Chery (Speranza) range came out of the production line</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">2006</div>
+            </div>
+            <div class="steps-container" data-aos="fade-left">
+                <div class="content">
+                    <h2>The first Chery (Speranza) range came out of the production line</h2>
+                    <p></p>
+                </div>
+                <i class="step-line"></i>
+                <div class="date">2006</div>
+            </div>
+
+        <!-- Continue the same for other items -->
+        <!-- Alternate fade-left / fade-right for zig-zag animation -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      
+
+
+ <!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer-5">	
+	<!-- Widget Section
+	============================================= -->
+	<div class="footer-widget">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-4 footer-widget-about">
+					<div class="footer-widget-title">
+						<h5>Contact Us</h5>
+					</div>
+					<div class="footer-widget-content">
+						<p class="mb-0">Lorem ipsum dolor sit amet, adipiscing condimentum tristique vel, eleifend sed turpis. Amet, consectetur adipising elit Integer.</p>
+						<div class="footer-widget-contact-link mt-md">
+							<div class="col-xs-12 col-sm-12 col-md-6 mb-30-xs mb-30-sm">
+								<h6>Phone :</h6>
+								<p><i class="fa fa-phone"></i>+91-22-40318111 </p>
+								<p class="mb-0"><i class="fa fa-fax"></i>+91-22-40318133</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<h6>Email :</h6>
+								<p class="mb-0"><i class="fa fa-envelope"></i>business@fredungroup.com</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12  col-md-12 mt-30 mb-30-xs mb-30-sm">
+								<h6>Address :</h6>
+								<p class="mb-0"><i class="fa fa-map-marker"></i>11th Floor, Tower A, Urmi Estate 95, Ganpatrao Kadam Marg, Lower Parel (W), Mumbai 400013</p>
+							</div><!-- .col-md-12 end -->
+						</div>
+					</div>
+				</div><!-- .col-md-4 end -->
+				
+				<div class="col-xs-12 col-sm-12  col-md-8">
+					
+					<div class="row mb-60">
+						<!-- Myaccount Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Pharmaceutical</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Formulations</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Surgifre</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun API</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun DC</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun Pellets</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Service Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Healthcare</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Allophatic</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredunvet</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun Aqua</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Neutraceuticals</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Niche</a>		
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Newsletter -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-newsletter newsletter-widget">
+								<div class="footer-widget-title">
+									<h5>Newsletter</h5>
+								</div>
+								<div class="footer-widget-content">
+									<p class="mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</p>
+									<form class="mailchimp">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="E-mail Address">
+											<span class="input-group-btn">
+											<button class="btn text-capitalize" type="button">join</button>
+											</span>
+										</div>
+										<!-- /input-group -->
+										<div class="subscribe-alert"></div>
+									</form>
+									<!--Mailchimp Form End-->
+								</div>
+							</div><!-- .newsletter-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+						
+					<div class="row">
+						<!-- Information Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Information</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="contactus.html"><i class="fa fa-angle-double-right"></i>Contact Us</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Delivery Information</a>
+									</li>
+									<li>
+										<a href="privacypolicy.html"><i class="fa fa-angle-double-right"></i>Privacy Policy</a>
+									</li>
+									<li>
+										<a href="termsandconditions.html"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Extras Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Company Profile</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li><a href="https://frednavetdiagnostics.com/"><i class="fa fa-angle-double-right"> </i>Fredna Vet Diagnostics</a></li>
+                  <li><a href="https://fredunnutrition.com/"><i class="fa fa-angle-double-right"> </i>Fredun Nutrition</a></li>
+                  <li><a href="fredunmobility.html"><i class="fa fa-angle-double-right"> </i>Fredun Mobility</a></li>
+                  <li><a href="fremorglobal.html"><i class="fa fa-angle-double-right"> </i>Fremor Global</a></li>
+                  <li><a href="frednadentalsystems.html"><i class="fa fa-angle-double-right"> </i>FDS</a></li>
+                  <li><a href="https://chuubalm.com/"><i class="fa fa-angle-double-right"> </i>Chuu Balm</a></li>
+                  <li><a href="beautyfred.html"><i class="fa fa-angle-double-right"> </i>Beauty Fred</a></li>
+                  <li><a href="farstore.html"><i class="fa fa-angle-double-right"> </i>FAR Store</a></li>
+                  <li><a href="inklingindia.html"><i class="fa fa-angle-double-right"> </i>Inkling India</a></li>
+                  <li><a href="Iteeha.html"><i class="fa fa-angle-double-right"> </i>Iteeha</a></li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+								<div class="footer-widget-title">
+									<h5>Investors </h5>
+								</div>
+								<div class="footer-widget-content">
+									<ul class="list-unstyled mb-0">
+                    <li><a href="investorsrelation.html#quarterly-2023"><i class="fa fa-angle-double-right"> </i>Annual report</a></li>
+                    <li><a href="boardofdirectors.html"><i class="fa fa-angle-double-right"> </i>Board of Directors</a></li>
+                    <li><a href="investorsrelation.html#news"><i class="fa fa-angle-double-right"> </i>News & Announcements</a></li>
+                    <li><a href="investorsrelation.html#infoforshareholders"><i class="fa fa-angle-double-right"> </i>Info for Shareholders</a></li>
+                  </div>
+								</div>
+							</div><!-- .tweets-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+					
+				</div><!-- .col-md-8 end -->
+			</div>
+		</div><!-- .container end -->
+	</div>
+  
+  <!-- .footer-widget end -->
+	
+	<!-- Copyrights
+	============================================= -->
+	<div class="footer-copyright bg-dark3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-12">
+					<div class="powered text-uppercase pull-left pull-none-xs mb-15-xs">
+						<p><span class="text-white">Fredun</span> Group <a href="http://themeforest.net/user/7oroof/portfolio?ref=7oroof"></a></p>
+					</div>
+					<div class="copyright pull-right pull-none-xs">
+						<p class="text-capitalize">
+							<span class="text-uppercase">&copy; 2025. All Rights Reserved</span>
+							<a href="privacy.html">Privacy Policy</a> &ndash; <a href="terms.html">Terms of Use</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-copyright end -->
+</footer>
+
+
+ </div><!-- #wrapper end -->
+ <div id="back-to-top" class="backtop">
+ 	<i class="fa fa-angle-up" aria-hidden="true"></i>
+ </div>
+ <div class="hamburger-panel">
+ 	<ul class="list-unstyled list-links">
+		<li><a class="active" href="#">Home</a></li>
+		<li><a href="#">Features</a></li>
+		<li><a href="#">Pages</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Shop</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<div class="social-share">
+		<a class="share-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-facebook"></i></a>
+		<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
+		<a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+		<a class="share-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+		<a class="share-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+	</div>
+	
+	<div class="copywright">
+		<span class="text-white">Mount.</span> Made By <a href="#">zytheme.com</a>
+		<p>© 2016. All Rights Reserved</p>
+	</div>
+
+ </div>
+<!-- Footer Scripts
+============================================= -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false,
+  });
+</script>
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
+</body>
+</html>

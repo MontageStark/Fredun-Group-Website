@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fredun Group | Iteeha</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://unpkg.co/gsap/dist/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	</head>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #c5c0b2;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://thefarstore.com/cdn/shop/files/natures_canvas_website.jpg?v=1701325940&width=1200') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  .navbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 120px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav-left {
+    flex: 1;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 100px;
+  }
+
+  .site-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+  }
+
+  .site-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .site-menu a:hover {
+    color: #0073e6;
+  }
+
+  .container-items {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .item {
+    position: relative;
+    flex-grow: 1;
+    font-family: "Mak";
+    font-size: 220px;
+    transition: all 300ms ease-in-out;
+  }
+
+  .item:hover {
+    flex-grow: 2;
+    font-size: 400px;
+  }
+
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+  }
+
+  .container-img-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    max-width: 400px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 1000;
+    transform: none;
+    transition: transform 0.2s ease;
+  }
+
+  .container-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 20%;
+    padding: 40px;
+    text-transform: uppercase;
+    font-family: "Mak";
+    font-size: 40px;
+    z-index: 2;
+  }
+
+  .header-left span {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .link {
+    margin: 40px 0;
+  }
+
+  .link a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000;
+  }
+
+  @media (max-width: 900px) {
+    .container-items {
+      height: 100px;
+    }
+
+    .item {
+      font-size: 20px;
+    }
+
+    .item:hover {
+      flex-grow: 1;
+      font-size: 20px;
+    }
+
+    .container-img-wrap {
+      display: none;
+    }
+
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .site-menu {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-left {
+      text-align: center;
+    }
+
+    .logo {
+      margin: 10px 0;
+    }
+  
+
+
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+   
+
+    .vision-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .vision-hero1 {
+      background: url(assets/images/banners/8189.jpg) center/cover no-repeat;
+      padding: 5rem 2rem;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.453);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .vision-text {
+      max-width: 700px;
+      text-align: center;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .vision-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .vision-description {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .vision-button {
+      background: #ff8c42;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .vision-button:hover {
+      background: #e6762d;
+    }
+
+    .vision-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: linear-gradient(to right, #0066cc, #0088ff);
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+    .nav-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 20px;
+  padding: 1rem;
+  width: 140px;
+  text-align: center;
+  
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+    .nav-icon:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+.nav-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+    .nav-icon img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+    .nav-icon.active {
+  background: #ffffffad;
+  border: 2px solid #fff;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ffffffcc;
+}
+.nav-icon p {
+  font-weight: 500;
+  font-size: 1rem;
+  
+  text-shadow: 0 1px 2px rgba(233, 230, 230, 0.4);
+}
+
+.nav-icon:hover img {
+  transform: scale(1.1);
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .vision-title {
+        font-size: 2rem;
+      }
+      .vision-description {
+        font-size: 1rem;
+      }
+      .nav-icon {
+        width: 45%;
+      }
+    }
+
+
+  }
+</style>
+
+
+<body>
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+
+
+  <div class="background-image"></div>
+
+  <div class="navbar">
+    <div class="nav-left">All Collections</div>
+
+    <div class="logo">
+      <a href="https://thefarstore.com/">
+        <img src="https://thefarstore.com/cdn/shop/files/new_FAR_logo_png_1_052f74f0-c5d5-49f6-959a-38f254769738_240x.png?v=1720691626" alt="The FAR Store Logo" />
+      </a>
+    </div>
+
+    <div class="site-menu">
+      <a href="https://thefarstore.com/collections/best-seller">Best Sellers</a>
+      <a href="https://thefarstore.com/collections/new-arrivals">New Arrivals</a>
+      <a href="https://thefarstore.com/pages/contact">Contact</a>
+    </div>
+  </div>
+
+
+  
+  <div class="container">
+    <div class="container-items">
+      <div class="container-img-wrap">
+        <div class="container-img"></div>
+      </div>
+
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/natures_canvas_website.jpg?v=1701325940&width=800">
+          <h3>F</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/TableNapkins_A_0003_IMG_1353.jpg?v=1709818114&width=800">
+          <h3>A</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/Nature_sCanvas-Botanical.jpg?v=1746710420&width=800">
+          <h3>R</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/148.png?v=1742988138&width=800">
+          <h3>S</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/257.jpg?v=1746871561&width=800">
+          <h3>T</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/TABLECOVER_COASTAL.jpg?v=1709849231&width=800">
+          <h3>O</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/Giftsleeves7.jpg?v=1706336600&width=800">
+          <h3>R</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/25_1f2353ec-4ac1-4293-a161-4de27425926d.png?v=1741345596&width=900">
+          <h3>E</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+	</body>
+	<script>
+		const allcontainer = gsap.utils.toArray(".container-item");
+		const venueImageWrap = document.querySelector(".container-img-wrap");
+		const venueImage = document.querySelector(".container-img");
+
+		function initcontainer() {
+			allcontainer.forEach((link) => {
+				link.addEventListener("mouseenter", venueHover);
+				link.addEventListener("mouseleave", venueHover);
+				link.addEventListener("mousemove", moveVenueImage);
+			});
+		}
+
+	function moveVenueImage(e) {
+	const offsetX = venueImageWrap.offsetWidth / 2;
+	const xpos = e.clientX - offsetX;
+	const ypos = e.clientY - 500; // ← Increase this value to raise image
+
+	gsap.to(venueImageWrap, {
+		x: xpos,
+		y: ypos,
+		duration: 0.3,
+		ease: "power2.out"
+	});
+}
+
+
+
+
+		function venueHover(e) {
+			if (e.type === "mouseenter") {
+				const targetImage = e.target.dataset.img;
+
+				const tl = gsap.timeline();
+				tl.set(venueImage, {
+					backgroundImage: `url(${targetImage})`,
+				}).to(venueImageWrap, {
+					duration: 0.5,
+					autoAlpha: 1,
+				});
+			} else if (e.type === "mouseleave") {
+				const tl = gsap.timeline();
+				tl.to(venueImageWrap, {
+					duration: 0.5,
+					autoAlpha: 0,
+				});
+			}
+		}
+
+		function init() {
+			initcontainer();
+		}
+
+		window.addEventListener("load", function () {
+			init();
+		});
+
+		tl = new TimelineMax();
+
+		tl.from(".navbar > div", 1.6, {
+			opacity: 0,
+			y: 60,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+
+		tl.from(
+			".site-logo",
+			1.6,
+			{
+				opacity: 0,
+				y: 40,
+				ease: Expo.easeInOut,
+			},
+			"-=1.6"
+		);
+
+		tl.staggerFrom(
+			".site-menu > div",
+			1,
+			{
+				opacity: 0,
+				y: 60,
+				ease: Power2.easeOut,
+			},
+			0.2
+		);
+
+		tl.staggerFrom(
+			".header > div",
+			1,
+			{
+				opacity: 0,
+				y: 60,
+				ease: Power2.easeOut,
+				delay: -1.4,
+			},
+			0.2
+		);
+	</script>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+    ============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mount is a pixel perfect creative multi purpose html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+
+<!-- Fonts
+    ============================================= -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+
+
+
+
+<!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Fredun Group</title>
+<style>
+
+    
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+        }
+        
+        a,
+        a:active,
+        a:focus {
+            color: #6f6f6f;
+            text-decoration: none;
+            transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-duration: .2s;
+            -ms-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -webkit-transition-duration: .2s;
+            -o-transition-duration: .2s;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img {
+    max-width: 100%;
+    height: auto;
+}
+        section {
+            padding: 60px 0;
+           /* min-height: 100vh;*/
+        }
+
+.sec-title{
+  position:relative;
+  z-index: 1;
+  margin-bottom:60px;
+}
+
+.sec-title .title{
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  color: #00aeef;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.sec-title h2{
+  position: relative;
+  display: block;
+  font-size:40px;
+  line-height: 1.28em;
+  color: #222222;
+  font-weight: 600;
+  padding-bottom:18px;
+}
+
+.sec-title h2:before{
+  position:absolute;
+  content:'';
+  left:0px;
+  bottom:0px;
+  width:50px;
+  height:3px;
+  background-color:#d1d2d6;
+}
+
+.sec-title .text{
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  color: #848484;
+  font-weight: 400;
+  margin-top: 35px;
+}
+
+.sec-title.light h2{
+  color: #ffffff;
+}
+
+.sec-title.text-center h2:before{
+  left:50%;
+  margin-left: -25px;
+}
+
+.list-style-one{
+  position:relative;
+}
+
+.list-style-one li{
+  position:relative;
+  font-size:16px;
+  line-height:26px;
+  color: #222222;
+  font-weight:400;
+  padding-left:35px;
+  margin-bottom: 12px;
+}
+
+.list-style-one li:before {
+    content: "\f058";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    display: block;
+    font-size: 18px;
+    padding: 0px;
+    color: #ff2222;
+    font-weight: 600;
+    -moz-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.6;
+    font-family: "Font Awesome 5 Free";
+}
+
+.list-style-one li a:hover{
+  color: #44bce2;
+}
+
+.btn-style-one{
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 10px 30px;
+  font-weight: 600;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  background-color: #00aeef;
+}
+
+.btn-style-one:hover{
+  background-color: #0794c9;
+  color: #ffffff;
+}
+.about-section{
+  position: relative;
+  padding: 300px 0 70px;
+}
+
+.about-section .sec-title{
+  margin-bottom: 45px;
+}
+
+.about-section .content-column{
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.about-section .content-column .inner-column{
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-section .text{
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #848484;
+  font-weight: 400;
+}
+
+.about-section .list-style-one{
+  margin-bottom: 45px;
+}
+
+.about-section .btn-box{
+  position: relative;
+}
+
+.about-section .btn-box a{
+  padding: 15px 50px;
+}
+
+.about-section .image-column{
+  position: relative;
+}
+
+.about-section .image-column .text-layer{
+    position: absolute;
+    right: -110px;
+    top: 50%;
+    font-size: 325px;
+    line-height: 1em;
+    color: #ffffff;
+    margin-top: -175px;
+    font-weight: 500;
+}
+
+.about-section .image-column .inner-column{
+  position: relative;
+  padding-left: 80px;
+  padding-bottom: 0px;
+}
+.about-section .image-column .inner-column .author-desc{
+    position: absolute;
+    bottom: 16px;
+    z-index: 1;
+    background: orange;
+    padding: 10px 15px;
+    left: 96px;
+    width: calc(100% - 152px);
+    border-radius: 50px;
+}
+.about-section .image-column .inner-column .author-desc h2{
+    font-size: 21px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #fff;
+  margin: 0;
+}
+.about-section .image-column .inner-column .author-desc span{
+    font-size: 16px;
+    letter-spacing: 6px;
+    text-align: center;
+    color: #fff;
+  display: block;
+  font-weight: 400;
+}
+.about-section .image-column .inner-column:before{
+    content: '';
+    position: absolute;
+    width: calc(50% + 80px);
+    height: calc(100% + 160px);
+    top: -80px;
+    left: -3px;
+    background: transparent;
+    z-index: 0;
+    border: 44px solid #00aeef;
+}
+
+.about-section .image-column .image-1{
+  position: relative;
+}
+.about-section .image-column .image-2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.about-section .image-column .image-2 img,
+.about-section .image-column .image-1 img{
+  box-shadow: 0 30px 50px rgba(8,13,62,.15);
+      border-radius: 46px;
+}
+
+.about-section .image-column .video-link{
+  position: absolute;
+  left: 70px;
+  top: 170px;
+}
+
+.about-section .image-column .video-link .link{
+  position: relative;
+  display: block;
+  font-size: 22px;
+  color: #191e34;
+  font-weight: 400;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 30px 50px rgba(8,13,62,.15);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.about-section .image-column .video-link .link:hover{
+  background-color: #191e34;
+  
+}
+</style>
+</head>
+
+ 
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+<header id="navbar-spy" class="header ">
+	<nav id="primary-menu" class="navbar navbar-fixed-top" style="background-color: white;">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="active" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+		   <li><a href="allophaticformulations.html">Allophatic Formulations</li>
+        <li><a href="surgifre.html">Surgifre</a></li>
+		
+			<li>
+				<a href="fredunapilist.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="fredundcgranules.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="fredunpellets.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+		   <li><a href="healthcareallopathicformulations.html">Allophatic Formulations</li>
+        <li><a href="fredunvet.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="fredunaqua.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="nutraceuticals.html">Nutraceuticals</a>
+			</li>
+			<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>
+			
+		</ul>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
+		<ul class="dropdown-menu">
+		  <li><a href="#">Fredna Vet Diagnostics</a></li>
+      <li><a href="">Fredun Nutrition</a></li>
+			<li><a href="fredunmobility.html">Fredun Mobility</a></li>
+      <li><a href="fremorglobal.html">Fremor Global</a></li>
+      <li><a href="frednadentalsystems.html">FDS</a></li>
+			<li><a href="https://chuubalm.com/">Chuu Balm</a></li>
+			<li><a href="beautyfred.html">Beauty Fred</a></li>
+      <li><a href="farstore.html">FAR Store</a></li>
+			<li><a href="inklingindia.html">Inkling India</a></li>
+      <li><a href="Iteeha.html">Iteeha</a></li>
+		</ul>
+	</li>
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Quaterly Reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Annual reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#news">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors.html#boardofdirectors">Board of Directors</a>
+								</li>
+								<li>
+									<!--<a href="portfolio-masonry-2.html">Investors Presentation</a> -->
+								</li>
+								<li>
+									<a href="investorsrelation.html#corporategovernance">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#infoforshareholders">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#shareholdingpattern">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#generalinformation">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#extractofannualreturn">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial Results</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#audited">Audited</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unaudited">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#otherfillingswithstockexchanges">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#statutorydocumentsandinformation">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unclaimeddividend">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="inactive" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+
+	
+
+  <li class="has-dropdown">
+		<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="about ">About </a>
+		<ul class="dropdown-menu">
+		   <li><a href="investorsrelation.html">Investors Relations</li>
+        <li><a href="companyprofile.html">Company Profile</a></li>
+				<li><a href="boardofdirectors1.html.html">Board of Directors</a></li>
+		    <li><a href="ourhistory.html">Our History</a></li>
+		
+			
+		</ul>
+	</li>
+
+	 <li class="inactive" >
+		<a href="./contactus.html"  class="#" data-hover="Career">Contact Us</a>
+	</li>
+
+	
+	<!-- li end -->
+	<!-- Elements Menu -->
+	
+	<!-- li end -->
+</ul>
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+<div class="module module-search pull-left" id="searchModule">
+  <div class="module-icon search-icon" onclick="toggleSearchBox()">
+    <i class="fa fa-search"></i>
+    <span class="title">Search</span>
+  </div>
+
+  <!-- Search results go here -->
+  <div id="searchResults" style="margin-bottom: 20px;"></div>
+</div>
+
+
+
+  <!-- .module-search-box end -->			
+</header>
+
+
+<!-- SEARCH BOX BELOW NAV -->
+<div class="module-search-box" style="display: none;">
+  <div class="module-content search-box"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form class="search-form" onsubmit="performSearch(); return false;">
+            <input type="text" id="searchInput" class="form-control" placeholder="Type Search Words Then Enter">
+            <a class="search-cancel" href="#" onclick="toggleSearchBox()"><i class="fa fa-close"></i></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<section class="about-section">
+        <div class="container">
+            <div class="row">                
+                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <span class="title">MESSAGE FROM MANAGING DIRECTOR</span>
+                            <h2>Letter to Shareholders</h2>
+                        </div>
+                        <div class="text">Dear Shareowners, Customers, and Employees,
+At Fredun Pharmaceuticals, our vision is to be a global leader in
+delivering compassionate healthcare. We are driven by the belief
+that healthcare should be accessible, effective, and affordable for
+all. Our journey is one of relentless innovation, customer-centricity, and
+a deep commitment to long-term value creation.
+We envision a world where our products reach every corner of the
+globe, improving lives and creating healthier communities. This year,
+we have taken significant steps toward that vision. We’ve expanded
+our reach, enhanced our capabilities, and laid the foundation for
+future growth. Our mission is not just to grow, but to grow with
+purpose—ensuring that our success translates into real, tangible
+benefits for our customers.</div>
+                      <div class="text">
+                        We are here to serve you next level tutorial that currently in trend to match you with your expertise. Css3 transition is a learning website. where you can find many good quality content related to web development and tutorials about plugins. here we are using html, html5, css, css3, jquery & javascript along with inspirational UI design layout by professionals by using Photoshop and adobe allustrator.
+                      </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInLeft">
+                      <div class="author-desc">
+                        <h2>Fredun Medhora</h2>
+                        <span>Managing Director and CFO</span>
+                      </div>
+                        <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Rahul Kumar Yadav" src="assets/images/boardofdirectors/FredunMedhora.jpg" alt=""></a></figure>
+                     
+                    </div>
+                </div>
+              
+            </div>
+           <div class="sec-title">
+                            <h2>Customer-Centric Innovation</h2>
+                        </div>
+          <div class="text">
+                Our customers are at the heart of everything we do. Their needs guide our innovations, from expanding into
+new markets such as Pet Care, Nutrition, and Cosmeceuticals, to enhancing our existing product lines. We
+strive to anticipate what our customers will need tomorrow, not just meet their needs today. This
+forward-thinking approach keeps us ahead of the curve and ensures that we continue to deliver products
+that truly make a difference
+              </div>
+           <div class="sec-title">
+                            <h2>Long-Term Vision</h2>
+                        </div>
+          <div class="text">
+                Our strategy is built on the foundation of long-term thinking. We’ve made deliberate investments in our
+infrastructure to convert variable costs into fixed ones. This approach allows us to scale efficiently, reducing
+costs while maintaining the highest standards of quality. But we don’t stop there. We believe that the savings
+we achieve through efficiency should benefit our customers directly.
+              </div>
+               <div class="sec-title">
+                            <h2>Delivering Value to Our Customers</h2>
+                        </div>
+          <div class="text">
+                One of our core principles is to pass on the benefits of our growth to our customers. As we scale, we achieve
+efficiencies that enable us to reduce costs. These savings are not kept within the company—they are shared
+with our customers in the form of more affordable prices. By doing this, we strengthen our customer
+relationships, drive loyalty, and make our products more accessible to those who need them most. This is how
+we create value, not just for our shareowners, but for everyone we serve. I believe long-term value creation
+for customers should result in long-term value creation for shareowners.
+              </div>
+              <div class="sec-title">
+                            <h2>The Path Forward</h2>
+                        </div>
+          <div class="text">
+                As we look to the future, our course is clear: continue to expand globally, innovate with purpose, and deliver
+unparalleled value to our customers. We are on the brink of an exciting new chapter, one that promises
+sustainable growth, enduring impact, and a legacy of compassionate healthcare.
+I want to express my deepest gratitude to our employees for their dedication and to our shareowners for their
+continued trust. Together, we are not just building a company; we are building a brighter future for all.
+Thank you for being part of this journey.
+              </div>
+               
+       
+      
+
+        
+        </div>
+        
+    </section>
+
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
+<!-- RS5.0 Core JS Files -->
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="assets/js/rsconfig.js"></script>
+
+</body>
+</html>

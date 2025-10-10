@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fredun Group | Iteeha</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://unpkg.co/gsap/dist/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+
+    <!-- Stylesheets
+    ============================================= -->
+
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+
+
+	</head>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #c5c0b2;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://thefarstore.com/cdn/shop/files/natures_canvas_website.jpg?v=1701325940&width=1200') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  
+
+  .logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 100px;
+  }
+
+  .site-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+  }
+
+  .site-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .site-menu a:hover {
+    color: #0073e6;
+  }
+
+  .container-items {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .item {
+    position: relative;
+    flex-grow: 1;
+    font-family: "Mak";
+    font-size: 220px;
+    transition: all 300ms ease-in-out;
+  }
+
+  .item:hover {
+    flex-grow: 2;
+    font-size: 400px;
+  }
+
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+  }
+
+  .container-img-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    max-width: 400px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 1000;
+    transform: none;
+    transition: transform 0.2s ease;
+  }
+
+  .container-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 20%;
+    padding: 40px;
+    text-transform: uppercase;
+    font-family: "Mak";
+    font-size: 40px;
+    z-index: 2;
+  }
+
+  .header-left span {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .link {
+    margin: 40px 0;
+  }
+
+  .link a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000;
+  }
+
+  @media (max-width: 900px) {
+    .container-items {
+      height: 100px;
+    }
+
+    .item {
+      font-size: 20px;
+    }
+
+    .item:hover {
+      flex-grow: 1;
+      font-size: 20px;
+    }
+
+    .container-img-wrap {
+      display: none;
+    }
+
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .site-menu {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-left {
+      text-align: center;
+    }
+
+    .logo {
+      margin: 10px 0;
+    }
+  
+
+
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+   
+
+    .vision-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .vision-hero1 {
+      background: url(assets/images/banners/8189.jpg) center/cover no-repeat;
+      padding: 5rem 2rem;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.453);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .vision-text {
+      max-width: 700px;
+      text-align: center;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .vision-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .vision-description {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .vision-button {
+      background: #ff8c42;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .vision-button:hover {
+      background: #e6762d;
+    }
+
+    .vision-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: linear-gradient(to right, #0066cc, #0088ff);
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+    .nav-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 20px;
+  padding: 1rem;
+  width: 140px;
+  text-align: center;
+  
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+    .nav-icon:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+.nav-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+    .nav-icon img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+    .nav-icon.active {
+  background: #ffffffad;
+  border: 2px solid #fff;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ffffffcc;
+}
+.nav-icon p {
+  font-weight: 500;
+  font-size: 1rem;
+  
+  text-shadow: 0 1px 2px rgba(233, 230, 230, 0.4);
+}
+
+.nav-icon:hover img {
+  transform: scale(1.1);
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .vision-title {
+        font-size: 2rem;
+      }
+      .vision-description {
+        font-size: 1rem;
+      }
+      .nav-icon {
+        width: 45%;
+      }
+    }
+
+
+  }
+</style>
+
+
+<body>
+
+<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+
+
+  <div class="background-image"></div>
+
+  <header id="navbar-spy" class="header ">
+	<nav id="primary-menu" class="navbar navbar-fixed-top " style="background-color: white;">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="active" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+		   <li><a href="listofproducts1.html">Allophatic Formulations</li>
+        <li><a href="surgifre.html">Surgifre</a></li>
+		
+			<li>
+				<a href="fredunapilist.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="fredundcgranules.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="fredunpellets.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+		   <li><a href="healthcareallopathicformulations.html">Allophatic Formulations</li>
+        <li><a href="fredunvet.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="fredunaqua.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="nutraceuticals.html">Nutraceuticals</a>
+			</li>
+			<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>
+			
+		</ul>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
+		<ul class="dropdown-menu">
+		  <li><a href="#">Fredna Vet Diagnostics</a></li>
+      <li><a href="">Fredun Nutrition</a></li>
+			<li><a href="fredunmobility.html">Fredun Mobility</a></li>
+      <li><a href="fremorglobal.html">Fremor Global</a></li>
+      <li><a href="frednadentalsystems.html">FDS</a></li>
+			<li><a href="https://chuubalm.com/">Chuu Balm</a></li>
+			<li><a href="beautyfred.html">Beauty Fred</a></li>
+      <li><a href="farstore.html">FAR Store</a></li>
+			<li><a href="inklingindia.html">Inkling India</a></li>
+      <li><a href="Iteeha.html">Iteeha</a></li>
+		</ul>
+	</li>
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Quaterly Reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Annual reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#news">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors.html#boardofdirectors">Board of Directors</a>
+								</li>
+								<li>
+									<!--<a href="portfolio-masonry-2.html">Investors Presentation</a> -->
+								</li>
+								<li>
+									<a href="investorsrelation.html#corporategovernance">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#infoforshareholders">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#shareholdingpattern">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#generalinformation">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#extractofannualreturn">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial Results</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#audited">Audited</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unaudited">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#otherfillingswithstockexchanges">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#statutorydocumentsandinformation">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unclaimeddividend">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="inactive" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+
+	
+
+  <li class="has-dropdown">
+		<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="about ">About </a>
+		<ul class="dropdown-menu">
+		   <li><a href="investorsrelation.html">Investors Relations</li>
+        <li><a href="companyprofile.html">Company Profile</a></li>
+				<li><a href="boardofdirectors1.html.html">Board of Directors</a></li>
+		    <li><a href="ourhistory.html">Our History</a></li>
+		
+			
+		</ul>
+	</li>
+
+	 <li class="inactive" >
+		<a href="./contactus.html"  class="#" data-hover="Career">Contact Us</a>
+	</li>
+
+	
+	<!-- li end -->
+	<!-- Elements Menu -->
+	
+	<!-- li end -->
+</ul>
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+<div class="module module-search pull-left" id="searchModule">
+  <div class="module-icon search-icon" onclick="toggleSearchBox()">
+    <i class="fa fa-search"></i>
+    <span class="title">Search</span>
+  </div>
+
+  <!-- Search results go here -->
+  <div id="searchResults" style="margin-bottom: 20px;"></div>
+</div>
+
+
+
+  <!-- .module-search-box end -->			
+</header>
+
+
+<!-- SEARCH BOX BELOW NAV -->
+<div class="module-search-box" style="display: none;">
+  <div class="module-content search-box"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form class="search-form" onsubmit="performSearch(); return false;">
+            <input type="text" id="searchInput" class="form-control" placeholder="Type Search Words Then Enter">
+            <a class="search-cancel" href="#" onclick="toggleSearchBox()"><i class="fa fa-close"></i></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+  
+  <div class="container">
+    <div class="container-items">
+      <div class="container-img-wrap">
+        <div class="container-img"></div>
+      </div>
+
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/natures_canvas_website.jpg?v=1701325940&width=800">
+          <h3>F</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/TableNapkins_A_0003_IMG_1353.jpg?v=1709818114&width=800">
+          <h3>A</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/Nature_sCanvas-Botanical.jpg?v=1746710420&width=800">
+          <h3>R</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/148.png?v=1742988138&width=800">
+          <h3>S</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/257.jpg?v=1746871561&width=800">
+          <h3>T</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/TABLECOVER_COASTAL.jpg?v=1709849231&width=800">
+          <h3>O</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/Giftsleeves7.jpg?v=1706336600&width=800">
+          <h3>R</h3>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#" class="container-item" data-img="https://thefarstore.com/cdn/shop/files/25_1f2353ec-4ac1-4293-a161-4de27425926d.png?v=1741345596&width=900">
+          <h3>E</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+	</body>
+	<script>
+		const allcontainer = gsap.utils.toArray(".container-item");
+		const venueImageWrap = document.querySelector(".container-img-wrap");
+		const venueImage = document.querySelector(".container-img");
+
+		function initcontainer() {
+			allcontainer.forEach((link) => {
+				link.addEventListener("mouseenter", venueHover);
+				link.addEventListener("mouseleave", venueHover);
+				link.addEventListener("mousemove", moveVenueImage);
+			});
+		}
+
+	function moveVenueImage(e) {
+	const offsetX = venueImageWrap.offsetWidth / 2;
+	const xpos = e.clientX - offsetX;
+	const ypos = e.clientY - 500; // ← Increase this value to raise image
+
+	gsap.to(venueImageWrap, {
+		x: xpos,
+		y: ypos,
+		duration: 0.3,
+		ease: "power2.out"
+	});
+}
+
+
+
+
+		function venueHover(e) {
+			if (e.type === "mouseenter") {
+				const targetImage = e.target.dataset.img;
+
+				const tl = gsap.timeline();
+				tl.set(venueImage, {
+					backgroundImage: `url(${targetImage})`,
+				}).to(venueImageWrap, {
+					duration: 0.5,
+					autoAlpha: 1,
+				});
+			} else if (e.type === "mouseleave") {
+				const tl = gsap.timeline();
+				tl.to(venueImageWrap, {
+					duration: 0.5,
+					autoAlpha: 0,
+				});
+			}
+		}
+
+		function init() {
+			initcontainer();
+		}
+
+		window.addEventListener("load", function () {
+			init();
+		});
+
+		tl = new TimelineMax();
+
+		tl.from(".navbar > div", 1.6, {
+			opacity: 0,
+			y: 60,
+			ease: Expo.easeInOut,
+			delay: 0.6,
+		});
+
+		tl.from(
+			".site-logo",
+			1.6,
+			{
+				opacity: 0,
+				y: 40,
+				ease: Expo.easeInOut,
+			},
+			"-=1.6"
+		);
+
+		tl.staggerFrom(
+			".site-menu > div",
+			1,
+			{
+				opacity: 0,
+				y: 60,
+				ease: Power2.easeOut,
+			},
+			0.2
+		);
+
+		tl.staggerFrom(
+			".header > div",
+			1,
+			{
+				opacity: 0,
+				y: 60,
+				ease: Power2.easeOut,
+				delay: -1.4,
+			},
+			0.2
+		);
+	</script>
+  </body>
+</html>

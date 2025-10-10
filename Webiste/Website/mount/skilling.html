@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+    ============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mount is a pixel perfect creative multi purpose html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+
+<!-- Fonts
+    ============================================= -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700%7CRaleway%3A800%2C500%2C400' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- RS5.0 Main Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+
+<!-- LOAD JQUERY LIBRARY -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<!-- REVOLUTION JS FILES -->
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+<!-- PARTICLES ADD-ON FILES -->
+		<link rel='stylesheet' href='assets/revolution/revolution-addons/particles/css/revolution.addon.particles.css?ver=1.0.3' type='text/css' media='all' />
+		<script type='text/javascript' src='assets/revolution/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+	(Load Extensions only on Local File Systems !  
+	The following part can be removed on Server for On Demand Loading) -->	
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Skilling</title>
+
+</head>
+<style>
+ body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f5f8fa;
+  color: #333;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+.skill-section {
+  padding: 4rem 2rem;
+}
+
+.skill-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.skill-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.skill-reverse {
+  flex-direction: row-reverse;
+}
+
+.skill-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.skill-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Hero */
+.skill-hero {
+  background: url('https://img.freepik.com/premium-photo/businessman-hold-man-icon-with-light-bulbs-ideas-new-ideas-with-innovative-technology-creativity-concept-creativity-with-bulbs-that-shine-glitter_150455-11852.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.skill-hero-overlay {
+  text-align: center;
+  background-color: rgba(0,0,0,0.6);
+  padding: 2rem;
+  color: #fff;
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+.skill-hero h1 {
+  font-size: 2.8rem;
+}
+
+.skill-hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Highlights Grid */
+.skill-highlight-section {
+  background: #eaf2f7;
+  border-radius: 20px;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.03);
+}
+
+.skill-card img {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.skill-center {
+  text-align: center;
+}
+
+/* CTA */
+.skill-cta {
+  background: #136ca8;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 0 0 30px 30px;
+}
+
+.skill-cta-button {
+  background: #fff;
+  color: #136ca8;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.skill-cta-button:hover {
+  background: #e6e6e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-hero h1 {
+    font-size: 2rem;
+  }
+
+  .skill-hero p {
+    font-size: 1rem;
+  }
+
+  .skill-row {
+    flex-direction: column;
+  }
+
+  .skill-reverse {
+    flex-direction: column;
+  }
+
+  .skill-section {
+    padding: 2rem 1rem;
+  }
+}
+
+</style>
+<body>
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+<header id="navbar-spy" class="header header-1">
+	<nav id="primary-menu" class="navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="#" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+		   <li><a href="allophaticformulations.html">Allophatic Formulations</li>
+        <li><a href="home-onepage-1.html">Surgifre</a></li>
+		
+			<li>
+				<a href="home-personal.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="home-showcase.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="home-alternative.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+		   <li><a href="home-blog-1.html">Allophatic Formulations</li>
+        <li><a href="home-onepage-1.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="home-personal.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="home-showcase.html">Neutraceuticals</a>
+			</li>
+			<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>
+			
+		</ul>
+	</li>
+	
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+								<li>
+									<a href="portfolio-classic-2col.html">Quaterly Reports</a>
+								</li>
+								<li>
+									<a href="portfolio-classic-2col-right-sidebar.html">Annual reports</a>
+								</li>
+								<li>
+									<a href="portfolio-classic-2col-left-sidebar.html">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors.html">Board of Directors</a>
+								</li>
+								<li>
+									<a href="portfolio-masonry-2.html">Investors Presentation</a>
+								</li>
+								<li>
+									<a href="portfolio-masonry-2.html">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="portfolio-gallery-2col.html">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="portfolio-gallery-2col-right-sidebar.html">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="portfolio-gallery-2col-right-sidebar.html">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="portfolio-gallery-2col-without-space.html">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financail Results</a>
+							<ul>
+								<li>
+									<a href="portfolio-fullwidth-2col.html">Audited</a>
+								</li>
+								<li>
+									<a href="portfolio-fullwidth-3col.html">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="portfolio-single-1.html">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="portfolio-single-2.html">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="portfolio-single-3.html">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="active" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+	<!-- li end -->
+	<!-- Elements Menu -->
+	
+	<!-- li end -->
+</ul>
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+				<div class="module module-search pull-left">
+					<div class="module-icon search-icon">
+						<i class="fa fa-search"></i>
+						<span class="title">search</span>
+					</div>
+						
+				</div>
+				<!-- .module-search-->
+				<!-- Module Side NAV -->
+				
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	
+</div>
+	<div class="module-search-box">
+		<div class="module-content search-box">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12  col-md-12">
+						<form class="search-form">
+							<input type="text" class="form-control" placeholder="Type Search Words Then Enter">
+							<a class="search-cancel" href="#"><i class="fa fa-close"></i></a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- .module-search-box end -->			
+</header>
+        
+                
+
+
+ <!-- Hero Section -->
+  <section class="skill-hero">
+    
+  </section>
+
+  <!-- Intro Section -->
+  <section class="skill-section">
+    <div class="skill-container skill-row" data-aos="fade-right" data-aos-delay="500">
+      <div class="skill-text">
+        <h2>Transforming Lives With Skills</h2>
+        <p>
+          At Fredun Group, we understand that employment begins with ability. 
+		  That’s why our skilling programs — especially under <strong>Inkling India</strong> — are tailored to help the differently-abled, unemployed youth, and single mothers acquire practical, job-ready skills.
+		  We partner with vocational institutes and employers to align our training with real-world opportunities. 
+		  Each program includes soft skills development, interview preparation, and basic financial literacy.
+		   Flexible learning formats ensure that participants can balance personal responsibilities while upskilling. 
+		   Post-training job placements and internship support help bridge the gap between learning and earning. 
+		   Our mission is to create pathways to dignity, independence, and lasting change through meaningful employment.
+
+        </p>
+      </div>
+      <div class="skill-image">
+        <img src="https://img.freepik.com/premium-photo/woman-is-smiling-working-machine_311725-18542.jpg" alt="Skilling Introduction" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Inkling India Integration -->
+  <section class="skill-section">
+    <div class="skill-container skill-row skill-reverse" data-aos="fade-left" data-aos-delay="500">
+      <div class="skill-text">
+        <h2>Inkling India – Skills for All</h2>
+        <p>
+          <strong>Inkling India</strong> provides personalized skilling modules for people with disabilities and those lacking family support. 
+		  From spoken English and digital literacy to tailoring, painting, and basic tech repairs — every course is hands-on and designed to build income potential. 
+		  All training is accessible, inclusive, and free.
+		  We ensure that training environments are mobility-friendly and equipped with assistive tools like sign language support and screen readers. 
+		  Individual progress is monitored closely to adapt learning methods and boost confidence. 
+		  Guest sessions with successful alumni inspire and motivate current learners. 
+		  Small batch sizes allow for focused attention and peer-to-peer collaboration. 
+		  At Inkling India, we believe that skills not only open doors to jobs — they unlock self-worth and hope.
+
+        </p>
+      </div>
+      <div class="skill-image">
+        <img src="https://img.freepik.com/premium-photo/happy-halloween-celebration-2024-discount-coupon-code-back-school-home-tablemother_791740-2812.jpg" alt="Inkling Skilling Program" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Women Empowerment -->
+  <section class="skill-section">
+    <div class="skill-container skill-row" data-aos="fade-right" data-aos-delay="500">
+      <div class="skill-text">
+        <h2>Skilling Women for Financial Freedom</h2>
+        <p>
+          We actively conduct vocational training workshops for women in rural and urban slum areas. 
+		  Programs include sewing, beauty & wellness, handicraft creation, and retail training. 
+		  These skills help women start their own businesses or earn consistent income, creating independence and dignity.
+		  We also provide micro-finance guidance and support to help women launch and sustain their ventures. 
+		  Training sessions are scheduled flexibly to accommodate household responsibilities. 
+		  Successful participants often return as trainers, creating a cycle of empowerment. 
+		  Community showcases and exhibitions give women a platform to sell their products and gain confidence. 
+		  Through these initiatives, we aim to break economic barriers and uplift entire families, one skilled woman at a time.
+
+        </p>
+      </div>
+      <div class="skill-image">
+        <img src="https://img.freepik.com/premium-photo/asian-indian-girl-clothe-manufacturing-worker-factory_835895-11002.jpg" alt="Women Skilling" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Youth and Employability -->
+  <section class="skill-section">
+    <div class="skill-container skill-row skill-reverse" data-aos="fade-left" data-aos-delay="500">
+      <div class="skill-text">
+        <h2>Upskilling Youth for the Future</h2>
+        <p>
+          Our youth training programs include basic coding, mobile repairing, computer literacy, resume writing, and soft skills. These ensure that young individuals, especially those from underprivileged backgrounds, are ready for both employment and entrepreneurship opportunities.
+        We collaborate with industry experts to keep our curriculum aligned with evolving market needs. Career guidance sessions help youth identify their strengths and choose suitable paths. Internships and job placement support bridge the gap between training and real-world experience. Special focus is placed on digital inclusion to prepare them for a tech-driven future. By investing in youth potential today, we’re building the skilled workforce of tomorrow.
+
+		</p>
+      </div>
+      <div class="skill-image">
+        <img src="https://img.freepik.com/premium-photo/imagine-nadu-institution-college-student-with-people-face-students-are-explaining-their_1078199-23678.jpg" alt="Youth Skilling" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Skilling Highlights -->
+  <section class="skill-section skill-highlight-section" data-aos="fade-right" data-aos-delay="500">
+    <div class="skill-container">
+      <h2 class="skill-center">Our Skilling Modules</h2>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <img src="https://img.freepik.com/premium-photo/boy-is-using-laptop-with-many-icons-wall-him_1181948-16353.jpg" alt="Computer Skills" />
+          <h3>Digital Skills</h3>
+          <p>MS Office, email etiquette, digital marketing, and cyber safety for job-ready skills.</p>
+        </div>
+        <div class="skill-card">
+          <img src="https://img.freepik.com/premium-photo/sewing-class-progress-with-students-learning-use-sewing-machines-make-simple-garments4_1247965-109483.jpg" alt="Tailoring" />
+          <h3>Tailoring & Handicraft</h3>
+          <p>Practical stitching classes with startup guidance for small tailoring businesses.</p>
+        </div>
+        <div class="skill-card">
+          <img src="https://img.freepik.com/premium-photo/closeup-man-repairing-open-smartphone_841543-52644.jpg" alt="Technical Skills" />
+          <h3>Tech Repair</h3>
+          <p>Basic training in mobile repair, hardware troubleshooting, and support tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="skill-cta">
+    <div class="skill-container">
+      <h2 style="color: #fff;">Be a Part of Our Mission</h2>
+      <p style="color: #e6e6e6;">Partner, volunteer, or sponsor a training session. Help us create skill-ready communities across India.</p>
+      <a href="contact.html" class="skill-cta-button">Get Involved</a>
+    </div>
+  </section>
+            
+
+    <!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer-1">
+	<!-- Social bar
+	============================================= -->
+	<div class="footer-social">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-12">
+					<div class="footer-social-bg">
+						<div class="footer-social-info pull-left pull-none-xs">
+							<p class="mb-0">Don’t Miss To Follow Us On Our Social Networks Official Accounts.</p>
+						</div>
+						<div class="footer-social-icon pull-right text-right pull-none-xs">
+							<a class="facebook" href="#">
+								<i class="fa fa-facebook"></i><i class="fa fa-facebook"></i>
+							</a>
+							<a class="twitter" href="#" >
+								<i class="fa fa-twitter"></i><i class="fa fa-twitter"></i>
+							</a>
+							<a class="pinterest" href="#">
+								<i class="fa fa-pinterest"></i><i class="fa fa-pinterest"></i>
+							</a>
+							<a class="vimeo" href="#">
+								<i class="fa fa-vimeo-square"></i><i class="fa fa-vimeo-square"></i>
+							</a>
+							<a class="linkedin" href="#">
+								<i class="fa fa-linkedin"></i><i class="fa fa-linkedin"></i>
+							</a>
+							<a class="rss" href="#">
+								<i class="fa fa-rss"></i><i class="fa fa-rss"></i>
+							</a>						
+						</div>
+					</div><!-- .footer-social-bg end -->
+				</div>
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-social end -->
+	
+	<!-- Widget Section
+	============================================= -->
+	<div class="footer-widget">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-4 footer-widget-about">
+					<div class="footer-widget-title">
+						<h5>Contact Us</h5>
+					</div>
+					<div class="footer-widget-content">
+						<p class="mb-0">Lorem ipsum dolor sit amet, adipiscing condimentum tristique vel, eleifend sed turpis. Amet, consectetur adipising elit Integer.</p>
+						<div class="footer-widget-contact-link mt-md">
+							<div class="col-xs-12 col-sm-12 col-md-6 mb-30-xs mb-30-sm">
+								<h6>Phone :</h6>
+								<p><i class="fa fa-phone"></i>+ 2 01065370701</p>
+								<p class="mb-0"><i class="fa fa-fax"></i>+ 2 01065370701</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<h6>Email :</h6>
+								<p><i class="fa fa-envelope"></i>7oroof@7oroof.com</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12  col-md-12 mt-30 mb-30-xs mb-30-sm">
+								<h6>Address :</h6>
+								<p class="mb-0"><i class="fa fa-map-marker"></i>2 AlBahr St, Tanta , AlGharbia, Egypt.</p>
+							</div><!-- .col-md-12 end -->
+						</div>
+					</div>
+				</div><!-- .col-md-4 end -->
+				<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-flickr flickr-widget mb-30-xs mb-30-sm">
+					<div class="footer-widget-title">
+						<h5>Flickr Stream</h5>
+					</div>
+					<div class="footer-widget-content">
+						<div id="flickr-feed"></div>
+						<a class="flickr-more" href="#">View Stream On Flickr</a>
+					</div>
+				</div><!-- .col-md-3 end -->
+				<div class="col-xs-12 col-sm-12  col-md-2 footer-widget-link">
+					<div class="footer-widget-title">
+						<h5>Links</h5>
+					</div>
+					<div class="footer-widget-content">
+						<ul class="list-unstyled">
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Branding</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Typography</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>UI Design</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Wordpress</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Development</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Photography</a>
+							</li> 	
+						</ul>
+					</div>
+				</div><!-- .col-md-2 end -->
+				<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-tweets tweets-widget">
+					<div class="footer-widget-title">
+						<h5>Latest Tweets</h5>
+					</div>
+					<div class="footer-widget-content">
+						<div id="twitter-feed"></div>
+					</div>
+				</div><!-- .col-md-3 end -->
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-widget end -->
+	
+	<!-- Copyrights
+	============================================= -->
+	<div class="footer-copyright bg-dark3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-12">
+					<div class="powered text-uppercase pull-left pull-none-xs mb-15-xs">
+						<p><span class="text-white">Mount.</span> Made With Love By <a href="http://themeforest.net/user/7oroof/portfolio?ref=7oroof">7oroof.com</a></p>
+					</div>
+					<div class="copyright pull-right pull-none-xs">
+						<p class="text-capitalize">
+							<span class="text-uppercase">&copy; 2016. All Rights Reserved</span>
+							<a href="privacy.html">Privacy Policy</a> &ndash; <a href="terms.html">Terms of Use</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-copyright end -->
+</footer>
+ </div><!-- #wrapper end -->
+ <div id="back-to-top" class="backtop">
+ 	<i class="fa fa-angle-up" aria-hidden="true"></i>
+ </div>
+ <div class="hamburger-panel">
+ 	<ul class="list-unstyled list-links">
+		<li><a class="active" href="#">Home</a></li>
+		<li><a href="#">Features</a></li>
+		<li><a href="#">Pages</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Shop</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<div class="social-share">
+		<a class="share-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-facebook"></i></a>
+		<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
+		<a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+		<a class="share-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+		<a class="share-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+	</div>
+	
+	<div class="copywright">
+		<span class="text-white">Mount.</span> Made By <a href="#">zytheme.com</a>
+		<p>© 2016. All Rights Reserved</p>
+	</div>
+
+ </div>
+ <!-- Footer Scripts
+============================================= -->
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
+</body>
+</html>

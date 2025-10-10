@@ -1,0 +1,2985 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+    ============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mount is a pixel perfect creative multi purpose html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+<!-- Fonts
+    ============================================= -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet/less" type="text/css" href="assets/less/style.less" />
+<link href="assets/css/style.css" rel="stylesheet">
+<script src="assets/js/less.js" type="text/javascript"></script>
+
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+ <style>* {
+  box-sizing: border-box;
+}
+
+
+
+ * {
+  box-sizing: border-box;
+}
+
+.tab-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4; /* Optional background */
+  padding: 20px;
+}
+
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional for better visibility */
+  border-radius: 10px; /* Optional */
+  background: #fff;    /* Optional */
+}
+
+/* Style the tab */
+.tab {
+  width: 100%;
+  max-width: 250px;
+  background: linear-gradient(to bottom, #f7f7f7, #ddd);
+  border-right: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.tab button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #333;
+}
+
+.tab button:hover {
+  background: #2196F3;
+  color: white;
+  transform: translateX(5px);
+}
+
+.tab button.active {
+  background: #0d47a1;
+  color: white;
+}
+
+/* Tab content wrapper to handle auto height */
+.tabcontent-wrapper {
+  flex: 1;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Tab content box */
+.tabcontent {
+  display: none;
+  animation: fadeEffect 0.5s ease-in-out;
+}
+
+.tabcontent h4 {
+  margin-top: 20px;
+  color: #0d47a1;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.tabcontent ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.tabcontent li {
+  padding: 5px 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-tags span {
+  background-color: #2196F3;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.category-tags span:hover {
+  background-color: #0d47a1;
+}
+
+/* Fade in animation */
+@keyframes fadeEffect {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tab-container {
+    flex-direction: column;
+  }
+
+  .tab {
+    flex-direction: row;
+    overflow-x: auto;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .tab button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .tabcontent-wrapper {
+    padding: 15px;
+  }
+
+  .category-tags {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .category-tags::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tabcontent {
+    scroll-margin-top: 120px;
+  }
+}
+
+.navbar-nav li a {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+    padding: 45px 0 8px;
+}
+</style>
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Fredunvet</title>
+</head>
+<body>
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="wrapper clearfix">
+<header id="navbar-spy" class="header ">
+	<nav id="primary-menu" class="navbar navbar-fixed-top" 
+     style="background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2);">
+
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+<!-- Headphone Icon (always visible, even on mobile) -->
+  
+        <!-- Headphone Icon (always visible, even on mobile) -->
+ 
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="inactive" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown ">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+		   <li><a href="listofproducts1.html">Allophatic Formulations</li>
+        <li><a href="surgifre.html">Surgifre</a></li>
+		
+			<li>
+				<a href="fredunapilist.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="fredundcgranules.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="fredunpellets.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown active">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+		   <li><a href="healthcareallopathicformulations.html">Allophatic Formulations</li>
+        <li><a href="fredunvet.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="fredunaqua.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="nutraceuticals.html">Nutraceuticals</a>
+			</li>
+			<!--<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>-->
+			
+		</ul>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
+		<ul class="dropdown-menu">
+		  <li><a href="frednavet.html">Fredna Vet Diagnostics</a></li>
+      <li><a href="fredunnutrition.html">Fredun Nutrition</a></li>
+			<li><a href="fredunmobility.html">Fredun Mobility</a></li>
+      <li><a href="fremorglobal.html">Fremor Global</a></li>
+      <li><a href="frednadentalsystems.html">FDS</a></li>
+			<li><a href="chuubalm.html">Chuu Balm</a></li>
+			<li><a href="beautyfred.html">Beauty Fred</a></li>
+      <li><a href="farstore.html">FAR Store</a></li>
+			<li><a href="inklingindia.html">Inkling India</a></li>
+      <li><a href="Iteeha.html">Iteeha</a></li>
+		</ul>
+	</li>
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+							
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Annual reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#news">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors2.html">Board of Directors</a>
+								</li>
+								<li>
+									<!--<a href="portfolio-masonry-2.html">Investors Presentation</a> -->
+								</li>
+								<li>
+									<a href="investorsrelation.html#corporategovernance">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#infoforshareholders">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#shareholdingpattern">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#generalinformation">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#extractofannualreturn">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial Results</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#audited">Audited</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unaudited">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#otherfillingswithstockexchanges">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#statutorydocumentsandinformation">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unclaimeddividend">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="inactive" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+
+	
+
+  <li class="has-dropdown">
+		<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="about ">About </a>
+		<ul class="dropdown-menu">
+		   <li><a href="investorsrelation.html">Investors Relations</li>
+        <li><a href="companyprofile.html">Company Profile</a></li>
+				<li><a href="boardofdirectors2.html">Board of Directors</a></li>
+		    <li><a href="ourhistory.html">Our History</a></li>
+		
+			
+		</ul>
+	</li>
+
+	 <li class="inactive" >
+		<a href="./contactus.html"  class="#" data-hover="Career">Contact Us</a>
+	</li>
+
+	
+	<!-- li end -->
+	<!-- Elements Menu -->
+
+	<!-- li end -->
+</ul>
+
+<div class="nav navbar-nav navbar-right">
+  <button id="play-audio" class="nav-link" 
+    style="background:none; border:none; cursor:pointer; font-size:20px; color:#000; align-items: center;" >
+    <i class="fa fa-headphones"></i>
+  </button>
+</div>
+
+
+
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+<div class="module module-search pull-left" id="searchModule">
+  <div class="module-icon search-icon" onclick="toggleSearchBox()">
+    <i class="fa fa-search" style="color: #000;"></i>
+    <span class="title">Search</span>
+  </div>
+
+  <!-- Search results go here -->
+  <div id="searchResults" style="margin-bottom: 20px;"></div>
+</div>
+
+
+
+  <!-- .module-search-box end -->			
+
+  <audio id="company-audio" src="assets/audios/Speechoncompany.mp3"></audio>
+
+</header>
+
+
+<!-- SEARCH BOX BELOW NAV -->
+<div class="module-search-box" style="display: none;">
+  <div class="module-content search-box"> 
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <form class="search-form" onsubmit="performSearch(); return false;">
+            <input type="text" id="searchInput" class="form-control" placeholder="Type Search Words Then Enter">
+            <a class="search-cancel" href="#" onclick="toggleSearchBox()"><i class="fa fa-close"></i></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Page Title #1
+============================================= -->
+<section id="page-title" class="page-title bg-overlay bg-overlay-dark">
+	<div class="bg-section" >
+		<img src="assets/images/banners/Investors.jpg" alt="Background"/>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12  col-md-12">
+				<div class="title-1 text-center">
+					<ol class="breadcrumb">
+						
+					</ol>
+					<div class="title-heading">
+						<h2><br>Fredunvet</h2>
+					</div>
+				</div>
+				<!-- .page-title end -->
+			</div>
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+	</div>
+	<!-- .container end -->
+</section>
+<!-- #page-title end -->
+
+
+
+
+<section>
+ <div class="tab-container">
+  <div class="tab">
+    <button class="tablinks" onmouseover="openCity(event, 'Growth')">GROWTH PROMOTOR</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Antibiotics')">ANTIBIOTICS / ANTIBACTERIALS</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Coccidials')">ANTICOCCIDIALS / COCCIDIOSTATS</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Anthelmintic')">ANTHELMINTIC</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Phytase')">PHYTASE</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Mycoplasmal')">ANTIMYCOPLASMAL</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Liver')">LIVER TONIC</button>
+    <button class="tablinks" onmouseover="openCity(event, 'OtherProducts')">OTHER PRODUCTS</button>
+    <button class="tablinks" onmouseover="openCity(event, 'VitaminsLiquid')">VITAMINS LIQUID</button>
+    <button class="tablinks" onmouseover="openCity(event, 'MineralsPowder')">MULTIMINERALS & MULTIVITAMINS POWDER</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Disinfectants')">DISINFECTANTS</button>
+    <button class="tablinks" onmouseover="openCity(event, 'Livestock')">LIVE STOCK / BOLUS TABLETS</button>
+  </div>
+
+ 
+
+
+
+
+<div class="tabcontent-wrapper">
+    <div id="Growth" class="tabcontent">
+      <h3>GROWTH PROMOTOR</h3>
+      <!-- Search Input -->
+  <input type="text" id="searchInput-growth" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('growth')">
+
+
+  <h4 id="tabletListLabel-growth-1">GROWAY</h4> 
+<ul id="tabletList-growth-1">
+  <li>
+    <strong>GROWAY</strong> – Bacitracin Methylene Disalicylate 10% Animal Feed Premix
+    <ul>
+      <li><strong>Each kg contains:</strong>
+        <ul>
+          <li>Bacitracin Methylene Disalicylate 100 gms</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Growth  Promoter</li>
+          <li>Improves FCR</li>
+          <li>Gives better carcass quality</li>
+          <li>Remarkable increase in egg production</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>For Growth Promotion</li>
+          <li>150-200 gms/ton of feed for broilers layers & breeders</li>
+          <li>To optimize egg production</li>
+          <li>110-275 gms/ ton of feed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kgs, 10 kgs & 25 kg Bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-growth-2">COLI-APPETI</h4> 
+<ul id="tabletList-growth-2">
+  <li>
+    <strong>COLI-APPETI</strong> – Colistin Sulphate 10% Feed Premix
+    <ul>
+      <li><strong>Each kg contains:</strong>
+        <ul>
+          <li>Colistin Sulphate USP (equivalent to colistin  base) 100 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Promotes Growth</li>
+          <li>Increases feed utilization</li>
+          <li>Antibacterial activity against Gram negative bacteria</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>For prophylaxis and growth promotion</li>
+          <li>50 gms/MT of feed</li>
+          <li>For Treatment</li>
+          <li>200 gms/ton of feed or</li>
+          <li>Dissolve 2 gms in 15 to 20 Liters of drinking water for 75-100 birds for 3-5 day or,</li>
+          <li>As Directed by Veterianian</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 50 gms & 200 packs 25 kg HDPE Laminated Bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-growth-3">FATTY FACTS</h4> 
+<ul id="tabletList-growth-3">
+  <li>
+    <strong>FATTY FACTS</strong> – Fats for Monogastric Animals (Swine, Poultry)
+    <ul>
+      <li><strong>Each kg contains:</strong>
+        <ul>
+          <li>Total Fat Content: 99.0% Min</li>
+          <li>Free Fatty Acid: 1-10%</li>
+          <li>Iodine Value: 14-18</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>For economical high energy source & for Better growth</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Add 2 - 5% of  FATTY FACTS in the animal feed or consult a local veterinary nutritionist.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kgs, 10 kgs & 25 kgs Bag</li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+<!--</div>-->
+
+
+
+<div id="Antibiotics" class="tabcontent">
+      <h3>ANTIBIOTICS / ANTIBACTERIALS</h3>
+      <!-- Search Input -->
+  <input type="text" id="searchInput-antibiotics" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('antibiotics')">
+
+
+<h4 id="tabletListLabel-antibiotics">DOXYFRED-N</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>DOXYFRED-N</strong> – Doxycycline Hyclate + Neomycin Sulphate
+    <ul>
+      <li><strong>Composition:</strong> Each g of DOXYFRED-N contains:
+        <ul>
+          <li>Doxycycline Hyclate BP: 115 mg</li>
+          <li>eq. to Doxycycline: 100 mg</li>
+          <li>Neomycin Sulphate BP: 143 mg</li>
+          <li>eq. to Neomycin: 100 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Fowl Cholera Mortality</li>
+          <li>Complex CRD with E. Coli</li>
+          <li>Non-specific diarrhoea</li>
+          <li>Infection due to gram positive and gram negative bacteria</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>During stress: 1 gm in 10 ltrs of drinking water for 4 to 5 days for 60 growers or 45 adult birds.</li>
+          <li>For Prevention of Early Chick Mortality: 1 gm in 10 ltrs of drinking water for 3 to 4 days for 100 chicks.</li>
+          <li>In Severe acute Infections: 1 gm in 2 to 4 ltrs of drinking water for 4 to 5 days.</li>
+          <li>For small/large animals (sheep, swine, dogs, horse, cattle etc.): 10 to 20 mg per kg body weight for 3 to 4 days or, till infection subsidies.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 Kg Aluminium Foil, 25 kg HDPE Laminated Bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">DOXYFRED POWDER w/s</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>DOXYFRED POWDER w/s</strong> – Doxycyclin Powder 20 %
+    <ul>
+      <li><strong>Composition:</strong> Each 1 g contains
+        <ul>
+          <li>Doxcycline Hyclate  BP 221 mg</li>
+          <li>eq to Doxycycline 200 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Gastrointestinal and respiratory infections caused by doxycycline sensitive micro-organisms like Bordetella, Campylobacter, Chlamydia, E.coli, Haemophilus, Mycoplasma, Pasteurella, Rickettsia, Salmonella, Staphylococcus and Streptococcus spp. in calves, goats, poultry, sheep, and swine.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>For oral administration: Calves, goats and sheep Twice daily 5 g per 200 kg body weight for 3 - 5 days.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> Sachet of 100 g and jar of 500 and 1000 g.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">DOXYFRED - T</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>DOXYFRED - T</strong> – Doxycycline & Tylosin Tartrate W/S Powder For Animals & Poultry Use
+    <ul>
+      <li><strong>Composition:</strong> Each gm contains
+        <ul>
+          <li>Doxycycline Hyclate BP</li>
+          <li>Equivalent to Doxycycline 100 mg</li>
+          <li>Tylosin Tartrate BP  100 mg</li>
+          <li>Excipients q.s.</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>It is effective against infections caused by micro-organisms in calves, poultry and pigs. Especially indicated for gastrointestinal and respiratory infections.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>For oral administration via feed or drinking water.</li>
+          <li>Calves: 500 g per 400 calves of 50 kg body weight daily, for 3-5 days.</li>
+          <li>Pigs: 100 g per 200-400 litres of drinking water daily, for 3-5 days</li>
+          <li>Poultry: 100 g per 200-400 litres of drinking water daily, for 3-5 days</li>
+          <li>For Prevention: Mix 500 gm per 1000 kg of feed.</li>
+          <li>For Treatment: 1 kg per 1000 kg of feed, for 2-5 days.</li>
+          <li>The above mentioned dosage for pigs and poultry can be doubled without any danger.</li>
+          <li>Mix with feed, and use immediately.</li>
+          <li>Medicated drinking water should be used within 24 hours.</li>
+        </ul>
+      </li>
+      <li><strong>Withdrawal period:</strong> 15 days for Meat, 4 days for eggs.</li>
+      <li><strong>Presentation:</strong> 100 gm, 227 gm & 1 kg pouch Pack.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">ENROFRED</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>ENROFRED</strong> – Enrofloxacin Oral Liquid 10%
+    <ul>
+      <li><strong>Composition:</strong> Each ml of ENROFRED contains:
+        <ul>
+          <li>Enrofloxacin: 100 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>For prevention of Chronic Respiratory Disease</li>
+          <li>Broncho Pnuemonia</li>
+          <li>Cholera, typhoid, Paratyphoid,</li>
+          <li>Colibacillosis, Colisepticaemia..etc</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 1 ml / 2 ltrs of drinking water for 5 days.</li>
+      <li><strong>Presentation:</strong> 1 Ltr HDPE Bottle, 5 Ltrs Jar, 25 Ltrs Drum</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">ERYFRED POWDER w/s</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>ERYFRED POWDER w/s</strong> – Erythomycin Thiocynate Powder 20 %
+    <ul>
+      <li><strong>Composition:</strong> Each 100 g contains:
+        <ul>
+          <li>Erythromycin Thiocynate 20% (Erythromycin 20 g Base)</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>ERYFRED POWDER W/S is indicated for the treatment of Chronic Respiratory Disease (CRD) caused by Mycoplasma infections, and for the treatment of infectious (respiratory) diseases due to erythromycin- sensitive bacteria such as Staphylococcus aureus (e.g. infectious arthritis), Haemophilus paragallinarum (e.g. infectious coryza) and Pasteurella multocida (e.g. pasteurellosis; pneumonia) in poultry.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>For oral administration, Poultry: 100 g per 100 liter drinking water for 3-5 days.</li>
+          <li>For meat: 3 days, For eggs: 6 days</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg pouch, 25 kg HDPE laminated bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">FRAMOX-C</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>FRAMOX-C</strong> – Amoxycillin & Colistin Sulphate Powder For Animals & Poultry Use
+    <ul>
+      <li><strong>Composition:</strong> Each gm. contains
+        <ul>
+          <li>Amoxycillin Trihydrate BP</li>
+          <li>Equivalent to Amoxycillin 200 mg</li>
+          <li>Colistin Sulphate USP 1,200000 IU</li>
+          <li>Excipients: q.s.</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Gastrointestinal, respiratory and urinary-tract infections in calves, goats, poultry, sheep and swine caused by micro-organisms, like Campylobacter, Clostridium, Corynebacterium, E.coli, Erysipelothrix, Haemophilus, Pasteurella, Salmonella, Penicillinase Staphylococcus and Streptococcus spp.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>For Oral Administration:</li>
+          <li>Poultry and Swine: 1 kg. per 1000-2000 litre drinking water for 3-5 days.</li>
+          <li>Calves, Goats and Sheep: Twice daily 5 gm per 100 kg. body weight for 3-5 days.</li>
+          <li>Note: For Pre-ruminant calves, lambs and kids only.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 100 gms, 1 kg pouch Pack</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">HEALTHY CHIC</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>HEALTHY CHIC</strong> – Lincomycin 11% W/W Animal Feed Premix
+    <ul>
+      <li><strong>Composition:</strong> Each kg of Healthy Chic contains:
+        <ul>
+          <li>Lincomycin base 110 gms</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>To Improve feed conversion</li>
+          <li>To increase Growth</li>
+          <li>For control of necrotic enteritis</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 20 gms to 4 gms of Healthy chic/ton of feed</li>
+      <li><strong>Presentation:</strong> 1 kg Pouch, 25 kg HDPE Laminated Bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">SURESPIR</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>SURESPIR</strong> – Spiramysin Hydrochloride 20%
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Spiramycin as a base 20%</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Prevention and treatment of Coccidiosis caused by Eimeria sp. in poultry, calves, lambs, kids and rabbits.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Calves: 20g/kg of milk replacer of feed for 4-5 days</li>
+          <li>Swine: 1 g/ kg of feed for 4-5 days</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg pouch, 25 kg HDPE laminated bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-antibiotics">NEOFRED POWDER</h4> 
+<ul id="tabletList-antibiotics">
+  <li>
+    <strong>NEOFRED POWDER</strong> – Neomycin Sulphate 100 mg
+    <ul>
+      <li><strong>Composition:</strong> Each gm of Neofred Powder contains:
+        <ul>
+          <li>Neomycin Sulphat BP 143 mg</li>
+          <li>Equivalent to Neomycin 100 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>For The Treatment And Control Of Colibacillosis (bacterial Enteritis) Caused By Escherichia Coli Susceptible to Neomycin Sulphate In Cattle Swine, Sheep And Goats.</li>
+          <li>For The Control of Mortality Associated With Escherichia Coli Organisms Susceptible To Neomycin Sulphate In Growing Turkeys.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Pigs Weighing 25 to 50 Pounds: 2 Packets</li>
+          <li>Pigs Weighing 50 to 100 Pounds: 3 Packets</li>
+          <li>Pigs Weighing Over 100 Pounds: 4 Packets</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg pouch, 25 kg HDPE laminated bag</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<!--</div>-->
+
+<div id="Coccidials" class="tabcontent">
+      <h3>ANTICOCCIDIALS / COCCIDIOSTATS</h3>
+      <!-- Search Input -->
+  <input type="text" id="searchInput-coccidials" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('coccidials')">
+
+<h4 id="tabletListLabel-coccidials">AMPRO -20</h4> 
+<ul id="tabletList-coccidials">
+  <li>
+    <strong>AMPRO -20</strong> – Amprolium HCl BP vet 20% w/w Soluble Powder
+    <ul>
+      <li><strong>Composition:</strong> Each gm of Ampro 20 contains:
+        <ul>
+          <li>Amprolium Hcl BP Vet 200 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Ampro 20 is indicated for coccidiosis caused by coccidia susceptible to amprolium (Eimeria spp.), or gastrointestinal infections for which it is therapeutically or prophylactically indicated to administer amprolium, in calves, goats, sheep and poultry.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Calves, Sheep and Goats:</li>
+          <li>Preventive: 1 gram per 50 -100 kg body weight through drinking water or milk for 21 days.</li>
+          <li>Curative: 5 gram per 25-50 kg body weight through drinking water or milk for 5 days.</li>
+          <li>Poultry: 20 gram per 20-40 litre drinking water for 5-7 days.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 25 kg Drum</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-coccidials">AMPRO -30</h4> 
+<ul id="tabletList-coccidials">
+  <li>
+    <strong>AMPRO -30</strong> – Amprolium HCl BP vet 30% w/w Soluble Powder
+    <ul>
+      <li><strong>Composition:</strong> Each gm of Ampro 30 contains:
+        <ul>
+          <li>Amprolium Hcl BP Vet 300 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Ampro-30 is indicated for coccidiosis caused by coccidia susceptible to amprolium (Eimeria spp.), or gastrointestinal infections for which it is therapeutically or prophylactically indicated to administer amprolium, in calves, goats, sheep and poultry.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Calves, Goats, Sheep:</li>
+          <li>Preventive: 1 g per 60 kg body weight through drinking water or milk for 21 days.</li>
+          <li>Curative: 1 g per 30 kg body weight for 5 days.</li>
+          <li>Poultry:</li>
+          <li>Preventive: 1 kg per 5000 litre drinking water for 1-2 weeks.</li>
+          <li>Curative: 1 kg per 1250-2500 litre drinking water for 5-7 days.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 25 kg Drum</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-coccidials">TOZU</h4> 
+<ul id="tabletList-coccidials">
+  <li>
+    <strong>TOZU</strong> – Toltrazuril 2.5% W/V Oral Solution
+    <ul>
+      <li><strong>Composition:</strong> Each 100 ml contains:
+        <ul>
+          <li>Toltrazuril 2.5 g</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>For the control of Coccidiosis caused by:</li>
+          <li>Chicken: E. acervulina, E. brunetti, E. necatrix, E. taenella</li>
+          <li>Turkey: E. adenoides, E. meleagridis, E. meleagrimitis</li>
+          <li>Geese: E. anesers, E. truncata</li>
+          <li>It acts against all intracellular development stages of Coccidia.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>28 ml of TOZU per 100 kg body weight per day for 2 consecutive days</li>
+          <li>Equivalent to 7 mg Toltrazuril/kg body weight per day for 2 consecutive days</li>
+          <li>Or as advised by the Veterinarian.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 100 ml bottle, 1 Ltr HDPE Bottle, 25 Ltr Drum</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-coccidials">NO-COCCI</h4> 
+<ul id="tabletList-coccidials">
+  <li>
+    <strong>NO-COCCI</strong> – Maduramycin Ammonium 1% w/w Premix
+    <ul>
+      <li><strong>Composition:</strong> Each kg contains:
+        <ul>
+          <li>Maduramycin activity 10 gms</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>To control and prevent Coccidiosis in broilers and in growers up to 16 weeks of age.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>500 gms per ton of feed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 100 ml bottle, 1 Ltr HDPE Bottle, 25 Ltr Drum</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-coccidials">DINI 25</h4> 
+<ul id="tabletList-coccidials">
+  <li>
+    <strong>DINI 25</strong> – Dinitolmide 25% w/w Animal Feed Premix
+    <ul>
+      <li><strong>Composition:</strong> Each 500 gms contains:
+        <ul>
+          <li>Dinitolmide (DOT) 125 gms</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>For the control of Coccidiosis caused by Eimeria species in layer birds.</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>0–8 weeks: 500 gms / ton of feed</li>
+          <li>9–14 weeks: 300 gms / ton of feed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 25 kg HDPE Laminated Bag</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+</div>
+   
+<!--</div>-->
+
+<div id="Anthelmintic" class="tabcontent">
+      <h3>ANTHELMINTIC</h3>
+      <!-- Search Input -->
+  <input type="text" id="searchInput-anthelmintic" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('anthelmintic')">
+
+<h4 id="tabletListLabel-anthelmintic">VORMIFRED -OS 2.5</h4>
+<ul id="tabletList-anthelmintic">
+  <li>
+    <strong>VORMIFRED -OS 2.5</strong> – Albendazole Oral Suspension 2.5% w/v
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Each ml contains: Albendazole 25 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Prophylaxis and treatment of worm infections in Calves, Cattle, Goats, and Sheep</li>
+          <li><strong>Gastrointestinal worms:</strong> Bunostomum, Cooperia, Chabertia, Haemonchus, Nematodirus, Oesophagostomum, Ostertagia, Strongyloides, Trichostrongylus spp.</li>
+          <li><strong>Lung worms:</strong> Dictyocaulus viviparus and D. filaria</li>
+          <li><strong>Tapeworms:</strong> Monieza spp.</li>
+          <li><strong>Liver-fluke:</strong> Adult Fasciola hepatica</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Goats and sheep: 1 ml per 5 kg body weight</li>
+          <li>Liver-fluke: 1 ml per 3 kg body weight</li>
+          <li>Calves and cattle: 1 ml per 3 kg body weight</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 500 ml & 1 Litre</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-anthelmintic">VORMIFRED -OS 10</h4>
+<ul id="tabletList-anthelmintic">
+  <li>
+    <strong>VORMIFRED -OS 10</strong> – Albendazole Oral Suspension 10% w/v
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Each ml contains: Albendazole 100 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Prophylaxis and treatment of worm infections in Calves, Cattle, Goats, and Sheep</li>
+          <li><strong>Gastrointestinal worms:</strong> Bunostomum, Cooperia, Chabertia, Haemonchus, Nematodirus, Oesophagostomum, Ostertagia, Strongyloides, Trichostrongylus spp.</li>
+          <li><strong>Lung worms:</strong> Dictyocaulus viviparus and D. filaria</li>
+          <li><strong>Tapeworms:</strong> Monieza spp.</li>
+          <li><strong>Liver-fluke:</strong> Adult Fasciola hepatica</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Goats and sheep: 1 ml per 20 kg body weight</li>
+          <li>Liver-fluke: 1 ml per 12 kg body weight</li>
+          <li>Calves and cattle: 1 ml per 12 kg body weight</li>
+          <li>Liver-fluke: 1 ml per 10 kg body weight</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 500 ml & 1 Litre</li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+   
+<!--</div>-->
+
+<div id="Phytase" class="tabcontent">
+      <h3>PHYTASE</h3>
+      <!-- Search Input -->
+  <input type="text" id="searchInput-phytase" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('phytase')">
+
+<h4 id="tabletListLabel-phytase">NUTRITASE 2500</h4>
+<ul id="tabletList-phytase">
+  <li>
+    <strong>NUTRITASE 2500</strong> – Phytase-2500
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Each g contains: Phytase 2500 PPU</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Improves nutrient digestibility of pH, amino acids, protein, and trace minerals</li>
+          <li>Reduces accumulation of phosphorus in the environment</li>
+          <li>Reduces excretion of nitrogen</li>
+          <li>Lowers feed cost</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Layers: 200–250 g/ton (replacing 10–12 kg Di-calcium phosphate)</li>
+          <li>Broilers: 400–450 g/ton (replacing 10–12 kg Di-calcium phosphate)</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg, 10 kg & 25 kg Bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-phytase">Phytase -5000</h4>
+<ul id="tabletList-phytase">
+  <li>
+    <strong>Phytase -5000</strong>
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Each g contains: Phytase 5000 PPU</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Improves nutrient digestibility of pH, amino acids, protein, and trace minerals</li>
+          <li>Reduces accumulation of phosphorus in the environment</li>
+          <li>Reduces excretion of nitrogen</li>
+          <li>Lowers feed cost</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Layers: 200–250 g/ton (replacing 10–12 kg Di-calcium phosphate)</li>
+          <li>Broilers: 400–450 g/ton (replacing 10–12 kg Di-calcium phosphate)</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg, 10 kg & 25 kg Bag</li>
+    </ul>
+  </li>
+</ul>
+
+
+   </div>
+   
+<!--</div>-->
+
+<div id="Mycoplasmal" class="tabcontent">
+      <h3>ANTIMYCOPLASMAL</h3>
+      <!-- Search Input -->
+  <input type="text" id="searchInput-mycoplasmal" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('mycoplasmal')">
+
+<h4 id="tabletListLabel-mycoplasmal">TYLOTAR</h4>
+<ul id="tabletList-mycoplasmal">
+  <li>
+    <strong>TYLOTAR</strong> – Tylosin Tartrate Veterinary Oral Powder
+    <ul>
+      <li><strong>Composition (Each 100 g contains):</strong>
+        <ul>
+          <li>Tylosin Tartrate BP – 80 g (Equivalent to Tylosin Base)</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Useful to control CRD (Chronic Respiratory Disease)</li>
+          <li>Improves Feed Conversion Ratio (FCR)</li>
+          <li>Increases weight gain</li>
+          <li>Improves fertility</li>
+          <li>Improves hatchability</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 1 gm in 1.5 liters of drinking water daily in 2 divided doses for 2 to 3 days</li>
+      <li><strong>Presentation:</strong> 1 kg Pouch, 25 kg Drum</li>
+    </ul>
+  </li>
+</ul>
+
+
+  </div>
+   
+<!--</div>-->
+
+
+
+<div id="Liver" class="tabcontent">
+      <h3>LIVER TONIC</h3>
+      <!-- Search Input -->
+  <input type="text" id="searchInput-liver" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('liver')">
+
+<h4 id="tabletListLabel-liver">LIVUP (Powder)</h4>
+<ul id="tabletList-liver">
+  <li>
+    <strong>LIVUP (Powder)</strong> – Nutrition Supplement
+    <ul>
+      <li><strong>Composition (Each Kg contains):</strong>
+        <ul>
+          <li>Tephrosia Purpurea – 5%</li>
+          <li>Cichorium endivia – 12%</li>
+          <li>Eclipta Alba – 11%</li>
+          <li>Picrorhiza Kurroa – 15%</li>
+          <li>Fumaria Officinalis – 10%</li>
+          <li>Andrographis Paniculata – 6%</li>
+          <li>Phyllanthus Niruri – 3%</li>
+          <li>Tinospora Cordifolia – 6%</li>
+          <li>Terminalia Chebula – 14%</li>
+          <li>Ocimum Basilicum – 2%</li>
+          <li>Emblica Officinalis – 16%</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Liver upgradation and protection to improve FCR</li>
+          <li>Builds immunity to Aflatoxins</li>
+          <li>Increases weight gain in broilers and egg production in layers & breeders</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 500 gms per Ton of feed or as directed by the veterinarian</li>
+      <li><strong>Presentation:</strong> 500 g container, 25 kg Pack</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-liver">LIVUP (Liquid)</h4>
+<ul id="tabletList-liver">
+  <li>
+    <strong>LIVUP (Liquid)</strong> – 100% Herbal Liver Protector Liquid
+    <ul>
+      <li><strong>Composition (Each 100 ml contains):</strong>
+        <ul>
+          <li>Silybum Mariamum – 6 gm</li>
+          <li>Boerhaavia Diffusa – 4 gm</li>
+          <li>Tephrosia Purpurea – 3 gm</li>
+          <li>Andrographis Paniculata – 8 gm</li>
+          <li>Solanum Nigrum – 4 gm</li>
+          <li>Terminalia Chebula – 3 gm</li>
+          <li>Emblica Officinalis – 3 gm</li>
+          <li>Eclipta Alba – 2 gm</li>
+          <li>Trachyspermum Ammi – 1 gm</li>
+          <li>Zingiber Officinalis – 1 gm</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Improves FCR</li>
+          <li>Resists Aflatoxicosis</li>
+          <li>Overcomes initial resorptive jaundice</li>
+          <li>Liver protectant and growth promoter</li>
+          <li>Reduces mortality rate</li>
+          <li>Improves liver functions</li>
+          <li>Increases milk production in mammals and egg output in poultry</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Horses, Camels & Cows: 40 ml twice a day</li>
+          <li>Calf, Foal, Colt: 20–25 ml twice a day</li>
+          <li>Sheep & Goat: 10–15 ml twice a day</li>
+          <li>POULTRY:
+            <ul>
+              <li>Chicks: 5 ml/100 birds/day</li>
+              <li>Growers: 10 ml/100 birds/day</li>
+              <li>Broilers: 5–10 ml/100 birds/day</li>
+              <li>Layers: 15 ml/100 birds/day</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 Ltr, & 5 Ltr Pack</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-liver">DEXTROVIT</h4>
+<ul id="tabletList-liver">
+  <li>
+    <strong>DEXTROVIT</strong> – Liquid Feed Supplement
+    <ul>
+      <li><strong>Composition (Each 10 ml contains):</strong>
+        <ul>
+          <li>Choline Chloride: 2000 mg</li>
+          <li>Liver Extract: 125 mg</li>
+          <li>Yeast Extract: 40 mg</li>
+          <li>Vitamin B1: 2.5 mg</li>
+          <li>Vitamin B12: 0.75 mcg</li>
+          <li>Niacin: 24 mg</li>
+          <li>DL-Panthenol: 2.5 mg</li>
+          <li>Inositol: 35 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Supplement for overall liver health and metabolism</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Large Animals: 30 ml per day</li>
+          <li>Small Animals: 15 ml per day</li>
+          <li>Broiler: 5–10 ml/100 birds daily</li>
+          <li>Layers: 20 ml/100 birds daily</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 litre, 5 litre HDPE bottle, 10 litre HDPE drum</li>
+    </ul>
+  </li>
+</ul>
+
+
+  </div>
+   
+<!--</div>-->
+
+<div id="OtherProducts" class="tabcontent"> 
+  <h3>OTHER PRODUCTS</h3>
+  
+  <!-- Search Input -->
+  <input type="text" id="searchInput-otherproducts" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('otherproducts')">
+
+<h4 id="tabletListLabel-otherproducts">Other Products</h4>
+<ul id="tabletList-otherproducts">
+  <li>
+    <strong>VIRGIN - 2</strong> – Virginiamycin 2%
+    <ul>
+      <li><strong>Composition (Each kg contains):</strong> Virginiamycin – 20 g</li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Layers: Better egg laying & FCR</li>
+          <li>Breeders: Uniform eggs</li>
+          <li>Feed Mills: Energy & lower density feeds</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Broilers: 500 g/ton from day-old till marketing</li>
+          <li>Layer Chicks: 500 g/ton from day-old to point of lay</li>
+          <li>Adult Layers: 250 g/ton from point of lay to end of lay</li>
+          <li>Breeders: 1–2 kg/ton from point of lay to end of lay</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg, & 25 kg Packs</li>
+    </ul>
+  </li>
+  <li>
+    <strong>FLAPOL - 8</strong> – Flavophospholipol 8%
+    <ul>
+      <li><strong>Composition:</strong> Flavophospholipol – 80 g</li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Improved FCR and growth promotion in chicken</li>
+          <li>For use via top dressing in feed</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Broilers: 125–250 g/ton of feed</li>
+          <li>Layers: 25–62.5 g/ton of feed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg & 25 kg Packs</li>
+    </ul>
+  </li>
+  <li>
+    <strong>ENZYPOWER POWDER</strong> – Multiple Enzymes Water Soluble Powder
+    <ul>
+      <li><strong>Composition (Each kg contains):</strong>
+        <ul>
+          <li>Cellulase – 2,000,000 IU</li>
+          <li>Xylanase – 200,000 IU</li>
+          <li>Amylase – 400,000 IU</li>
+          <li>Protease – 200 IU</li>
+          <li>Phytase – 200 IU</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Improves feed utilization & FCR</li>
+          <li>Makes nutrients more available</li>
+          <li>Optimizes both conventional & non-conventional feed use</li>
+          <li>Reduces disease and improves weight gain</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Broilers: 300–350 g/ton of feed</li>
+          <li>Breeders: 250–300 g/ton of feed</li>
+          <li>Layers: 200–250 g/ton of feed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg & 25 kg Packs</li>
+    </ul>
+  </li>
+  <li>
+  <strong>ENZYPOWER LIQUID</strong> – Multiple Enzymes Liquid
+  <ul>
+    <li><strong>Composition (Each 1 Litre contains):</strong>
+      <ul>
+        <li>Protease NLT – 400,000 IU</li>
+        <li>Cellulase NLT – 100,000,000 IU</li>
+        <li>Xylanase NLT – 1,500,000 IU</li>
+        <li>Lipase NLT – 6,500 IU</li>
+        <li>Amylase NLT – 250,000 IU</li>
+        <li>Pectinase NLT – 30,000 IU</li>
+        <li>β-Glucosidase – 10,000 U</li>
+        <li>α-Galactosidase – 10,000 U</li>
+        <li>Arabinase – 7,000 U</li>
+      </ul>
+    </li>
+    <li><strong>Indications:</strong>
+      <ul>
+        <li>Improves nutrient availability & FCR</li>
+        <li>Enhances amino acid & mineral absorption</li>
+        <li>Improves calcium retention and egg shell quality</li>
+        <li>Reduces disease incidence and mortality</li>
+      </ul>
+    </li>
+    <li><strong>Dosage:</strong> 1 ml/4 litres of drinking water</li>
+    <li><strong>Presentation:</strong> 1 L, 5 L HDPE bottle, 25 L HDPE drum</li>
+  </ul>
+</li>
+
+<li>
+  <strong>NEOFUR - V</strong> – Furazolidone 20% Powder
+  <ul>
+    <li><strong>Composition:</strong> Furazolidone 20%</li>
+    <li><strong>Indications:</strong>
+      <ul>
+        <li>Promotes growth and weight gain in broilers</li>
+        <li>Improves egg production, hatchability, and reduces mortality</li>
+        <li>Effective against Salmonella and gastrointestinal infections</li>
+      </ul>
+    </li>
+    <li><strong>Dosage:</strong>
+      <ul>
+        <li>Routine: 250 g/ton of feed</li>
+        <li>Monthly Plan: 500 g/ton for one week per month (Layers)</li>
+      </ul>
+    </li>
+    <li><strong>Presentation:</strong> 1 kg, 5 kg & 25 kg Packs</li>
+  </ul>
+</li>
+
+<li>
+  <strong>CYRO -1</strong> – Cyromazine 1% w/w Animal Feed Additive
+  <ul>
+    <li><strong>Composition:</strong> Cyromazine 1%</li>
+    <li><strong>Indications:</strong> Eco-friendly fly and larvae control for birds</li>
+    <li><strong>Dosage:</strong> 500 g/ton of feed</li>
+    <li><strong>Presentation:</strong> 1 kg, 5 kg & 25 kg Packs</li>
+  </ul>
+</li>
+
+</ul>
+
+  </div>
+   
+<!--</div>-->
+
+
+
+<div id="VitaminsLiquid" class="tabcontent"> 
+  <h3>VITAMINS LIQUID</h3>
+  
+  <!-- Search Input -->
+  <input type="text" id="searchInput-vitamins1" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('vitamins1')">
+
+<h4 id="tabletListLabel-vitamins1">OSSO - D</h4>
+<ul id="tabletList-vitamins1">
+  <li>
+    <strong>OSSO - D</strong> – Vitamin D3 2,00,000 IU / gm
+    <ul>
+      <li><strong>Each gram contains:</strong>
+        <ul>
+          <li>Vitamin D3 – 200,000 IU</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Protects from deficiency & rickets development</li>
+          <li>Minimises feed cost</li>
+          <li>Optimises metabolism of calcium & phosphorus</li>
+          <li>Gives better FCR & higher body weight</li>
+          <li>Increases quality of egg shells</li>
+          <li>Develops musculo-skeletal system</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Pullet Starter: 10–15 gms</li>
+          <li>Pullet Grower & Developer: 8–10 gms</li>
+          <li>Layer: 10–15 gms</li>
+          <li>Broiler: 12.5–15 gms</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg & 25 kg Packs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-vitamins2">FREDS SEL - E (LIQUID)</h4>
+<ul id="tabletList-vitamins2">
+  <li>
+    <strong>FREDS SEL - E (LIQUID)</strong> – Vitamin E with Selenium Oral Liquid
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Selenium – 0.5 mg</li>
+          <li>Vitamin E – 100 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Fights muscular dystrophy in broilers and layers</li>
+          <li>Enhances egg production</li>
+          <li>Builds better immune system in birds</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>2–3 ml in drinking water per 100 birds (all age groups)</li>
+          <li>Or, as directed by the veterinarian</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg & 25 kg Packs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-vitamins3">FRETONE-V</h4>
+<ul id="tabletList-vitamins3">
+  <li>
+    <strong>FRETONE-V</strong> – Vitamin A + D3 + E + C Oral Liquid
+    <ul>
+      <li><strong>Each 5 ml contains:</strong>
+        <ul>
+          <li>Vitamin A – 250,000 IU</li>
+          <li>Vitamin D3 – 25,000 IU</li>
+          <li>Vitamin E – 150 mg</li>
+          <li>Vitamin C – 500 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Anti-stress and antioxidant feed supplement</li>
+          <li>Enhances egg production and hatchability</li>
+          <li>Promotes weight gain in broilers</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Broilers: 20–50 ml / 1000 birds in drinking water</li>
+          <li>Layers: 30–70 ml / 1000 birds in drinking water</li>
+          <li>Prepare fresh drinking water with Fretone-V daily</li>
+          <li>Or, as directed by the veterinarian</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 ltr, 5 ltr & 10 ltr Packs</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="tabletListLabel-vitamins4">FREDS</h4>
+<ul id="tabletList-vitamins4">
+  <li>
+    <strong>FREDS</strong> – Vitamin B Complex + DL-Methionine Liquid
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Vitamin B2 – 2 mg</li>
+          <li>Vitamin B6 – 0.62 mg</li>
+          <li>Vitamin B12 – 6.25 mcg</li>
+          <li>D-Panthenol – 1.25 mg</li>
+          <li>Niacinamide – 37.5 mg</li>
+          <li>DL-Methionine – 5 mg</li>
+          <li>L-Lysine – 5 mg</li>
+          <li>Choline Chloride – 5 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>A vitamin supplementation to birds for better performance</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Broilers: 2–5 ml / 100 birds in drinking water</li>
+          <li>Layers: 3–6 ml / 100 birds in drinking water</li>
+          <li>Or, as directed by the veterinarian</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 ltr, 5 ltr & 10 ltr Packs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-vitamins5">FREDCAL - D</h4>
+<ul id="tabletList-vitamins5">
+  <li>
+    <strong>FREDCAL - D</strong> – Liquid Animal Feed Supplement of Calcium, Phosphorus, Vitamin B12 & Vitamin D3
+    <ul>
+      <li><strong>Each 20 ml contains:</strong>
+        <ul>
+          <li>Calcium – 325.6 mg</li>
+          <li>Phosphorus – 167.7 mg</li>
+          <li>Vitamin B12 – 20 mcg</li>
+          <li>Vitamin D3 – 1600 IU</li>
+          <li>Flavoured Base – q.s.</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Optimises egg quality</li>
+          <li>Improves quality of egg shell</li>
+          <li>Prevents rickets in birds</li>
+          <li>Prevents prolapse/cannibalism</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Cattle & Horse: 100 ml daily</li>
+          <li>Calves: 40 ml daily</li>
+          <li>Dogs: 20 ml daily</li>
+          <li>Poultry: 20 ml daily for 100 birds</li>
+          <li>Broilers & Growers: 50 ml daily for 100 birds</li>
+          <li>Layers: 100 ml daily for 100 birds</li>
+          <li>Or, as directed by the veterinarian</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 5 ltr, 25 ltr Packs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-vitamins6">FREDCAL - D PLUS</h4>
+<ul id="tabletList-vitamins6">
+  <li>
+    <strong>FREDCAL - D PLUS</strong> – Liquid Animal Feed Supplement with Calcium, Phosphorus, Vitamin D3, B12 and Herbal Extracts
+    <ul>
+      <li><strong>Each 100 ml contains:</strong>
+        <ul>
+          <li>Calcium Phosphate – 7.5 gm</li>
+          <li>Elemental Calcium – 2.2 gm</li>
+          <li>Elemental Phosphorus – 1.7 gm</li>
+          <li>Vitamin B12 – 100 mcg</li>
+          <li>Vitamin D3 – 10,000 IU</li>
+          <li>Jivanti – 4 gm</li>
+          <li>Shatavari – 8 gm</li>
+          <li>Jatamansi – 1 gm</li>
+          <li>Kalongi – 0.6 gm</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Balances calcium and phosphorus for lactating cows and buffalo</li>
+          <li>Vitamin D3 ensures calcium and phosphorus absorption</li>
+          <li>Vitamin B12 improves metabolism and appetite</li>
+          <li>Jivanti & Shatavari are potent galactogogues</li>
+          <li>Kalongi increases milk secreting cells</li>
+          <li>Jatamansi reduces anxiety and helps complete milking</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Cattle/Buffalo: 40 ml twice daily for 12–13 days before and monthly</li>
+          <li>Dog: 5 ml twice daily</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 ltr, 5 ltr Packs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-vitamins7">VITAFRED</h4>
+<ul id="tabletList-vitamins7">
+  <li>
+    <strong>VITAFRED</strong> – Vitamin A Solution
+    <ul>
+      <li><strong>Each ml contains:</strong>
+        <ul>
+          <li>Vitamin A – 100,000 IU</li>
+          <li>Excipients – q.s.</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Increases egg production and hatchability</li>
+          <li>Builds resistance in Enteritis, Coccidiosis, Infectious Bronchitis</li>
+          <li>Prevents blood spots in eggs</li>
+          <li>Supports therapy during CRD, Coryza, and Helminthiasis</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>To be given at least 1 week in a month</li>
+          <li>Broilers: 2 ml / 100 birds</li>
+          <li>Layers: Chicks – 2 ml / 100 birds; Adults – 6 ml / 100 birds</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 ltr, 5 ltr & 25 ltr Packs</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+</div>
+   
+<!--</div>-->
+
+<div id="MineralsPowder" class="tabcontent"> 
+  <h3>MULTIMINERALS & MULTIVITAMINS POWDER</h3>
+  
+  <!-- Search Input -->
+  <input type="text" id="searchInput-mineralspowder" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('mineralspowder')">
+<h4 id="tabletListLabel-mineralspowder1">FREDS-BE</h4>
+<ul id="tabletList-mineralspowder1">
+  <li>
+    <strong>FREDS-BE</strong> – Vitamin B Complex Feed Premix (Four Strength)
+    <ul>
+      <li><strong>Each kg contains:</strong>
+        <ul>
+          <li>Vitamin B1 – 16 gms</li>
+          <li>Vitamin B6 – 32 gms</li>
+          <li>Vitamin B12 – 0.16 gms</li>
+          <li>Vitamin E – 160 gms</li>
+          <li>Calcium Pantothenate – 160 mg</li>
+          <li>Niacin – 340 mg</li>
+          <li>Folic Acid – 16 mg</li>
+          <li>L-Lysine – 40 mg</li>
+          <li>DL-Methionine – 40 mg</li>
+          <li>Calcium – 52 mg</li>
+          <li>Carrier – q.s.</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Builds resistance to fight against diseases</li>
+          <li>Important for production and utilization of energy</li>
+          <li>Provides vitamins required for growth and production</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>50 gms of Freds-BE per ton of feed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg, 10 kg Packs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder2">C-MAGIC</h4>
+<ul id="tabletList-mineralspowder2">
+  <li>
+    <strong>C-MAGIC</strong> – Water Miscible Vitamin C 100% Feed Supplement Powder
+    <ul>
+      <li><strong>Each gram contains:</strong>
+        <ul>
+          <li>Vitamin C – 1000 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Essential vitamin for calves, cattle, goats, poultry, sheep, and swine</li>
+          <li>Prevention or treatment of vitamin C deficiencies</li>
+          <li>Supports animals during stress (vaccination, disease, transport, weather changes)</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li><strong>Poultry, Swine:</strong> 100 g per 2000 litres of drinking water for 3–5 days</li>
+          <li><strong>Calves, Goats, Sheep:</strong> 1 g per 200 kg body weight for 3–5 days</li>
+          <li><strong>Cattle:</strong> 1 g per 400 kg body weight for 3–5 days</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> Sachet of 100 g and jar of 500 g & 1 Litre</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder3">CELECTO</h4>
+<ul id="tabletList-mineralspowder3">
+  <li>
+    <strong>CELECTO</strong> – Electrolyte Powder with Vitamin C
+    <ul>
+      <li><strong>Each 100 g contains:</strong>
+        <ul>
+          <li>Sodium Chloride – 1.000 gm</li>
+          <li>Potassium Chloride – 3.000 gm</li>
+          <li>Sodium Carbonate – 3.000 gm</li>
+          <li>Sodium Acid Phosphate – 0.008 gm</li>
+          <li>Calcium Lactate – 1.100 gm</li>
+          <li>Magnesium Sulphate – 1.000 gm</li>
+          <li>Calcium Gluconate – 1.100 gm</li>
+          <li>Vitamin C – 1.000 gm</li>
+          <li>Carrier – q.s.</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Prevents dehydration & heat strokes in summer</li>
+          <li>Useful in diarrhoea and dysentery</li>
+          <li>Maintains osmotic pressure and acid-base equilibrium</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li><strong>Through feed:</strong> 1 kg per ton of feed</li>
+          <li><strong>Through drinking water:</strong></li>
+          <li>Chicks: 100 g per 1000 chicks</li>
+          <li>Growers: 75 g per 500 birds</li>
+          <li>Layers & Broilers: 1 g per 2 litres of water</li>
+          <li>Breeders: 1 g per 1 litre of water</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="tabletListLabel-mineralspowder4">FREOSSITONE GRANULES</h4>
+<ul id="tabletList-mineralspowder4">
+  <li>
+    <strong>FREOSSITONE GRANULES</strong> – Biologically Derived Calcium, Phosphorus Feed Supplement
+    <ul>
+      <li><strong>Each 5 g contains:</strong>
+        <ul>
+          <li>Microcrystalline Hydroxyapatite (MCHC) equivalent to:</li>
+          <li>Calcium – 400 mg</li>
+          <li>Phosphorus – 190 mg</li>
+          <li>Trace minerals: Copper, Cobalt, Iron, Magnesium</li>
+          <li>Collagenous proteins</li>
+          <li>Vitamin D3 – 1500 IU</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Improves skeletal and muscular strength</li>
+          <li>Prevents osteoporosis and rickets</li>
+          <li>Enhances calcium absorption and metabolism</li>
+          <li>Reduces inflammation and joint pain due to injury or arthritis</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li><strong>Poultry:</strong> 250 g–500 g per ton of feed</li>
+          <li><strong>Cattle & Horses:</strong> 30–50 g daily</li>
+          <li><strong>Sheep, Goats & Pigs:</strong> 10 g daily</li>
+          <li><strong>Dogs & Cats:</strong> 5–10 g daily</li>
+          <li>To be given daily for 10 days/month or as directed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 250 g & 500 g Jar packs, laminated bags</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder5">LAYERS PREMIX PLUS</h4>
+<ul id="tabletList-mineralspowder5">
+  <li>
+    <strong>LAYERS PREMIX PLUS</strong>
+    <ul>
+      <li><strong>Each kg contains:</strong>
+        <ul>
+          <li>Vitamin A – 9,000,000 IU</li>
+          <li>Vitamin D3 – 2,135,000 IU</li>
+          <li>Vitamin E – 20,000 mg</li>
+          <li>Vitamin B1 – 1340 mg</li>
+          <li>Vitamin B2 – 5340 mg</li>
+          <li>Vitamin B6 – 2500 mg</li>
+          <li>Vitamin B12 – 25 mcg</li>
+          <li>Folic Acid – 1000 mg</li>
+          <li>Manganese – 117,340 mg</li>
+          <li>Zinc – 78,000 mg</li>
+          <li>Iron – 63,340 mg</li>
+          <li>Copper – 10,670 mg</li>
+          <li>Potassium – 10,000 mg</li>
+          <li>Calcium – 20,000 mg</li>
+          <li>Niacin – 30,000 mg</li>
+          <li>Partially hydrolyzed proteins – 300 gm</li>
+          <li><strong>Amino Acids Profile (Casein-based):</strong></li>
+          <li>Lysine – 7.2%</li>
+          <li>Glutamic Acid – 17.75%</li>
+          <li>Cystine – 0.40%</li>
+          <li>Valine – 6.55%</li>
+          <li>Tyrosine – 5.44%</li>
+          <li>Aspartic Acid – 5.95%</li>
+          <li>Histidine – 2.72%</li>
+          <li>Proline – 11.63%</li>
+          <li>Serine – 5.78%</li>
+          <li>Tryptophan – 1.40%</li>
+          <li>Arginine – 3.57%</li>
+          <li>Threonine – 3.83%</li>
+          <li>Glycine – 1.79%</li>
+          <li>Alanine – 2.81%</li>
+          <li>Methionine – 2.98%</li>
+          <li>Isoleucine – 6.38%</li>
+          <li>Leucine – 8.50%</li>
+          <li>Phenylalanine – 5.6%</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Enhances animal health and performance</li>
+          <li>Improves feed digestibility and quality</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>200–500 g per ton of feed</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg & 25 kg HDPE Laminated Bags</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder6">BROILER/BREEDER PREMIX PLUS</h4>
+<ul id="tabletList-mineralspowder6">
+  <li>
+    <strong>BROILER/BREEDER PREMIX PLUS</strong>
+    <ul>
+      <li><strong>Each kg contains:</strong>
+        <ul>
+          <li>Vitamin A – 10,000,000 IU</li>
+          <li>Vitamin D3 – 2,500,000 IU</li>
+          <li>Vitamin E – 60,000 mg</li>
+          <li>Vitamin K3 – 1500 mg</li>
+          <li>Vitamin C – 50,000 mg</li>
+          <li>Vitamin B1 – 2200 mg</li>
+          <li>Vitamin B2 – 10,000 mg</li>
+          <li>Vitamin B6 – 2500 mg</li>
+          <li>Vitamin B12 – 25 mcg</li>
+          <li>Calcium Pantothenate – 15,000 mg</li>
+          <li>Niacin – 37,500 mg</li>
+          <li>Biotin – 100 mg</li>
+          <li>Folic Acid – 1500 mg</li>
+          <li>Copper – 8000 mg</li>
+          <li>Iron – 44,500 mg</li>
+          <li>Zinc – 58,500 mg</li>
+          <li>Manganese – 128,000 mg</li>
+          <li>Iodine – 1340 mg</li>
+          <li>Selenium – 160 mg</li>
+          <li>L-Lysine – 40 mg</li>
+          <li>DL-Methionine – 40 mg</li>
+          <li>Antioxidant – 10,000 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Delayed growth, reduced hatchability</li>
+          <li>Loss of appetite, feathering issues</li>
+          <li>Swelling of eyelids, fatty liver conditions</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 200 g per ton of feed</li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg, 25 kg HDPE Laminated Bags</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder7">FREDS SEL - E</h4>
+<ul id="tabletList-mineralspowder7">
+  <li>
+    <strong>FREDS SEL - E</strong> – Vitamin E and Selenium Premix
+    <ul>
+      <li><strong>Each kg contains:</strong>
+        <ul>
+          <li>Vitamin E – 20% w/w</li>
+          <li>Selenium – 400 ppm</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Vitamin E deficiency support</li>
+          <li>Improves productivity</li>
+          <li>Helps combat muscular dystrophy</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 500 g per ton of feed</li>
+      <li><strong>Presentation:</strong> 1 kg x 10 jars shippers, 25 kg HDPE Laminated Bags</li>
+    </ul>
+  </li>
+</ul>
+<h4 id="tabletListLabel-mineralspowder8">FREDMIX</h4>
+<ul id="tabletList-mineralspowder8">
+  <li>
+    <strong>FREDMIX</strong> – Vitamin AB2D3K Feed Premix (Triple Strength)
+    <ul>
+      <li><strong>Each gram contains:</strong>
+        <ul>
+          <li>Vitamin A – 247,500 IU</li>
+          <li>Vitamin B2 – 150 mg</li>
+          <li>Vitamin D3 – 3,600 IU</li>
+          <li>Vitamin K – 30 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Improves feed conversion</li>
+          <li>Improves egg production in layers</li>
+          <li>Improves weight gain in broilers</li>
+          <li>Improves growth of chicks and reduces mortality</li>
+          <li>Prevents curled toe paralysis</li>
+          <li>Ensures proper coagulation of blood</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 35–40 g per ton of feed</li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg & 25 kg HDPE laminated bags</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder9">FREOSSIPOWER</h4>
+<ul id="tabletList-mineralspowder9">
+  <li>
+    <strong>FREOSSIPOWER</strong> – SUPER SUPPLEMENT FOR HEALTHY BONES
+    <ul>
+      <li><strong>Composition:</strong> 
+        Each 5 gm powder contains:	 
+        Glucosamine Sulphate USP 400 mg, 
+        Methyl Sulphonyl Methane 100 mg, 
+        Chondroitin Sulphate 20 mg, 
+        Ascorbic Acid 100 mg, 
+        Tocopheryl Acetate 50 % 10 mg (with Vitamin Acetate), 
+        Manganese Chloride 0.50 mg, 
+        Zinc Chloride 0.50 mg, 
+        Boswellic Acid 60% 45 mg, 
+        Microcrystalline Hydroxyapatite Complex q.s.
+      </li>
+      <li><strong>Indications:</strong> 
+        For reducing inflammation & pain associated with acute inflammation of body parts of a non-human animal, particularly joints due to injury or due to arthritic conditions like osteoarthritis and rheumatoid arthritis or other diseases.
+        Addition of Freossipower could translate into lower management costs, lower vet bills, and healthier animals, as well as a reduction in antibiotic use.
+      </li>
+      <li><strong>Dosage:</strong> 
+        5 g (scoop provided in the container) per day with or after meals for small animals & 5 g twice a day with or after meals for large animals. Allow 4 – 6 weeks for best results. If lameness worsens or persists, discontinue use and contact your veterinarian.
+      </li>
+      <li><strong>Precautions:</strong> 
+        Consult with your veterinarian before using this product in animals with clotting disorders, being treated with anticoagulant medications, diabetes, or any metabolic disorders causing hyperglycemia, history of urinary tract stones, known allergies to shellfish and in pregnant animals or animals intended for breeding.
+      </li>
+      <li><strong>Presentation:</strong> 250 gm Jar pack, 500 gm Jar pack, 1 kg & 25 kg Laminated Bag</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder10">FREOSSITONE +</h4>
+<ul id="tabletList-mineralspowder10">
+  <li>
+    <strong>FREOSSITONE +</strong> – Combination of Calcium & Phosphorus with Potent Herbal Extracts
+    <ul>
+      <li><strong>Each 50 g contains:</strong>
+        <ul>
+          <li>Microcrystalline Hydroxyapatite Complex (MCHC) providing:</li>
+          <li>Calcium – 9 g</li>
+          <li>Phosphorus – 4 g</li>
+          <li>Trace minerals: Copper, Cobalt, Iron, Magnesium</li>
+          <li>Herbal Extracts Blend – 12.5 g containing:
+            Shatavari, Jivanti, Methi, Galo, Ashwagandha, Jatamashi, Varahikand, Vidarikand, Piper, Piparimul
+          </li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Unique blend of MCHC and galactogogue herbs for ruminant health</li>
+          <li>Improves skeletal and muscular strength</li>
+          <li>Prevents osteoporosis and rickets</li>
+          <li>Enhances milk yield and corrects irregular or suppressed lactation</li>
+          <li>Supports lengthy lactation and prevents post-partum haemorrhage</li>
+          <li>Treats psychological agalactia (e.g., due to calf death, first lactation, change in milker)</li>
+          <li>Free from heavy metals and does not generate toxins ("ama") in animal channels ("srotas")</li>
+          <li>Safe, easily digestible, and well-accepted by ruminant physiology</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> Add 50 g per animal daily in feed. For best results, give twice a day.</li>
+      <li><strong>Presentation:</strong> 250 g & 500 g jar packs, 1 kg & 25 kg laminated bags</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder11">FREOSSITONE – M</h4>
+<ul id="tabletList-mineralspowder11">
+  <li>
+    <strong>FREOSSITONE – M</strong> – Biologically Derived Calcium & Phosphorus Supplement for Layers & Broilers
+    <ul>
+      <li><strong>Composition (per 5 g):</strong>
+        <ul>
+          <li>Calcium (MCHC) – 400 mg</li>
+          <li>Phosphorus – 190 mg</li>
+          <li>Vitamin D3 – 1500 IU</li>
+          <li>Copper – 0.33 mg</li>
+          <li>Magnesium – 1 mg</li>
+          <li>Zinc – 1.33 mg</li>
+        </ul>
+      </li>
+      <li><strong>Advantages:</strong>
+        <ul>
+          <li>Nutrient supplement for stressed or older laying hens</li>
+          <li>Enhances shell formation during non-daylight hours</li>
+          <li>Slow-release calcium supports better absorption</li>
+          <li>Uniform granular size ensures equal intake in every peck</li>
+        </ul>
+      </li>
+      <li><strong>ECONOMICAL BENEFITS OF FREOSSITONE – M GRANULES</strong>
+        <ul>
+          <li>One ton of Freossitone – M granules can feed 62,500 birds for approximately five months, at 500 gm  , per ton on a continuous basis</li>
+        </ul>
+      </li>
+      <li><strong>Benefits:</strong>
+        <ul>
+          <li>Improves eggshell thickness, shape, and size</li>
+          <li>Prevents soft/cracked/shell-less eggs</li>
+          <li>Reduces leg weakness and uterine prolapse</li>
+          <li>Increases hatchability, body weight, and skeletal integrity</li>
+        </ul>
+      </li>
+      <li><strong>Mixing Ratio:</strong> 500 g – 1 kg per ton of feed or as directed by veterinarian</li>
+      <li><strong>Presentation:</strong> 250 g & 500 g jar/sachet, 1 kg & 25 kg laminated bags</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder12">IMMU – 365</h4>
+<ul id="tabletList-mineralspowder12">
+  <li>
+    <strong>IMMU – 365</strong> – Herbal Immunizer & Stress Reliever
+    <ul>
+      <li><strong>Composition (per Liter):</strong>
+        <ul>
+          <li>Aswagandha (Leaves) – 10,000 mg</li>
+          <li>Bhrami (Roots) – 20,000 mg</li>
+          <li>Chitrak – 15,000 mg</li>
+          <li>Camellia Sinensis – 10,000 mg</li>
+          <li>Phyllanthus Emblica – 20,000 mg</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>For newborn chicks</li>
+          <li>Vaccinations, debeaking, deworming</li>
+          <li>Climatic disturbances, transportation stress</li>
+          <li>Poor growth, uneven sizes, disease conditions</li>
+          <li>Low/high egg production</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>1 Liter per 500 kg feed</li>
+          <li>Or 1 Liter per 15,000–20,000 kg body weight</li>
+          <li>Or as advised by a veterinarian</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 L, 5 L & 10 L packs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-mineralspowder13">PROCHIC</h4>
+<ul id="tabletList-mineralspowder13">
+  <li>
+    <strong>PROCHIC</strong> – Probiotic Immunizer & Stress Reliever
+    <ul>
+      <li><strong>Composition (per gram):</strong>
+        <ul>
+          <li>Bifidobacterium bifidum – 2.00×10⁸ cfu</li>
+          <li>Lactobacillus acidophilus – 2.06×10⁸ cfu</li>
+          <li>Lactobacillus bulgaricus – 2.06×10⁸ cfu</li>
+          <li>Lactobacillus casei – 2.06×10⁸ cfu</li>
+          <li>Lactobacillus plantarum – 1.26×10⁸ cfu</li>
+          <li>Streptococcus thermophilus – 4.10×10⁸ cfu</li>
+          <li>Torulopsis spp – 5.32×10⁷ cfu</li>
+          <li>Aspergillus oryzae – 5.32×10⁷ cfu</li>
+          <li>Total Viable Count – 2×10⁹ cfu</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Reduces digestive disorders</li>
+          <li>Improves FCR and egg shell quality</li>
+          <li>Improves food safety</li>
+          <li>Extends laying life</li>
+          <li>No withdrawal period required</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li><em>In Water:</em></li>
+          <li>Chicks: 1 g/L for 5–7 days</li>
+          <li>Post-antibiotic: 1 g in 4 L for 5–7 days</li>
+          <li>Stress: 1 g in 4 L for 3 days</li>
+          <li><em>In Feed:</em></li>
+          <li>Broiler (Pre-starter): 150 g/ton</li>
+          <li>Starter: 100 g/ton</li>
+          <li>Finisher: 50 g/ton (8–10 days)</li>
+          <li>Breeders/Layers: 50–100 g/ton for 7 days, repeat every 3–4 weeks</li>
+          <li>Large animals: 2–3 g per 10 kg body weight</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 1 kg, 5 kg & 10 kg packs</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+</div>
+   
+<!--</div>-->
+
+<div id="Disinfectants" class="tabcontent"> 
+  <h3>DISINFECTANTS</h3>
+  
+  <!-- Search Input -->
+  <input type="text" id="searchInput-disinfectants01" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('disinfectants01')">
+
+<h4 id="tabletListLabel-disinfectants01">SANIFACT</h4>
+<ul id="tabletList-disinfectants01">
+  <li>
+    <strong>SANIFACT</strong> – Water Sanitizer for All Types of Livestock
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Peracetic Acid</li>
+          <li>Hydrogen Peroxide</li>
+          <li>Acetic Acid</li>
+          <li>Sulphuric Acid</li>
+          <li>Surfactant in a stabilized aqueous solution</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>For Sanitizing Drinking Water</li>
+          <li>Farm Sanitization – floors, equipment, pipelines</li>
+          <li>Hatchery Disinfection – trays, incubators, humidity chambers</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>General: 5–10 ml per 100 liters of water</li>
+          <li>Acute cases: 15–20 ml per 100 liters</li>
+          <li>Severe cases: 40–50 ml per 100 liters for 2–3 days</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 5 L, 15 L, 25 L drum containers</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-disinfectants01">FREQUAT</h4>
+<ul id="tabletList-disinfectants01">
+  <li>
+    <strong>FREQUAT</strong> – Water Sanitizer & Utility Equipment Cleaning Agent
+    <ul>
+      <li><strong>Composition:</strong>
+        <ul>
+          <li>Quaternary Ammonium Compounds</li>
+          <li>Pine Oil</li>
+          <li>Citronella Oil</li>
+          <li>Surfactants</li>
+          <li>Isopropyl Alcohol (IPA)</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Kills gram-positive/negative bacteria, molds, viruses</li>
+          <li>Leaves residual bacteriostatic film on surfaces</li>
+          <li>EPA registered for hatchery fogging</li>
+          <li>Safe for surfaces not harmed by water</li>
+          <li>Suitable for manual and foam cleaning</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Prevention: 15 ml per 100 liters of water</li>
+          <li>Spray/mopping: 20 ml per liter of water</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 5 L, 15 L, 25 L drum containers</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+</div>
+   
+<!--</div>-->
+
+
+
+
+<div id="Livestock" class="tabcontent"> 
+  <h3>LIVE STOCK / BOLUS TABLETS</h3>
+  
+  <!-- Search Input -->
+  <input type="text" id="searchInput-livestock" class="searchInput" placeholder="Search for a medicine..." onkeyup="filterList('livestock')">
+
+  <!-- Product List -->
+  <h4 id="tabletListLabel-livestock">FENDA-250</h4>
+  <ul id="tabletList-livestock">
+    <li>
+      <strong>FENDA-250</strong> – Fenbendazole Bolus 250 mg
+      <ul>
+        <li><strong>Composition:</strong> Each bolus contains Fenbendazole BP 250 mg</li>
+        <li><strong>Indications:</strong> 
+          <ul>
+            <li><strong>Cattle, Buffaloes, Sheep, Goats:</strong> Adult nematodes, larvae, lungworms, tapeworms</li>
+            <li><strong>Horses:</strong> Strongyles, Ascarids, Oxyuris, Strongyloides</li>
+            <li><strong>Pigs:</strong> Hyostrongylus, Oesophagostomum, Ascaris suum, Trichuris, Metastrongylus, Stephanurus dentatus</li>
+            <li><strong>Dogs:</strong> Ancylostoma (Hookworms), Ascarids, Trichuris (Whipworms), Taenia</li>
+          </ul>
+        </li>
+        <li><strong>Dosage:</strong> 
+          <ul>
+            <li>Cattle & Buffalo: 5 mg/kg body weight</li>
+            <li>Sheep & Pigs: 5 mg/kg body weight</li>
+            <li>Horses: 5–10 mg/kg body weight</li>
+            <li>Dogs: 50 mg/kg for 5 days</li>
+          </ul>
+        </li>
+        <li><strong>Presentation:</strong> Strip of 4 Boluses; 20 Bolus Box (5x4 Alu. Strip)</li>
+      </ul>
+    </li>
+  </ul>
+
+    <h4 id="tabletListLabel-livestock">PIQAN</h4> 
+  <ul id="tabletList-livestock">
+    <li>
+      <strong>PIQAN</strong> – Praziquantel Tablet 50 mg
+      <ul>
+        <li><strong>Composition:</strong> Each tablet contains Praziquantel 50 mg in IPA aqueous base</li>
+        <li><strong>Indications:</strong> 
+          <ul>
+            <li>Effective against all adult and developmental stages of tapeworms</li>
+            <li>Targets: <em>Echinococcus granulosus, Echinococcus multilocularis, Taenia hydatigena, Taenia multiceps, Diplidium caninum, Mesocestoides spp.</em></li>
+          </ul>
+        </li>
+        <li><strong>Dosage:</strong> Single oral dose of 5 mg/kg body weight for dogs and cats, repeated every 6 weeks from 6 weeks of age
+          <ul>
+            <li>5 kg – ½ tablet</li>
+            <li>10 kg – 1 tablet</li>
+            <li>15 kg – 1½ tablets</li>
+            <li>20 kg – 2 tablets</li>
+            <li>Over 20 kg – increase dose by ½ tablet per 5 kg</li>
+          </ul>
+        </li>
+        <li><strong>Presentation:</strong> Blister of 4 tablets</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4 id="tabletListLabel-livestock">PEFXA</h4> 
+  <ul id="tabletList-livestock">
+    <li>
+      <strong>PEFXA</strong> – Pefloxacin Tablet 400 mg
+      <ul>
+        <li><strong>Composition:</strong> Each tablet contains Pefloxacin 400 mg</li>
+        <li><strong>Indications:</strong> 
+          <ul>
+            <li>Treatment of gastrointestinal, respiratory, urinary and genital tract infections</li>
+            <li>Effective against Mycoplasma spp.</li>
+            <li>Ideal for pre-ruminant calves and monogastric animals</li>
+            <li>Fluoroquinolone antimicrobial with broad-spectrum, favorable pharmacokinetics, and low toxicity</li>
+          </ul>
+        </li>
+        <li><strong>Dosage:</strong> 1 tablet per 80 kg body weight for 3–4 days</li>
+        <li><strong>Presentation:</strong> Strip of 4 tablets</li>
+      </ul>
+    </li>
+  </ul>
+
+ <h4 id="tabletListLabel-livestock">RAFXI</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>RAFXI</strong> – Rafoxindine Bolus 2 gm
+    <ul>
+      <li><strong>Composition:</strong> Each bolus contains Rafoxindine 2 gm</li>
+      <li><strong>Indications:</strong> 
+        <ul>
+          <li>Effective against immature flukes and blood-sucking nematodes</li>
+          <li>Controls tissue-invading fly maggots and nasal bots (Oestrus ovis)</li>
+          <li>Safe for cattle and sheep of all ages under common field conditions</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong> 
+        <ul>
+          <li>Basic dose: 7.5 mg/kg body weight</li>
+          <li>Cattle/Buffalo: 1 bolus</li>
+          <li>For maggot-infested wounds: repeat dose after 3 days</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> Strip of 2 boluses</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">STANFRE</h4>
+<ul id="tabletList-livestock-1">
+  <li>
+    <strong>STANFRE</strong> – Clostantel Bolus 1000 mg
+    <ul>
+      <li><strong>Composition:</strong> Each Closan bolus contains Clostantel 1000 mg</li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Effective against both endoparasites and ectoparasites in cattle, buffalo, sheep, goat, dog, horse, and other domestic animals</li>
+          <li><strong>Endoparasites:</strong> Fasciola hepatica, Fasciola gigantica, Fascioloides magna, Haemonchus contortus, Haemonchus similis, Bunostomum phlebotomum, Oesophagostomum radiatum, Strongyloides spp, Ascarid spp, Ancylostoma caninum</li>
+          <li><strong>Ectoparasites:</strong> Oestrus ovis, Hyalomma anatolicum, Boophilus microplus, Dermatobia hominis, Ligonathus ovillus, Callitroga hominivorax, Melophagus ovis, Gastrophilus spp, Lucillia cuprina, Schistosoma nasalis</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li><strong>For Fasciola spp.:</strong> 1 Bolus / 66 kg body weight</li>
+          <li><strong>For Haemonchus spp., Bunostomum, Oesophagostomum, Strongyloides, Ascarids, Ancylostoma:</strong> 1 Bolus / 100 kg body weight</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> Strip of 4 Boluses</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">HALIFRED</h4>
+<ul id="tabletList-livestock">
+  <li>
+    <strong>HALIFRED</strong> – Halquinol Bolus 1.5 g
+    <ul>
+      <li><strong>Composition:</strong> Each bolus contains Halquinol 1.5 g</li>
+      <li><strong>Indications:</strong> Treatment of diarrhoea</li>
+      <li><strong>Dosage:</strong> ¼ to ½ bolus twice daily orally for 5–7 days</li>
+      <li><strong>Presentation:</strong> Strip of 4 Boluses</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">VORMIFRED -V</h4>
+<ul id="tabletList-livestock-3">
+  <li>
+    <strong>VORMIFRED -V</strong> – Albendazole Bolus 1.5 g
+    <ul>
+      <li><strong>Composition:</strong> Each bolus contains Albendazole U.S.P. 1.5 g</li>
+      <li><strong>Indications:</strong> Broad-spectrum anthelmintic effective against immature and mature gastrointestinal roundworms, lungworms, tapeworms, liver flukes, and amphistomes in ruminants</li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li><strong>For Roundworms:</strong> Cattle/Horse: 1 Bolus / 300 kg body weight</li>
+          <li><strong>For Flukes:</strong> Cattle: 2 Boluses / 300 kg body weight</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 20 Bolus Box (5x4 Alu. Strip)</li>
+    </ul>
+  </li>
+</ul>
+
+
+<h4 id="tabletListLabel-livestock">MEBENFRED -V</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>MEBENFRED -V</strong> – Mebendazole Bolus 1 gm
+    <ul>
+      <li><strong>Composition:</strong> Each bolus contains Mebendazole 1 gm</li>
+      <li><strong>Indications:</strong>
+        <ul>
+          <li>Kills ova, larva, immature and mature stages of roundworms and tapeworms in the GI and respiratory tracts</li>
+          <li><strong>Cattle/Sheep:</strong> Haemonchus, Ostertagia, Trichostrongylus, Nematodirus, Bunostomum, Oesophagostomum, Dictyocaulus (lungworms), Chabertia, Cooperia, Cestodes (tapeworms)</li>
+          <li><strong>Horse:</strong> Strongyles, Parascaris, Oxyuris equi, Tapeworms, Probsmayria vivipara</li>
+        </ul>
+      </li>
+      <li><strong>Dosage:</strong>
+        <ul>
+          <li>Cattle: 4–5 boluses</li>
+          <li>Sheep/Goat: 1–2 boluses</li>
+          <li>Horse: 2–4 boluses</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> Strip of 4 Boluses</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">DIMIFRED</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>DIMIFRED</strong> – Diminazene Diaceturate Granules
+    <ul>
+      <li><strong>Composition:</strong> 23.6 g of granules containing 10.5 g of Diminazene Diaceturate</li>
+      <li><strong>Indications:</strong> Active against Trypanosoma spp., Babesia spp., and Theileria annulata</li>
+      <li><strong>Dosage:</strong> One 10.5 g sachet for 3000 kg body weight; dissolve in 150 ml water to prepare injectable solution</li>
+      <li><strong>Presentation:</strong> 23.6 g and 2.36 g Sachets</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">PRAZFEB</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>PRAZFEB</strong> – Praziquantel tablet 50mg & Febendazole tablet 500 mg
+    <ul>
+      <li><strong>Composition:</strong> Each tablet contains :<br>
+        Praziquantel U.S.P…….50mg<br>
+        Febendazole B.P vet 500 mg
+      </li>
+      <li><strong>Indications:</strong>
+        <ul>
+        <li>For regular deworming of tape worms, Praziquantel kills mature & immature stages of common species of tapeworms like Echinococus granulosus, E-multilocularis, Taeniamulticeps, T.Hydatigena, T.Pisiformis, T.taeniformis Dipylidium caninum.</li>
+        <li>For regular deworming of roundworms Febendazole is very effective on ascardis (Toxocara canis, Taxascaris Leonina), hookworms (Ancylostoma caninum), hookworms (Ancylostoma caninum), Uncinaria, Stenocephala and Whipworms (Trichuris vulpis).
+        <li>Febendazole works on both mature and immature stages of namatodes.</li>
+        <li>Prazfeb tablets is to be given to pregnant bitches & puppies.</li>
+      </li>
+      </ul>
+      <li><strong>Dosage:</strong> One Prazfeb tablet for 10 kg body weight of the dog as a single dose Prazfeb tablet @ 5 mg/kg body weight and Febendazole @50 mg / kg body weight. The dose is to be repeated every month.</li>
+      <li><strong>Presentation:</strong> Strip of 2 tablets in a catch cover</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">FREMET-V</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>FREMET-V</strong> – Metronidazole tablet 200 mg & 400 mg
+    <ul>
+      <li><strong>Composition:</strong> Each tablet contains: Metronidazole 200 mg & 400 mg</li>
+      <li><strong>Indications:</strong> 
+        For treatment of intestinal coccidiosis & giardiasis in dogs. The brown discoloration of urine commonly observed is due to a pigment metabolite of metronidazole and is of no clinical significance.
+      </li>
+      <li><strong>Dosage:</strong> 20 mg per kg body weight daily orally for 5-7 days.</li>
+      <li><strong>Presentation:</strong> Strip of 10 tablets</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">COTRIFRED -V</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>COTRIFRED -V</strong> – Trimethoprim tablet 400 mg & Sulphamethoxazole 2 gm
+    <ul>
+      <li><strong>Composition:</strong> Each bolus contains: Trimethoprim………400 mg, Sulphamethoxazole……..2 g</li>
+      <li><strong>Indications:</strong> In enteritis, diarrhoea, dysentry.</li>
+      <li><strong>Dosage:</strong> Dog and Cat : 30 mg per kg body weight daily orally for 3-5 days</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">OXY-TRACY</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>OXY-TRACY</strong> – Oxytetracycline tablet 500 mg
+    <ul>
+      <li><strong>Composition:</strong> Each tablet contains : Oxytetracycline HCl…500 mg</li>
+      <li><strong>Indications:</strong> 
+        Diarrhoea caused by oxytetracycline sensitive bacteria. Prolonged oral administraton may disturb the intestinal- microflora resulting in avitaminosis and infection with candida.
+      </li>
+      <li><strong>Dosage:</strong> Dog : 1 tab per 10 kg body weight given orally</li>
+      <li><strong>Presentation:</strong> Pack of 10 tablets</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">FREMET-F</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>FREMET-F</strong> – Metronidazole tablet 1 g & Furazolidone 200 mg
+    <ul>
+      <li><strong>Composition:</strong> Each bolus contains : Metronidazole……………..1 g, Furazolidone: 200g</li>
+      <li><strong>Indications:</strong> For treatment of gastrointestinal infection due to G+ve, G-ve aerobic and anaerobic bacteria and protozoa</li>
+      <li><strong>Dosage:</strong> 1/4 to 1/2 bolus twice daily orally for five days</li>
+      <li><strong>Presentation:</strong> Pack of 10 tablets</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabletListLabel-livestock">TERAFRED</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>TERAFRED</strong> – Teramisole Powder
+    <ul>
+      <li><strong>Composition:</strong> Each kg bolus contains: Tetramizole HCl B.P. Vet 30% W/W</li>
+      <li><strong>Indications:</strong> Broad Spectrum anthelminitic for Cattle, Buffalo, Sheep, Goat and Poultry</li>
+      <li><strong>Dosage:</strong> 
+        <ul>
+          <li>Large Animals: Dissolve 10 gms in 300 ml water and administer in following dose</li>
+          <li>Upto 15 kg Body weight -15 ml</li>
+          <li>15 to 25 kg Body weight - 30 ml</li>
+          <li>Over 35 kg Body weight - 60 ml</li>
+          <li>Poultry : Dissolve 10 gms powder in 1 ltr. Drinking water for 100 birds</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 100 gms containers & 10 gms pouch</li>
+    </ul>
+  </li>
+</ul>
+
+
+<h4 id="tabletListLabel-livestock">FREPRIMECAL</h4> 
+<ul id="tabletList-livestock">
+  <li>
+    <strong>FREPRIMECAL</strong> – Combination of Natural Calcium, Phosphorous And Vitamin D3  with Proteins And Collagen
+    <ul>
+      <li><strong>Composition:</strong> Each tablet contains :
+        <ul>
+          <li>Microcrystalline Hydroxyapatitie Complex (MCHC) providing:</li>
+          <li>Calcium : 500 mg</li>
+          <li>Phosphorous : 220 mg</li>
+          <li>Vitamin D3 : 400 IU</li>
+          <li>Proteins : 25%</li>
+          <li>Collagens : 12%</li>
+          <li>And Trace Minerals as Copper, Zinc, Magnesium, Iron and Amino acids</li>
+        </ul>
+      </li>
+      <li><strong>Indications:</strong> 
+        <ul>
+          <li>For growing pet, lactating bitch, old dogs to prevent Calcium and Phosphorus deficiency.</li>
+          <li>To prevent puerperal tetany in pregnant bitches.</li>
+          <li>Calcium supplement in pups, pregnant bitches as it helps in remineralisation of bone during lactation, stimulates fracture healing, physical growth and tissue repair.</li>
+          <li>As a daily supplement for dogs and cats where appropriate to provide a dietary source of Calcium, Phosphorus and Vitamin D 3</li>
+          <li>Helps to prevent osteoporosis and other degenerative bone disorders in dogs and cats.</li>
+        </ul>
+      </li>
+      <li><strong>Target Animal Species:</strong> Dogs, Cats</li>
+      <li><strong>Dosage:</strong> 
+        <ul>
+          <li>Dogs and Cats : 1 tablet per 20 lb of body weight daily.</li>
+          <li>Pups : 1 tablet BID</li>
+          <li>Small breed dogs : 1 tablet BID</li>
+          <li>Large breed dogs : 2 tablets BID</li>
+          <li>Administer by hand just prior to feeding or crumble and mix with food.</li>
+          <li>Or, as directed by the veterinarian.</li>
+        </ul>
+      </li>
+      <li><strong>Presentation:</strong> 200 tablets packed in a Jar</li>
+    </ul>
+  </li>
+</ul>
+   </div>
+
+
+
+
+
+
+
+   </div>
+</section>
+
+
+
+
+
+
+
+
+<script>
+  function filterList(tabKey) {
+    const input = document.getElementById("searchInput-" + tabKey).value.toLowerCase();
+    const listTypes = ["tabletList", "capsuleList", "syrupList"];
+
+    listTypes.forEach(type => {
+      const listId = `${type}-${tabKey}`;
+      const list = document.getElementById(listId);
+      if (!list) return;
+
+      const items = list.getElementsByTagName("li");
+      Array.from(items).forEach(item => {
+        const text = item.textContent || item.innerText;
+        item.style.display = text.toLowerCase().includes(input) ? "" : "none";
+      });
+    });
+  }
+
+  function scrollToCategory(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function openCity(evt, cityName) {
+    const contents = document.getElementsByClassName("tabcontent");
+    const buttons = document.getElementsByClassName("tablinks");
+
+    // Hide all tab contents
+    Array.from(contents).forEach(content => content.style.display = "none");
+
+    // Remove active class from all buttons
+    Array.from(buttons).forEach(btn => btn.classList.remove("active"));
+
+    // Show the selected tab content
+    const activeContent = document.getElementById(cityName);
+    if (activeContent) {
+      activeContent.style.display = "block";
+      if (evt) evt.currentTarget.classList.add("active");
+
+      // Scroll into view on mobile
+      if (window.innerWidth <= 768) {
+        activeContent.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const firstTab = document.querySelector(".tablinks");
+    const firstTabContentId = firstTab?.getAttribute("onmouseover")?.match(/'([^']+)'/)?.[1];
+
+    if (firstTab && firstTabContentId) {
+      openCity({ currentTarget: firstTab }, firstTabContentId);
+    }
+  });
+</script>
+
+
+  
+
+
+
+
+
+
+<!-- Footer #5
+============================================= -->
+
+<!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer-5">	
+	<!-- Widget Section
+	============================================= -->
+	<div class="footer-widget">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-4 footer-widget-about">
+					<div class="footer-widget-title">
+						<h5>Contact Us</h5>
+					</div>
+					<div class="footer-widget-content">
+						<p class="mb-0">Lorem ipsum dolor sit amet, adipiscing condimentum tristique vel, eleifend sed turpis. Amet, consectetur adipising elit Integer.</p>
+						<div class="footer-widget-contact-link mt-md">
+							<div class="col-xs-12 col-sm-12 col-md-6 mb-30-xs mb-30-sm">
+								<h6>Phone :</h6>
+								<p><i class="fa fa-phone"></i>+ 2 01065370701</p>
+								<p class="mb-0"><i class="fa fa-fax"></i>+ 2 01065370701</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<h6>Email :</h6>
+								<p class="mb-0"><i class="fa fa-envelope"></i>7oroof@7oroof.com</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12  col-md-12 mt-30 mb-30-xs mb-30-sm">
+								<h6>Address :</h6>
+								<p class="mb-0"><i class="fa fa-map-marker"></i>2 AlBahr St, Tanta , AlGharbia, Egypt.</p>
+							</div><!-- .col-md-12 end -->
+						</div>
+					</div>
+				</div><!-- .col-md-4 end -->
+				
+				<div class="col-xs-12 col-sm-12  col-md-8">
+					
+					<div class="row mb-60">
+						<!-- Myaccount Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Pharmaceutical</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Formulations</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Surgifre</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun API</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun DC</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun Pellets</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Service Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Healthcare</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Allophatic</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredunvet</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun Aqua</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Neutraceuticals</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Niche</a>		
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Newsletter -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-newsletter newsletter-widget">
+								<div class="footer-widget-title">
+									<h5>Newsletter</h5>
+								</div>
+								<div class="footer-widget-content">
+									<p class="mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam.</p>
+									<form class="mailchimp">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="E-mail Address">
+											<span class="input-group-btn">
+											<button class="btn text-capitalize" type="button">join</button>
+											</span>
+										</div>
+										<!-- /input-group -->
+										<div class="subscribe-alert"></div>
+									</form>
+									<!--Mailchimp Form End-->
+								</div>
+							</div><!-- .newsletter-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+						
+					<div class="row">
+						<!-- Information Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Information</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>About Us</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Delivery Information</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Privacy Policy</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Extras Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Extras</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Brands</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Gift Vouchers</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Affiliates</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Specials</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-tweets tweets-widget">
+								<div class="footer-widget-title">
+									<a href="./career.html"  class="#" data-hover="Career"><h5>Careers</h5></a>
+								</div>
+								<div class="footer-widget-content">
+									<div id="twitter-feed"></div>
+								</div>
+							</div><!-- .tweets-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+					
+				</div><!-- .col-md-8 end -->
+			</div>
+		</div><!-- .container end -->
+	</div>
+  
+  <!-- .footer-widget end -->
+   
+	<!-- Copyrights
+	============================================= -->
+	<div class="footer-copyright bg-dark3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-12">
+					<div class="powered text-uppercase pull-left pull-none-xs mb-15-xs">
+						<p><span class="text-white">Mount.</span> Made With Love By <a href="http://themeforest.net/user/7oroof/portfolio?ref=7oroof">7oroof.com</a></p>
+					</div>
+					<div class="copyright pull-right pull-none-xs">
+						<p class="text-capitalize">
+							<span class="text-uppercase">&copy; 2016. All Rights Reserved</span>
+							<a href="privacy.html">Privacy Policy</a> &ndash; <a href="terms.html">Terms of Use</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-copyright end -->
+</footer>
+<!-- Footer Scripts
+============================================= -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
+</body>
+</html> 

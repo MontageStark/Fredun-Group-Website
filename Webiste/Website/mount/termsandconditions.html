@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<!-- Document Meta
+    ============================================= -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--IE Compatibility Meta-->
+<meta name="author" content="zytheme" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Mount is a pixel perfect creative multi purpose html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+<link href="assets/images/favicon/favicon.ico" rel="icon">
+
+<!-- Fonts
+    ============================================= -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets
+    ============================================= -->
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet/less" type="text/css" href="assets/less/style.less" />
+<script src="assets/js/less.js" type="text/javascript"></script>
+
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+      
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      animation: slideFadeIn 1s ease;
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      font-weight: 800;
+      color: #00796b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section {
+		
+      margin-bottom: 40px;
+    }
+
+    .section h3 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #004d40;
+    }
+
+    .info-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .info-box {
+      flex: 1 1 45%;
+      margin: 10px;
+      padding: 20px;
+      border-left: 4px solid #00796b;
+      background-color: #f1f8f7;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-box p,
+    .info-box a {
+      margin: 6px 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #00695c;
+    }
+
+    
+    .btn:hover {
+      background-color: #004d40;
+    }
+
+    .map-text-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .map-text-wrapper .text-col {
+      flex: 1 1 300px;
+    }
+
+    .map-text-wrapper .map-col {
+      flex: 1 1 300px;
+    }
+
+    .map-col iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    @keyframes slideFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .info-box, .map-text-wrapper, .text-col, .map-col {
+        flex-direction: column;
+        flex: 1 1 100%;
+      }
+
+      .section-title {
+        font-size: 2em;
+      }
+
+      .map-text-wrapper {
+        flex-direction: column;
+      }
+
+      .map-col iframe {
+        height: 200px;
+      }
+
+
+    }
+
+	  /* Mobile-specific fix */
+@media (max-width: 768px) {
+  .vision-navigation .nav-icon {
+    text-align: left; /* or center if better suited */
+    padding-left: 1rem;
+    white-space: normal; /* allow text wrap */
+    overflow-wrap: break-word;
+  }
+
+  .dropdown-menu, .investor-dropdown { 
+    left: 0 !important;
+    padding-left: 10px !important;
+    box-sizing: border-box;
+    width: 100%; /* Ensure full screen width if needed */
+  }
+
+  .dropdown-menu a, 
+  .investor-dropdown a {
+    padding-left: 10px !important;
+    white-space: normal; /* break long words if necessary */
+    display: block;
+  }
+}
+  </style>
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Document Title
+    ============================================= -->
+<title>Terms and Conditions</title>
+</head>
+<body>
+<div class="preloader">
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<!-- Document Wrapper
+	============================================= -->
+<div id="wrapper" class="wrapper clearfix">
+ <header id="navbar-spy" class="header ">
+	<nav id="primary-menu" class="navbar navbar-fixed-top " style="background-color: white;">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="logo" href="index.html">
+					<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+				</a>
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+	<!-- Home Menu -->
+	 <li class="" >
+		<a href="index.html"  class="#" data-hover="Global Presence">Home</a>
+	</li>
+	
+	<li class="has-dropdown">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
+		<ul class="dropdown-menu">
+		   <li><a href="listofproducts1.html">Allophatic Formulations</li>
+        <li><a href="surgifre.html">Surgifre</a></li>
+		
+			<li>
+				<a href="fredunapilist.html">Fredun API</a>
+			</li>
+			<li>
+				<a href="fredundcgranules.html">Fredun DC</a>
+			</li>
+			<li>
+				<a href="fredunpellets.html">Fredun Pellets</a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="has-dropdown ">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
+		<ul class="dropdown-menu">
+		   <li><a href="healthcareallopathicformulations.html">Allophatic Formulations</li>
+        <li><a href="fredunvet.html">Fredunvet</a></li>
+		
+			<li>
+				<a href="fredunaqua.html">Fredun Aqua</a>
+			</li>
+			<li>
+				<a href="nutraceuticals.html">Nutraceuticals</a>
+			</li>
+			<!--<li>
+				<a href="home-alternative.html">Niche</a>	
+			</li>-->
+			
+		</ul>
+	</li>
+	
+	<li class="has-dropdown ">
+		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
+		<ul class="dropdown-menu">
+		  <li><a href="frednavet.html">Fredna Vet Diagnostics</a></li>
+      <li><a href="">Fredun Nutrition</a></li>
+			<li><a href="fredunmobility.html">Fredun Mobility</a></li>
+      <li><a href="fremorglobal.html">Fremor Global</a></li>
+      <li><a href="frednadentalsystems.html">FDS</a></li>
+			<li><a href="chuubalm.html">Chuu Balm</a></li>
+			<li><a href="beautyfred.html">Beauty Fred</a></li>
+      <li><a href="farstore.html">FAR Store</a></li>
+			<li><a href="inklingindia.html">Inkling India</a></li>
+      <li><a href="Iteeha.html">Iteeha</a></li>
+		</ul>
+	</li>
+	
+	<!-- li end -->
+	<li class="has-dropdown mega-dropdown">
+		<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+		<ul class="dropdown-menu mega-dropdown-menu">
+			<li>
+				<div class="container">
+					<div class="row">
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial & Fillings</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#quarterly-2023">Quaterly Reports</a>
+								</li>
+								<li>
+									<a href="37annualreport.html">Annual reports</a>
+								</li>
+								<li>
+									<a href="investorsrelation.html#news">News & Announcements</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Fredun Group</a>
+							<ul>
+								<li>
+									<a href="boardofdirectors.html#boardofdirectors">Board of Directors</a>
+								</li>
+								<li>
+									<!--<a href="portfolio-masonry-2.html">Investors Presentation</a> -->
+								</li>
+								<li>
+									<a href="investorsrelation.html#corporategovernance">Corporate Governance</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Shareholders</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#infoforshareholders">Info For Shareholders</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#shareholdingpattern">Shareholding Pattern</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#generalinformation">General Information</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Annual Return</a>
+							<ul>
+								<li>
+									<a href="investorsrelation.html#extractofannualreturn">Extract of  annual return</a>
+								</li>
+								
+							</ul>
+							
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Financial Results</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#audited">Audited</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unaudited">Unaudited</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						<!-- Portfolio -->
+						<div class="col-md-2">
+							<a href="#">Other Fillings</a>
+							<ul>
+								<li>
+									<a href="/investorsrelation.html#otherfillingswithstockexchanges">Fillings with Stock Exchanges</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#statutorydocumentsandinformation">Statutory Documents</a>
+								</li>
+								<li>
+									<a href="/investorsrelation.html#unclaimeddividend">Unclaimed Dividend</a>
+								</li>
+								
+							</ul>
+						</div>
+						<!-- .col-md-2 end -->
+						
+					</div>
+					<!-- .row end -->
+				</div>
+				<!-- container end -->
+			</li>
+		</ul>
+		<!-- .mega-dropdown-menu end -->
+	</li>
+	
+	
+
+	<li class="inactive" >
+		<a href="./globalpresence.html"  class="#" data-hover="Global Presence">Global Presence</a>
+	</li>
+
+	
+
+  <li class="has-dropdown ">
+		<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="about ">About </a>
+		<ul class="dropdown-menu">
+		   <li><a href="investorsrelation.html">Investors Relations</li>
+        <li><a href="companyprofile.html">Company Profile</a></li>
+				<li><a href="boardofdirectors1.html.html">Board of Directors</a></li>
+		    <li><a href="ourhistory.html">Our History</a></li>
+		
+			
+		</ul>
+	</li>
+
+	 <li class="active" >
+		<a href="./contactus.html"  class="#" data-hover="Career">Contact Us</a>
+	</li>
+
+	
+	<!-- li end -->
+	<!-- Elements Menu -->
+	
+	<!-- li end -->
+</ul>
+				<!-- Mod-->
+				<!-- Module Cart -->
+				
+				<!-- .module-cart end -->
+				<!-- Module Search -->
+<div class="module module-search pull-left" id="searchModule">
+  <div class="module-icon search-icon" onclick="toggleSearchBox()">
+    <i class="fa fa-search"></i>
+    <span class="title">Search</span>
+  </div>
+
+  <!-- Search results go here -->
+  <div id="searchResults" style="margin-bottom: 20px;"></div>
+</div>
+
+
+
+  <!-- .module-search-box end -->			
+</header>
+
+
+<!-- Page Title #1
+============================================= -->
+<section id="page-title" class="page-title bg-overlay bg-overlay-dark">
+	<div class="bg-section" >
+		<img src="assets/images/banners/globalpresence.jpg" alt="Background"/>
+	</div>
+	<div class="container" style="padding-top: 100px">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12  col-md-12">
+				<div class="title-1 text-center">
+					
+					<div class="title-heading">
+						<h2>Terms and Conditions</h2>
+					</div>
+				</div>
+				<!-- .page-title end -->
+			</div>
+			<!-- .col-md-12 end -->
+		</div>
+		<!-- .row end -->
+	</div>
+	<!-- .container end -->
+</section>
+<!-- #page-title end -->
+
+<!-- Section
+============================================= -->
+<section>
+    
+
+<div class="contact-container">
+    <h1 class="section-title"></h1>
+
+    <div class="section">
+      <h3>Terms and Conditions</h3>
+      <div class="info-group">
+        <div class="info-box">
+          <div class="map-text-wrapper">
+            <div class="text-col">
+              <p><span class="highlight">Fredun Pharmaceuticals Ltd.</span></p>
+              <p>Terms and Conditions of Use – Fredun Group Website<br><br>
+Welcome to Fredun Group’s website. These terms of use set out the Terms and Conditions for use or access of this Site (“Terms and Conditions”) by any individual (“User”). Fredun may modify these Terms and Conditions or discontinue the Site at any time without any prior written notice. Any reference to the Terms and Conditions will mean a reference to the Terms and Conditions as amended or modified. The Site and its contents are designed to comply with the laws and regulations of India. Although accessible in other parts of the world, the Site and its contents are intended for access and use by Indian residents only.
+<br><br>
+This Site is not intended to establish any professional-client or doctor-patient relationship. Fredun (which includes its affiliates, successors, and permitted assigns) neither takes responsibility nor provides guarantees regarding the prescription or administration of any drugs/treatments. Any healthcare professionals or third parties whose information may appear on this Site are independent and not affiliated with Fredun. Fredun takes no responsibility for the qualifications or authenticity of any professionals or the correctness of any advice they may offer. Users are responsible for independently verifying any such information.
+<br><br>
+<b>1. Acceptance of the Terms and Conditions<br></b>
+Access to and use of this Site is subject to the Terms and Conditions as set out herein and all applicable laws. By accessing and browsing this Site, the User acknowledges having read, understood, and accepted, without limitation or qualification, the Terms and Conditions. Any other agreement between the User and Fredun, if inconsistent with these Terms, is considered superseded. If you do not agree to these Terms and Conditions, you may not use this Site.
+<br><br>
+<b> 2. Use of Information<br></b>
+All materials on this Site, including text, audio, video, and images (“Information”), are provided for non-commercial reference purposes only and are not a substitute for professional judgment. Users may browse the Site and download content only for personal, non-commercial use. Reproduction, distribution, transmission, or modification of the Information for commercial purposes is strictly prohibited without written permission from Fredun. All content is protected by applicable intellectual property laws.
+<br><br>
+<b> 3. Medical or Product Information<br></b>
+Any reference to products on this Site is for general information only. Products may only be available in India and only via appropriate regulatory channels. Availability, branding, and indications may differ in other countries.
+<br><br>
+<b> 4. Video and Third-Party Content Disclaimer<br></b>
+Information on the Site may be presented via video, interviews, or other electronic formats. These reflect the views of the respective individuals and do not constitute Fredun’s endorsement. Fredun is not responsible for any such third-party content.
+<br><br>
+<b> 5. Disclaimer of Liability<br></b>
+Information, software, and services on this Site may contain inaccuracies or errors. Fredun disclaims all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement. Users must confirm any Information independently. Fredun is not liable for any damages resulting from use of the Site, including but not limited to direct, indirect, incidental, or consequential damages.
+<br><br>
+<b> 6. User Information<br></b>
+Any communication or content transmitted to the Site (e.g., questions, comments, suggestions, personal data) will be treated as non-confidential and non-proprietary. Fredun may use such content without any obligation to the user. Users are prohibited from posting unlawful, offensive, or defamatory material, and Fredun will cooperate with law enforcement if required. Users agree to indemnify Fredun for any claims resulting from such misuse.
+<br><br>
+<b> 7. Third-Party Links<br></b>
+This Site may contain links to external websites. These are provided for convenience and do not imply endorsement. Fredun is not responsible for the content or data practices of such third-party sites. Users access such links at their own risk.
+<br><br>
+<b> 8. Non-Transferable Access<br></b>
+User rights to access the Site are non-transferable. Any login credentials provided must not be shared. All access privileges remain the exclusive property of Fredun.
+<br><br>
+<b> 9. No Investment or Medical Advice<br></b>
+The Site does not constitute medical advice or an offer to invest in Fredun or any of its affiliates. It is strictly informational.
+<br><br>
+<b> 10. Limitation of Liability<br></b>
+Fredun makes no warranties regarding the accuracy or completeness of the Site content. All content is provided “as is.” Fredun and its affiliates, employees, and agents shall not be liable for any damages, including virus-related damage to the User’s system. Any user-generated content is the sole responsibility of the poster. Fredun assumes no liability for such submissions and may remove any content without notice.
+<br><br>
+<b> 11. Copyright Notice<br></b>
+All content on this Site is protected by copyright laws. No part of this Site may be reproduced, distributed, or used without prior written permission from Fredun. Materials marked for download are for personal use only and must be properly attributed. Unauthorized use may lead to civil or criminal liability.
+<br><br>
+<b> 12. Miscellaneous<br></b>
+If any provision of these Terms is deemed invalid or unenforceable, the remaining provisions shall remain in effect. These Terms do not limit any rights Fredun may have under applicable law.
+<br><br>
+<b> 13. Governing Law<br></b>
+This Site is operated by Fredun from Mumbai, India. These Terms are governed by the laws of India, and the courts in Mumbai shall have exclusive jurisdiction. Fredun may update these Terms without notice, and users are advised to review them regularly.</p>
+
+            </div>
+           
+          </div>
+        </div>
+
+    
+  </section>
+<!-- Footer #5
+============================================= -->
+
+<!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer-5">	
+	<!-- Widget Section
+	============================================= -->
+	<div class="footer-widget">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-4 footer-widget-about">
+					<div class="footer-widget-title">
+						<h5><a href="./contactus.html"  class="#" data-hover="Contact">Contact Us</a></h5>
+					</div>
+					<div class="footer-widget-content">
+						<p class="mb-0"></p>
+						<div class="footer-widget-contact-link mt-md">
+							<div class="col-xs-12 col-sm-12 col-md-6 mb-30-xs mb-30-sm">
+								<h6>Phone :</h6>
+								<p><i class="fa fa-phone"></i>+91-22-40318111</p>
+								<p class="mb-0"><i class="fa fa-fax"></i>+91-22-40318133</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12 col-md-6">
+								<h6>Email :</h6>
+								<p class="mb-0"><i class="fa fa-envelope"></i>business@fredungroup.com</p>
+							</div><!-- .col-md-6 end -->
+							<div class="col-xs-12 col-sm-12  col-md-12 mt-30 mb-30-xs mb-30-sm">
+								<h6>Address :</h6>
+								<p class="mb-0"><i class="fa fa-map-marker"></i>11th Floor, Tower A,
+Urmi Estate 95, Ganpatrao Kadam Marg,
+Lower Parel (W), Mumbai 400013</p>
+							</div><!-- .col-md-12 end -->
+						</div>
+					</div>
+				</div><!-- .col-md-4 end -->
+				
+				<div class="col-xs-12 col-sm-12  col-md-8">
+					
+					<div class="row mb-60">
+						<!-- Myaccount Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Pharmaceutical</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="allophaticformulations.html"><i class="fa fa-angle-double-right"></i>Formulations</a>
+									</li>
+									<li>
+										<a href="surgifre.html"><i class="fa fa-angle-double-right"></i>Surgifre</a>
+									</li>
+									<li>
+										<a href="fredunapilist.html"><i class="fa fa-angle-double-right"></i>Fredun API</a>
+									</li>
+									<li>
+										<a href="fredundcgranules.html"><i class="fa fa-angle-double-right"></i>Fredun DC</a>
+									</li>
+									<li>
+										<a href="fredunpellets.html"><i class="fa fa-angle-double-right"></i>Fredun Pellets</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Service Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Healthcare</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="healthcareallopathicformulations.html"><i class="fa fa-angle-double-right"></i>Allophatic</a>
+									</li>
+									<li>
+										<a href="fredunvet.html"><i class="fa fa-angle-double-right"></i>Fredunvet</a>
+									</li>
+									<li>
+										<a href="fredunaqua.html"><i class="fa fa-angle-double-right"></i>Fredun Aqua</a>
+									</li>
+									<li>
+										<a href="nutraceuticals.html"><i class="fa fa-angle-double-right"></i>Neutraceuticals</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Niche</a>		
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Newsletter -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-newsletter newsletter-widget">
+								<div class="footer-widget-title">
+									<h5>Newsletter</h5>
+								</div>
+								<div class="footer-widget-content">
+									<p class="mb-30"></p>
+									<form class="mailchimp">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="E-mail Address">
+											<span class="input-group-btn">
+											<button class="btn text-capitalize" type="button">join</button>
+											</span>
+										</div>
+										<!-- /input-group -->
+										<div class="subscribe-alert"></div>
+									</form>
+									<!--Mailchimp Form End-->
+								</div>
+							</div><!-- .newsletter-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+						
+					<div class="row">
+						<!-- Information Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Information</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>About Us</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Delivery Information</a>
+									</li>
+									<li>
+										<a href="privacypolicy.html"><i class="fa fa-angle-double-right"></i>Privacy Policy</a>
+									</li>
+									<li>
+										<a href="termsandconditions.html"><i class="fa fa-angle-double-right"></i>Terms & Conditions</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<!-- Extras Links -->
+						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-link mb-30-xs mb-30-sm">
+							<div class="footer-widget-title">
+								<h5>Company Profile</h5>
+							</div>
+							<div class="footer-widget-content">
+								<ul class="list-unstyled mb-0">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredna Vet Diagnostics</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Fredun Nutrition</a>
+									</li>
+									<li>
+										<a href="fredunmobility.html"><i class="fa fa-angle-double-right"></i>Fredun Mobility</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i>Chuu Balm</a>
+									</li>
+									<li>
+										<a href="beautyfred.html"><i class="fa fa-angle-double-right"></i>BeautyFred</a>
+									</li>
+									<li>
+										<a href="fremorglobal.html"><i class="fa fa-angle-double-right"></i>Fremor Global</a>
+									</li>
+									<li>
+										<a href="farstore.html"><i class="fa fa-angle-double-right"></i>Far Store</a>
+									</li>
+								</ul>
+							</div>
+						</div><!-- .col-md-3 end -->
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="footer-widget-tweets tweets-widget">
+								<div class="footer-widget-title">
+									<a href="./career.html"  class="#" data-hover="Career"><h5>Careers</h5></a>
+								</div>
+								<div class="footer-widget-content">
+									<div id="twitter-feed"></div>
+								</div>
+							</div><!-- .tweets-widget end -->
+						</div><!-- .col-md-6 end -->
+					</div>
+					
+				</div><!-- .col-md-8 end -->
+			</div>
+		</div><!-- .container end -->
+	</div>
+  
+  <!-- .footer-widget end -->
+   
+	<!-- Copyrights
+	============================================= -->
+	<div class="footer-copyright bg-dark3">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12  col-md-12">
+					<div class="powered text-uppercase pull-left pull-none-xs mb-15-xs">
+						<p><span class="text-white">Mount.</span> Made With Love By <a href="http://themeforest.net/user/7oroof/portfolio?ref=7oroof">7oroof.com</a></p>
+					</div>
+					<div class="copyright pull-right pull-none-xs">
+						<p class="text-capitalize">
+							<span class="text-uppercase">&copy; 2016. All Rights Reserved</span>
+							<a href="privacy.html">Privacy Policy</a> &ndash; <a href="terms.html">Terms of Use</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- .container end -->
+	</div><!-- .footer-copyright end -->
+</footer>
+ </div><!-- #wrapper end -->
+ <div id="back-to-top" class="backtop">
+ 	<i class="fa fa-angle-up" aria-hidden="true"></i>
+ </div>
+ <div class="hamburger-panel">
+ 	<ul class="list-unstyled list-links">
+		<li><a class="active" href="#">Home</a></li>
+		<li><a href="#">Features</a></li>
+		<li><a href="#">Pages</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Shop</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<div class="social-share">
+		<a class="share-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fa fa-facebook"></i></a>
+		<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
+		<a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+		<a class="share-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+		<a class="share-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+	</div>
+	
+	<div class="copywright">
+		<span class="text-white">Mount.</span> Made By <a href="#">zytheme.com</a>
+		<p>© 2016. All Rights Reserved</p>
+	</div>
+
+ </div>
+<!-- Footer Scripts
+============================================= -->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/functions.js"></script>
+</body>
+</html> 

@@ -808,6 +808,24 @@ h1, h2 {
 
 
 </script>
+<script>
+	  const playButton = document.getElementById('play-audio');
+  const audio = document.getElementById('company-audio');
+  const icon = playButton.querySelector('i');
+
+  playButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      icon.classList.remove('fa-headphones');
+      icon.classList.add('fa-pause');
+    } else {
+      audio.pause();
+      audio.currentTime = 0; // reset to beginning
+      icon.classList.remove('fa-pause');
+      icon.classList.add('fa-headphones');
+    }
+  });
+</script>
 	<!-- AOS JS -->
 	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 	<script>

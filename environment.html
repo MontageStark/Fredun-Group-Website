@@ -658,7 +658,24 @@ body {
 <script>
   AOS.init();
 </script>
+<script>
+	  const playButton = document.getElementById('play-audio');
+  const audio = document.getElementById('company-audio');
+  const icon = playButton.querySelector('i');
 
+  playButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      icon.classList.remove('fa-headphones');
+      icon.classList.add('fa-pause');
+    } else {
+      audio.pause();
+      audio.currentTime = 0; // reset to beginning
+      icon.classList.remove('fa-pause');
+      icon.classList.add('fa-headphones');
+    }
+  });
+</script>
 
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/functions.js"></script>

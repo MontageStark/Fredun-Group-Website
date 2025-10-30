@@ -188,7 +188,7 @@
       width: 100%;
       height: auto; /* Keep aspect ratio */
       object-fit: contain; /* Avoid cropping on small screens */
-	  padding-top: 20%;
+	  padding-top: 100px
     }
   }
 
@@ -203,6 +203,30 @@
     color: #000000;
     padding: 45px 0 8px;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .navbar-nav > li > a {
+        line-height: 36px;
+        color: #ffffff;
+		}
+  }
+
+  /*headphoneicon css */
+#play-audio {
+  margin-left: 15px;
+  margin-top: 40px;
+  color: #000; /* adjust to match your brand */
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  #play-audio {
+    margin-right: 10px;
+   
+  }
+}
+
+
   </style>
 
 
@@ -849,6 +873,24 @@
  </div>
 <!-- Footer Scripts
 ============================================= -->
+<script>
+	  const playButton = document.getElementById('play-audio');
+  const audio = document.getElementById('company-audio');
+  const icon = playButton.querySelector('i');
+
+  playButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      icon.classList.remove('fa-headphones');
+      icon.classList.add('fa-pause');
+    } else {
+      audio.pause();
+      audio.currentTime = 0; // reset to beginning
+      icon.classList.remove('fa-pause');
+      icon.classList.add('fa-headphones');
+    }
+  });
+</script>
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/functions.js"></script>

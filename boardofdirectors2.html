@@ -376,7 +376,7 @@ header h1 {
 		</ul>
 	</li>
 	
-	<li class="has-dropdown">
+	<!-- <li class="has-dropdown">
 		<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Company">Company</a>
 		<ul class="dropdown-menu">
 		  <li><a href="frednavet.html">Fredna Vet Diagnostics</a></li>
@@ -391,7 +391,7 @@ header h1 {
       <li><a href="Iteeha.html">Iteeha</a></li>
 		</ul>
 	</li>
-	
+	 -->
 	<!-- li end -->
 	<li class="has-dropdown mega-dropdown">
 		<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
@@ -892,6 +892,24 @@ header h1 {
  </div>
 <!-- Footer Scripts
 ============================================= -->
+<script>
+	  const playButton = document.getElementById('play-audio');
+  const audio = document.getElementById('company-audio');
+  const icon = playButton.querySelector('i');
+
+  playButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      icon.classList.remove('fa-headphones');
+      icon.classList.add('fa-pause');
+    } else {
+      audio.pause();
+      audio.currentTime = 0; // reset to beginning
+      icon.classList.remove('fa-pause');
+      icon.classList.add('fa-headphones');
+    }
+  });
+</script>=
 <script>
   AOS.init({
     duration: 800, // animation duration in ms

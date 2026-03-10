@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    
+    <title>Fredun Group | Beautyfred</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #37617a;
+  --primary-color-dark: #0d1a20;
+  --secondary-color: #fb923c;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to right bottom, #7aa7ba, #0d1a20);
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.slide.active {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.slider-controls button {
+  background-color: var(--white);
+  color: var(--primary-color-dark);
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.slider-controls button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+
+.container {
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+.logo img {
+  height: 60px; /* adjust as needed */
+  width: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.links div {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links div:hover {
+  color: var(--secondary-color);
+}
+
+.links div span {
+  font-size: 1.2rem;
+}
+
+.links .shopping__cart {
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  font-size: 1.2rem;
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+}
+
+.content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+ 
+  width: 100%;
+  animation: shoe-animation 3s infinite;
+  overflow: hidden;
+}
+
+.image img {
+  
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  margin: auto;
+  transform: rotate(-20deg);
+}
+
+@keyframes shoe-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.header {
+  position: absolute;
+  top: 7rem;
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.header p {
+  text-align: right;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header p:hover {
+  color: var(--secondary-color);
+}
+
+.featured__item {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.featured__item h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: var(--white);
+}
+
+.featured__item p {
+  color: var(--white);
+}
+
+.contact {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  transform: rotate(-90deg);
+}
+
+.contact span {
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  font-size: 1.2rem;
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+  transform: rotate(90deg);
+}
+
+.footer {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.socials span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials span:hover {
+  color: var(--secondary-color);
+}
+
+.slides {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.slides span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media (width < 640px) {
+  .links div:not(.shopping__cart) {
+    display: none;
+  }
+
+  .header {
+    top: 1rem;
+  }
+
+  .featured__item {
+    left: -5rem;
+  }
+
+  .contact {
+    right: -4rem;
+  }
+}
+  </style>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <a href="https://www.beautyfred.com/" class="logo">
+  <img src="assets/images/logo/BEAUTYFRED.png" alt="Your Brand Logo" />
+</a>
+        <div class="links">
+         
+          <div class="">
+            SKINCARE <a href="https://www.beautyfred.com/collections/skin-care"></a>
+          </div>
+          <div class="">
+           BODYCARE <a href="https://www.beautyfred.com/collections/bodycare"></a>
+          </div>
+          <div class="">
+            HAIRCARE <a href="https://www.beautyfred.com/collections/hair-care"></a>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="image">
+          <img src="assets/images/logo/10.1.png" alt="shoes" />
+        </div>
+        <div class="header">
+          <h1>WET WIPES <a href="https://www.facebook.com/people/Beauty-Fred/61557284547511/"></a></h1>
+          <p>BUY NOW  <a href="https://www.facebook.com/people/Beauty-Fred/61557284547511/"></a></p>
+        </div>
+        <div class="featured__item">
+          <h4>FEATURED</h4>
+          <p>PRODUCT FOR MEN AND WOMEN</p>
+        </div>
+       
+      </div>
+      <div class="footer">
+        <div class="socials">
+          <span >Facebook <a href="https://www.facebook.com/people/Beauty-Fred/61557284547511/"></a></span>
+          <span>Instagram <a href="https://www.instagram.com/thebeautyfred/"></a></span>
+            <span>Youtube <a href="https://www.youtube.com/@BeautyFred-p7w"></a></span>
+
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
+  }
+
+  document.getElementById("next").addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  document.getElementById("prev").addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+</script>
+
+  </body>
+</html>

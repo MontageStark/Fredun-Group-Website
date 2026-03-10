@@ -1,0 +1,75 @@
+{
+	"files": {
+		"style.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/style.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"base/base.less",
+				"base/mixins.less",
+				"base/vars.less",
+				"layout/accordion.less",
+				"layout/alert.less",
+				"layout/align.less",
+				"layout/background.less",
+				"layout/backtop.less",
+				"layout/breadcrumb.less",
+				"layout/buttons.less",
+				"layout/color.less",
+				"layout/columns.less",
+				"layout/cta.less",
+				"layout/forms.less",
+				"layout/hover.less",
+				"layout/icon-box.less",
+				"layout/icons.less",
+				"layout/media.less",
+				"layout/misc.less",
+				"layout/modals.less",
+				"layout/page-title.less",
+				"layout/pagination.less",
+				"layout/range.less",
+				"layout/typography.less",
+				"module/404.less",
+				"module/action.less",
+				"module/blog.less",
+				"module/contact.less",
+				"module/faqs.less",
+				"module/feature.less",
+				"module/footer.less",
+				"module/header.less",
+				"module/heading.less",
+				"module/hero.less",
+				"module/intro.less",
+				"module/landing.less",
+				"module/loading.less",
+				"module/login.less",
+				"module/maintenance.less",
+				"module/portfolio.less",
+				"module/pricing.less",
+				"module/services.less",
+				"module/shop.less",
+				"module/shortcode.less",
+				"module/sidebar.less",
+				"module/soon.less",
+				"module/team.less",
+				"module/testimonial.less",
+				"state/custom.less",
+				"state/layout-boxed.less",
+				"state/layout-dark.less",
+				"state/responsive.less",
+				"theme/theme-default.less"
+			]
+		}
+	}
+}

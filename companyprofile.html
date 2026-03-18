@@ -759,6 +759,86 @@
       color: #000000;
       padding: 45px 0 8px;
     }
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+    /* 11 */
+    .btn-11 {
+      border: none;
+      background: rgb(251, 33, 117);
+      background: linear-gradient(0deg, rgb(19, 108, 168) 0%, rgb(19, 108, 168) 100%);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .btn-11:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .btn-11:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn1 3s ease-in-out infinite;
+    }
+
+    .btn-11:hover {
+      opacity: .7;
+    }
+
+    .btn-11:active {
+      box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+    }
+
+
+    @-webkit-keyframes shiny-btn1 {
+      0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+      }
+
+      81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+      }
+
+      100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
@@ -1091,6 +1171,12 @@
           easier administration and faster absorption. Our R&D-backed process delivers customized granules for energy,
           hydration, and therapeutic use.</p>
         <p>We are a trusted partner for many global brands in customized pharma packaging and B2B production.</p>
+        <div class="frame">
+          <a href="https://www.chuubalm.com" class="custom-btn btn-11">
+            Read More
+            <div class="dot"></div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -1104,6 +1190,7 @@
         <p>A modern twist to traditional relief, Chuu Balm is our signature balm product designed for muscular relief,
           headaches, and nasal congestion. Its herbal formula is enriched with menthol, camphor, and essential oils.</p>
         <p>Chuu Balm is known for its quick relief and is exported to over 15 countries worldwide.</p>
+        <div class="frame"><button class="custom-btn btn-11">Read More<div class="dot"></div></button></div>
       </div>
     </div>
 
@@ -1120,6 +1207,7 @@
           blends to support active lifestyles. Especially beneficial for athletes and seniors, our products are
           clinically tested and internationally certified.</p>
         <p>We believe mobility is freedom, and our mission is to help everyone move pain-free.</p>
+        <div class="frame"><button class="custom-btn btn-11">Read More<div class="dot"></div></button></div>
       </div>
     </div>
 
@@ -1135,6 +1223,7 @@
           shampoos, and wellness products for dogs and cats. Made with safe, vet-approved ingredients, Freossi ensures
           your furry companions live healthier and happier lives.</p>
         <p>Our commitment to animal care is as strong as our dedication to human wellness.</p>
+        <div class="frame"><button class="custom-btn btn-11">Read More<div class="dot"></div></button></div>
       </div>
     </div>
 

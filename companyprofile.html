@@ -851,7 +851,7 @@ button {
       <div class="bounce3"></div>
     </div>
   </div>
-  ============================================= -->
+
   <div id="wrapper" class="wrapper clearfix">
     <header id="navbar-spy" class="header ">
       <nav id="primary-menu" class="navbar navbar-fixed-top"
@@ -1594,79 +1594,53 @@ button {
 ============================================= -->
   <script>
 
-    $(document).ready(function () {
-      var radius = 200;
-      var fields = $('.itemDot');
-      let i = 2;
-      var container = $('.dotCircle');
-      var width = container.width();
-      radius = width / 2.5;
+   // AFTER (Vanilla JS)
+document.addEventListener('DOMContentLoaded', function () {
+  const fields = document.querySelectorAll('.itemDot');
+  const container = document.querySelector('.dotCircle');
+  let i = 2;
+  const width = container.offsetWidth;
+  const height = container.offsetHeight;
+  const radius = width / 2.5;
+  let angle = 0;
+  const step = (2 * Math.PI) / fields.length;
 
-      var height = container.height();
-      var angle = 0, step = (2 * Math.PI) / fields.length;
-      fields.each(function () {
-        var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).width() / 2);
-        var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).height() / 2);
-        if (window.console) {
-          console.log($(this).text(), x, y);
-        }
+  fields.forEach(function (dot) {
+    const x = Math.round(width / 2 + radius * Math.cos(angle) - dot.offsetWidth / 2);
+    const y = Math.round(height / 2 + radius * Math.sin(angle) - dot.offsetHeight / 2);
+    dot.style.left = x + 'px';
+    dot.style.top  = y + 'px';
+    angle += step;
+  });
 
-        $(this).css({
-          left: x + 'px',
-          top: y + 'px'
-        });
-        angle += step;
-      });
-
-
-      $('.itemDot').click(function () {
-
-        var dataTab = $(this).data("tab");
-        $('.itemDot').removeClass('active');
-        $(this).addClass('active');
-        $('.CirItem').removeClass('active');
-        $('.CirItem' + dataTab).addClass('active');
-        i = dataTab;
-
-        $('.dotCircle').css({
-          "transform": "rotate(" + (360 - (i - 1) * 36) + "deg)",
-          "transition": "2s"
-        });
-        $('.itemDot').css({
-          "transform": "rotate(" + ((i - 1) * 36) + "deg)",
-          "transition": "1s"
-        });
-
-
-      });
-
-      setInterval(function () {
-        var dataTab = $('.itemDot.active').data("tab");
-        if (dataTab > 6 || i > 6) {
-          dataTab = 1;
-          i = 1;
-        }
-        $('.itemDot').removeClass('active');
-        $('[data-tab="' + i + '"]').addClass('active');
-        $('.CirItem').removeClass('active');
-        $('.CirItem' + i).addClass('active');
-        i++;
-
-
-        $('.dotCircle').css({
-          "transform": "rotate(" + (360 - (i - 2) * 36) + "deg)",
-          "transition": "2s"
-        });
-        $('.itemDot').css({
-          "transform": "rotate(" + ((i - 2) * 36) + "deg)",
-          "transition": "1s"
-        });
-
-      }, 5000);
-
+  fields.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      const dataTab = this.dataset.tab;
+      document.querySelectorAll('.itemDot').forEach(d => d.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.CirItem').forEach(c => c.classList.remove('active'));
+      document.querySelector('.CirItem' + dataTab).classList.add('active');
+      i = parseInt(dataTab);
+      container.style.transform  = 'rotate(' + (360 - (i - 1) * 36) + 'deg)';
+      container.style.transition = '2s';
+      fields.forEach(d => { d.style.transform = 'rotate(' + ((i - 1) * 36) + 'deg)'; d.style.transition = '1s'; });
     });
+  });
 
-
+  setInterval(function () {
+    const active = document.querySelector('.itemDot.active');
+    let dataTab = active ? parseInt(active.dataset.tab) : 1;
+    if (dataTab > 6 || i > 6) { dataTab = 1; i = 1; }
+    document.querySelectorAll('.itemDot').forEach(d => d.classList.remove('active'));
+    document.querySelector('[data-tab="' + i + '"]').classList.add('active');
+    document.querySelectorAll('.CirItem').forEach(c => c.classList.remove('active'));
+    document.querySelector('.CirItem' + i).classList.add('active');
+    i++;
+    container.style.transform  = 'rotate(' + (360 - (i - 2) * 36) + 'deg)';
+    container.style.transition = '2s';
+    fields.forEach(d => { d.style.transform = 'rotate(' + ((i - 2) * 36) + 'deg)'; d.style.transition = '1s'; });
+  }, 5000);
+});
 
   </script>
 

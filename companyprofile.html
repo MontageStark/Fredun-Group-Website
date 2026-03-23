@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--IE Compatibility Meta-->
   <meta name="author" content="zytheme" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="Mount is a pixel perfect creative multi purpose html5 template  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
   <link href="assets/images/favicon/favicon.ico" rel="icon">
@@ -759,27 +759,30 @@
       color: #000000;
       padding: 45px 0 8px;
     }
-button {
-  margin: 20px;
-}
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  outline: none;
-}
+
+    button {
+      margin: 20px;
+    }
+
+    .custom-btn {
+      width: 130px;
+      height: 40px;
+      color: #fff;
+      border-radius: 5px;
+      padding: 10px 25px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 500;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+      outline: none;
+    }
+
     /* 11 */
     .btn-11 {
       border: none;
@@ -868,7 +871,7 @@ button {
               <span class="icon-bar"></span>
             </button>
             <a class="logo" href="index.html">
-              <img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Mount Template">
+              <img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Fredun Group">
             </a>
             <!-- Headphone Icon (always visible, even on mobile) -->
 
@@ -1594,53 +1597,53 @@ button {
 ============================================= -->
   <script>
 
-   // AFTER (Vanilla JS)
-document.addEventListener('DOMContentLoaded', function () {
-  const fields = document.querySelectorAll('.itemDot');
-  const container = document.querySelector('.dotCircle');
-  let i = 2;
-  const width = container.offsetWidth;
-  const height = container.offsetHeight;
-  const radius = width / 2.5;
-  let angle = 0;
-  const step = (2 * Math.PI) / fields.length;
+    // AFTER (Vanilla JS)
+    document.addEventListener('DOMContentLoaded', function () {
+      const fields = document.querySelectorAll('.itemDot');
+      const container = document.querySelector('.dotCircle');
+      let i = 2;
+      const width = container.offsetWidth;
+      const height = container.offsetHeight;
+      const radius = width / 2.5;
+      let angle = 0;
+      const step = (2 * Math.PI) / fields.length;
 
-  fields.forEach(function (dot) {
-    const x = Math.round(width / 2 + radius * Math.cos(angle) - dot.offsetWidth / 2);
-    const y = Math.round(height / 2 + radius * Math.sin(angle) - dot.offsetHeight / 2);
-    dot.style.left = x + 'px';
-    dot.style.top  = y + 'px';
-    angle += step;
-  });
+      fields.forEach(function (dot) {
+        const x = Math.round(width / 2 + radius * Math.cos(angle) - dot.offsetWidth / 2);
+        const y = Math.round(height / 2 + radius * Math.sin(angle) - dot.offsetHeight / 2);
+        dot.style.left = x + 'px';
+        dot.style.top = y + 'px';
+        angle += step;
+      });
 
-  fields.forEach(function (dot) {
-    dot.addEventListener('click', function () {
-      const dataTab = this.dataset.tab;
-      document.querySelectorAll('.itemDot').forEach(d => d.classList.remove('active'));
-      this.classList.add('active');
-      document.querySelectorAll('.CirItem').forEach(c => c.classList.remove('active'));
-      document.querySelector('.CirItem' + dataTab).classList.add('active');
-      i = parseInt(dataTab);
-      container.style.transform  = 'rotate(' + (360 - (i - 1) * 36) + 'deg)';
-      container.style.transition = '2s';
-      fields.forEach(d => { d.style.transform = 'rotate(' + ((i - 1) * 36) + 'deg)'; d.style.transition = '1s'; });
+      fields.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          const dataTab = this.dataset.tab;
+          document.querySelectorAll('.itemDot').forEach(d => d.classList.remove('active'));
+          this.classList.add('active');
+          document.querySelectorAll('.CirItem').forEach(c => c.classList.remove('active'));
+          document.querySelector('.CirItem' + dataTab).classList.add('active');
+          i = parseInt(dataTab);
+          container.style.transform = 'rotate(' + (360 - (i - 1) * 36) + 'deg)';
+          container.style.transition = '2s';
+          fields.forEach(d => { d.style.transform = 'rotate(' + ((i - 1) * 36) + 'deg)'; d.style.transition = '1s'; });
+        });
+      });
+
+      setInterval(function () {
+        const active = document.querySelector('.itemDot.active');
+        let dataTab = active ? parseInt(active.dataset.tab) : 1;
+        if (dataTab > 6 || i > 6) { dataTab = 1; i = 1; }
+        document.querySelectorAll('.itemDot').forEach(d => d.classList.remove('active'));
+        document.querySelector('[data-tab="' + i + '"]').classList.add('active');
+        document.querySelectorAll('.CirItem').forEach(c => c.classList.remove('active'));
+        document.querySelector('.CirItem' + i).classList.add('active');
+        i++;
+        container.style.transform = 'rotate(' + (360 - (i - 2) * 36) + 'deg)';
+        container.style.transition = '2s';
+        fields.forEach(d => { d.style.transform = 'rotate(' + ((i - 2) * 36) + 'deg)'; d.style.transition = '1s'; });
+      }, 5000);
     });
-  });
-
-  setInterval(function () {
-    const active = document.querySelector('.itemDot.active');
-    let dataTab = active ? parseInt(active.dataset.tab) : 1;
-    if (dataTab > 6 || i > 6) { dataTab = 1; i = 1; }
-    document.querySelectorAll('.itemDot').forEach(d => d.classList.remove('active'));
-    document.querySelector('[data-tab="' + i + '"]').classList.add('active');
-    document.querySelectorAll('.CirItem').forEach(c => c.classList.remove('active'));
-    document.querySelector('.CirItem' + i).classList.add('active');
-    i++;
-    container.style.transform  = 'rotate(' + (360 - (i - 2) * 36) + 'deg)';
-    container.style.transition = '2s';
-    fields.forEach(d => { d.style.transform = 'rotate(' + ((i - 2) * 36) + 'deg)'; d.style.transition = '1s'; });
-  }, 5000);
-});
 
   </script>
 

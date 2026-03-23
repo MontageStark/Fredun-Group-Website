@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Dashboard</title>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* =============================================
+       CSS CUSTOM PROPERTIES (THEME VARIABLES)
+       ============================================= */
+    :root {
+      --bg:        #0d0d0f;
+      --surface:   #16161a;
+      --border:    #2a2a32;
+      --accent:    #e8ff5a;
+      --accent2:   #5affdb;
+      --text:      #f0f0f4;
+      --muted:     #6b6b7a;
+      --btn-bg:    #1c1c22;
+      --radius:    10px;
+      --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-display: 'Syne', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
+
+    /* =============================================
+       RESET & BASE
+       ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      min-height: 100vh;
+      /* Subtle dot-grid background texture */
+      background-image:
+        radial-gradient(circle, #2a2a3a 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    /* =============================================
+       PAGE WRAPPER
+       ============================================= */
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    /* =============================================
+       HEADER / TITLE BAR
+       ============================================= */
+    .header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    /* Accent badge next to title */
+    .header .badge {
+      background: var(--accent);
+      color: #000;
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    /* =============================================
+       NAVIGATION BUTTONS (TOP BAR)
+       ============================================= */
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    /* Individual nav button */
+    .nav-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      background: var(--btn-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+      overflow: hidden;
+    }
+
+    /* Animated left-side accent bar */
+    .nav-btn::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      transform: scaleY(0);
+      transition: transform var(--transition);
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* Hover state */
+    .nav-btn:hover {
+      background: #222228;
+      border-color: #444;
+      color: var(--text);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .nav-btn:hover::before { transform: scaleY(1); }
+
+    /* Active (current page) state */
+    .nav-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+      font-weight: 700;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232, 255, 90, 0.25);
+    }
+
+    .nav-btn.active::before { background: #000; transform: scaleY(1); }
+
+    /* Icon dot inside button */
+    .nav-btn .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+
+    /* =============================================
+       SECTION LABEL
+       ============================================= */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* =============================================
+       PDF GRID (2×2)
+       ============================================= */
+    .pdf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* Each PDF card */
+    .pdf-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+    }
+
+    .pdf-card:hover {
+      border-color: #3a3a48;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      transform: translateY(-3px);
+    }
+
+    /* Card title bar */
+    .pdf-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .pdf-card-title {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+
+    /* Coloured index pill */
+    .pdf-index {
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 100px;
+      letter-spacing: 0.08em;
+    }
+
+    .pdf-card:nth-child(1) .pdf-index { background: rgba(232,255,90,0.15);  color: var(--accent); }
+    .pdf-card:nth-child(2) .pdf-index { background: rgba(90,255,219,0.15);  color: var(--accent2); }
+    .pdf-card:nth-child(3) .pdf-index { background: rgba(255,120,90,0.15);  color: #ff785a; }
+    .pdf-card:nth-child(4) .pdf-index { background: rgba(160,90,255,0.15);  color: #a05aff; }
+
+    /* Iframe / embed wrapper — fixed height + scrollable */
+    .pdf-embed-wrap {
+      position: relative;
+      height: 520px;          /* fixed height so content overflows and scrolls */
+      overflow-y: auto;       /* vertical scroll when content exceeds height    */
+      overflow-x: hidden;
+      background: #111114;
+      /* Custom scrollbar styling (webkit) */
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+
+    .pdf-embed-wrap::-webkit-scrollbar        { width: 6px; }
+    .pdf-embed-wrap::-webkit-scrollbar-track  { background: transparent; }
+    .pdf-embed-wrap::-webkit-scrollbar-thumb  {
+      background: var(--border);
+      border-radius: 99px;
+    }
+    .pdf-embed-wrap::-webkit-scrollbar-thumb:hover { background: #444455; }
+
+    /* Loading placeholder text behind the iframe */
+    .pdf-embed-wrap::before {
+      content: 'Loading PDF…';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      z-index: 0;
+    }
+
+    /* The embedded PDF viewer — tall enough to be scrolled through */
+    .pdf-embed-wrap iframe {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 1200px;   /* taller than the wrapper → enables scrolling */
+      border: none;
+      display: block;
+    }
+
+    /* =============================================
+       RESPONSIVE BREAKPOINTS
+       ============================================= */
+
+    /* Tablet: stack to 1 column */
+    @media (max-width: 860px) {
+      .pdf-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Mobile: tighten spacing */
+    @media (max-width: 540px) {
+      .wrapper { padding: 24px 16px 40px; }
+      .nav-bar { gap: 8px; }
+      .nav-btn { padding: 10px 16px; font-size: 0.82rem; }
+      .pdf-embed-wrap        { height: 360px; }
+      .pdf-embed-wrap iframe { height: 1000px; }
+    }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    .footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* Page-load fade-in animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .header    { animation: fadeUp 0.5s ease both; }
+    .nav-bar   { animation: fadeUp 0.5s 0.1s ease both; }
+    .pdf-grid  { animation: fadeUp 0.5s 0.2s ease both; }
+  </style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- ==========================================
+       HEADER
+       ========================================== -->
+  <header class="header">
+    <h1>PDF Dashboard</h1>
+    <span class="badge">Live</span>
+  </header>
+
+  <!-- ==========================================
+       NAVIGATION BUTTONS
+       Each button links to a placeholder anchor
+       and calls handleNav() on click.
+       ========================================== -->
+  <nav class="nav-bar" id="navBar" aria-label="Page navigation">
+
+    <a href="#page1" class="nav-btn active" data-page="page1"
+       onclick="handleNav(event, 'page1')">
+      <span class="dot"></span>Overview
+    </a>
+
+    <a href="#page2" class="nav-btn" data-page="page2"
+       onclick="handleNav(event, 'page2')">
+      <span class="dot"></span>Analytics
+    </a>
+
+    <a href="#page3" class="nav-btn" data-page="page3"
+       onclick="handleNav(event, 'page3')">
+      <span class="dot"></span>Reports
+    </a>
+
+    <a href="#page4" class="nav-btn" data-page="page4"
+       onclick="handleNav(event, 'page4')">
+      <span class="dot"></span>Archive
+    </a>
+
+  </nav>
+
+  <!-- ==========================================
+       SECTION LABEL
+       ========================================== -->
+  <p class="section-label">Documents</p>
+
+  <!-- ==========================================
+       PDF GRID (2×2)
+       Using public sample PDFs via Mozilla's
+       PDF.js viewer for reliable cross-browser
+       embedding.
+       ========================================== -->
+  <section class="pdf-grid" aria-label="PDF viewers">
+
+    <!-- PDF Card 1 -->
+    <article class="pdf-card">
+      <div class="pdf-card-header">
+        <span class="pdf-card-title">Document 01 — Sample Report</span>
+        <span class="pdf-index">PDF</span>
+      </div>
+      <div class="pdf-embed-wrap">
+        <iframe
+          src="assets/page_speed/PageSpeed Insights desktop (before).html"
+          title="Sample PDF 1"
+          loading="lazy"
+          allow="fullscreen"
+          aria-label="Sample Report PDF viewer">
+        </iframe>
+      </div>
+    </article>
+
+    <!-- PDF Card 2 -->
+    <article class="pdf-card">
+      <div class="pdf-card-header">
+        <span class="pdf-card-title">Document 02 — Research Paper</span>
+        <span class="pdf-index">PDF</span>
+      </div>
+      <div class="pdf-embed-wrap">
+        <iframe
+          src="assets/page_speed/PageSpeed Insights mobile (before).html"
+          title="Sample PDF 2"
+          loading="lazy"
+          allow="fullscreen"
+          aria-label="Research Paper PDF viewer">
+        </iframe>
+      </div>
+    </article>
+
+    <!-- PDF Card 3 -->
+    <article class="pdf-card">
+      <div class="pdf-card-header">
+        <span class="pdf-card-title">Document 03 — Technical Guide</span>
+        <span class="pdf-index">PDF</span>
+      </div>
+      <div class="pdf-embed-wrap">
+        <iframe
+          src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://www.ietf.org/rfc/rfc2616.txt.pdf"
+          title="Sample PDF 3"
+          loading="lazy"
+          allow="fullscreen"
+          aria-label="Technical Guide PDF viewer">
+        </iframe>
+      </div>
+    </article>
+
+    <!-- PDF Card 4 -->
+    <article class="pdf-card">
+      <div class="pdf-card-header">
+        <span class="pdf-card-title">Document 04 — White Paper</span>
+        <span class="pdf-index">PDF</span>
+      </div>
+      <div class="pdf-embed-wrap">
+        <iframe
+          src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://bitcoin.org/bitcoin.pdf"
+          title="Sample PDF 4"
+          loading="lazy"
+          allow="fullscreen"
+          aria-label="White Paper PDF viewer">
+        </iframe>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <span>PDF Dashboard &copy; 2026</span>
+    <span id="activePageLabel">Viewing: Overview</span>
+  </footer>
+
+</div><!-- /.wrapper -->
+
+
+<!-- ==========================================
+     JAVASCRIPT
+     ========================================== -->
+<script>
+  /**
+   * Map of page keys → human-readable labels.
+   * Extend this whenever a new page is added.
+   */
+  const PAGE_LABELS = {
+    page1: 'Overview',
+    page2: 'Analytics',
+    page3: 'Reports',
+    page4: 'Archive',
+  };
+
+  /**
+   * handleNav()
+   * Called on each nav-button click.
+   *
+   * @param {MouseEvent} event  - The click event (used to prevent default scroll jump)
+   * @param {string}     pageId - Identifier matching data-page attribute
+   */
+  function handleNav(event, pageId) {
+    // Prevent the default anchor scroll behaviour (we handle routing manually)
+    event.preventDefault();
+
+    // --- 1. Update active button state ---
+    const allBtns = document.querySelectorAll('#navBar .nav-btn');
+    allBtns.forEach(btn => {
+      const isTarget = btn.dataset.page === pageId;
+      btn.classList.toggle('active', isTarget);
+
+      // Update aria-current for accessibility
+      if (isTarget) {
+        btn.setAttribute('aria-current', 'page');
+      } else {
+        btn.removeAttribute('aria-current');
+      }
+    });
+
+    // --- 2. Update the browser URL hash (no page reload) ---
+    history.pushState(null, '', `#${pageId}`);
+
+    // --- 3. Update the footer status label ---
+    const label = PAGE_LABELS[pageId] || pageId;
+    document.getElementById('activePageLabel').textContent = `Viewing: ${label}`;
+
+    // --- 4. Log navigation (replace with real router logic as needed) ---
+    console.log(`[Nav] Navigated to ${pageId}`);
+  }
+
+  /**
+   * restoreActiveFromHash()
+   * On page load, read the URL hash and activate
+   * the matching button (supports direct links / bookmarks).
+   */
+  function restoreActiveFromHash() {
+    const hash = window.location.hash.replace('#', ''); // e.g. "page2"
+    if (hash && PAGE_LABELS[hash]) {
+      // Simulate a click restoration without pushing history again
+      const btn = document.querySelector(`[data-page="${hash}"]`);
+      if (btn) {
+        document.querySelectorAll('#navBar .nav-btn').forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b === btn
+            ? b.setAttribute('aria-current', 'page')
+            : b.removeAttribute('aria-current');
+        });
+        document.getElementById('activePageLabel').textContent =
+          `Viewing: ${PAGE_LABELS[hash]}`;
+      }
+    }
+  }
+
+  // Run once on load
+  restoreActiveFromHash();
+</script>
+
+</body>
+</html>

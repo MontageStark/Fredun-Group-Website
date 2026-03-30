@@ -23,7 +23,7 @@
     ============================================= -->
   <link href="assets/css/external.css" rel="stylesheet">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/style.less.css" rel="stylesheet">  
+
   <link href="assets/css/style.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -453,10 +453,11 @@
           dragging: true
         });
 
-        // Add OpenStreetMap tiles
-        L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-          attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
-        }).addTo(map);
+        // FREE — no API key, no domain restrictions, works everywhere
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 19
+}).addTo(map);
         // Marker icon using your logo
         const customIcon = L.icon({
           iconUrl: 'assets/images/favicon/favicon-32x32.png',

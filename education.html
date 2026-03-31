@@ -2,253 +2,815 @@
 <html dir="ltr" lang="en-US">
 
 <head>
-	<!-- Document Meta
-    ============================================= -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!--IE Compatibility Meta-->
 	<meta name="author" content="zytheme" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description"
-		content="Mount is a pixel perfect creative multi purpose html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout">
+	<meta name="description" content="Fredun Group – Education CSR initiatives for the underprivileged, orphaned, and specially-abled communities.">
 	<link href="assets/images/favicon/favicon.ico" rel="icon">
 
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-	<!-- Fonts
-    ============================================= -->
-	<link
-		href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:300,400,500,600,700%7CRaleway%3A800%2C500%2C400'
-		rel='stylesheet' type='text/css'>
-
-	<!-- Stylesheets
-    ============================================= -->
+	<!-- Bootstrap -->
 	<link href="assets/css/external.css" rel="stylesheet">
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet">
 
-	<!-- RS5.0 Main Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+	<!-- Font Awesome -->
 	<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
 	<link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
 
-	<!-- LOAD JQUERY LIBRARY -->
+	<!-- jQuery -->
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
-	<!-- REVOLUTION JS FILES -->
 	<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
 	<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
 
-	<!-- PARTICLES ADD-ON FILES -->
-	<link rel='stylesheet'
-		href='assets/revolution/revolution-addons/particles/css/revolution.addon.particles.css?ver=1.0.3'
-		type='text/css' media='all' />
-	<script type='text/javascript'
-		src='assets/revolution/revolution-addons/particles/js/revolution.addon.particles.min.js?ver=1.0.3'></script>
-	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-	(Load Extensions only on Local File Systems !  
-	The following part can be removed on Server for On Demand Loading) -->
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-	<script type="text/javascript"
-		src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-	<script type="text/javascript"
-		src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-	<script type="text/javascript"
-		src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-
 	<!-- AOS CSS -->
 	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+
 	<!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
 
-	<!-- Document Title
-    ============================================= -->
-	<title>Mount | Multi-purpose Business Html5 Template</title>
+	<title>Education & CSR | Fredun Group</title>
 
-</head>
-<style>
-	body {
-		font-family: 'Poppins', sans-serif;
-		margin: 0;
-		background: #f8f9fa;
-		color: #333;
-	}
-
-	h1,
-	h2 {
-		font-weight: 700;
-	}
-
-	.section {
-		padding: 4rem 2rem;
-	}
-
-	.container {
-		max-width: 1200px;
-		margin: auto;
-
-	}
-
-	.row {
-		display: flex;
-		gap: 2rem;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-
-	.reverse {
-		flex-direction: row-reverse;
-	}
-
-	.image img {
-		width: 100%;
-		border-radius: 12px;
-		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-	}
-
-	.text {
-		flex: 1;
-		min-width: 280px;
-	}
-
-	.image {
-		flex: 1;
-		min-width: 280px;
-	}
-
-	.hero {
-		background: url('https://img.freepik.com/free-vector/people-with-education-related-icons_53876-66207.jpg') no-repeat center center/cover;
-		height: 90vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-	}
-
-	.hero .overlay {
-		text-align: center;
-		background-color: rgba(0, 0, 0, 0.5);
-		padding: 2rem;
-		color: #fff;
-		max-width: 800px;
-		border-radius: 12px;
-	}
-
-	.hero h1 {
-		font-size: 2.5rem;
-	}
-
-	.hero p {
-		font-size: 1.2rem;
-		margin-top: 1rem;
-	}
-
-	/* Grid Section */
-	.showcase {
-		background: #eef5f9;
-		border-radius: 20px;
-	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-	}
-
-	.card {
-		background: #fff;
-		padding: 1rem;
-		text-align: center;
-		border-radius: 12px;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-		transition: 0.3s ease-in-out;
-	}
-
-	.card:hover {
-		transform: scale(1.03);
-	}
-
-	.card img {
-		height: 180px;
-		object-fit: contain;
-		margin-bottom: 1rem;
-		border-radius: 10px;
-	}
-
-	.centered {
-		text-align: center;
-	}
-
-	.cta {
-		background: #136ca8;
-		color: #fff;
-		text-align: center;
-		padding: 4rem 2rem;
-	}
-
-	.cta-button {
-		background: #fff;
-		color: #136ca8;
-		padding: 0.8rem 2rem;
-		border-radius: 50px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: 0.3s ease;
-		display: inline-block;
-		margin-top: 1rem;
-	}
-
-	.cta-button:hover {
-		background: #e6e6e6;
-	}
-
-	/* Responsive */
-	@media (max-width: 768px) {
-		.hero h1 {
-			font-size: 2rem;
+	<style>
+		/* =============================================
+		   CSS VARIABLES & RESET
+		   ============================================= */
+		:root {
+			--primary: #136ca8;
+			--primary-dark: #0e5285;
+			--primary-light: #eef5f9;
+			--accent: #f0a500;
+			--text-dark: #1a1a2e;
+			--text-mid: #444;
+			--text-light: #777;
+			--white: #ffffff;
+			--bg-light: #f8f9fa;
+			--shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+			--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+			--shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.15);
+			--radius-sm: 8px;
+			--radius-md: 14px;
+			--radius-lg: 20px;
+			--transition: 0.3s ease;
 		}
 
-		.hero p {
+		*, *::before, *::after {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Poppins', sans-serif;
+			margin: 0;
+			padding: 0;
+			background: var(--bg-light);
+			color: var(--text-dark);
+			line-height: 1.7;
+			overflow-x: hidden;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-top: 0;
+		}
+
+		p {
+			color: var(--text-mid);
+			font-size: 0.97rem;
+			line-height: 1.8;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		a {
+			text-decoration: none;
+			transition: var(--transition);
+		}
+
+		/* =============================================
+		   PRELOADER
+		   ============================================= */
+		.preloader {
+			position: fixed;
+			inset: 0;
+			background: var(--white);
+			z-index: 99999;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.spinner {
+			display: flex;
+			gap: 8px;
+		}
+
+		.spinner > div {
+			width: 14px;
+			height: 14px;
+			background: var(--primary);
+			border-radius: 50%;
+			animation: bounce 1.4s infinite ease-in-out both;
+		}
+
+		.spinner .bounce1 { animation-delay: -0.32s; }
+		.spinner .bounce2 { animation-delay: -0.16s; }
+
+		@keyframes bounce {
+			0%, 80%, 100% { transform: scale(0); }
+			40% { transform: scale(1); }
+		}
+
+		/* =============================================
+		   NAVBAR
+		   ============================================= */
+		.header {
+			position: relative;
+			z-index: 1000;
+		}
+
+		#primary-menu {
+			background-color: rgba(255, 255, 255, 0.92) !important;
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+			border-bottom: 1px solid rgba(19, 108, 168, 0.12);
+			box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+		}
+
+		/* =============================================
+		   HERO SECTION — FIXED: was empty
+		   ============================================= */
+		.hero {
+			position: relative;
+			min-height: 88vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			background: linear-gradient(135deg, #0e3d6e 0%, #136ca8 50%, #1a9fd4 100%);
+		}
+
+		/* Decorative background shapes */
+		.hero::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background:
+				radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+				radial-gradient(ellipse at 80% 20%, rgba(240,165,0,0.12) 0%, transparent 40%);
+			pointer-events: none;
+		}
+
+		.hero-floating-shapes {
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+			overflow: hidden;
+		}
+
+		.hero-floating-shapes span {
+			position: absolute;
+			border-radius: 50%;
+			opacity: 0.07;
+			background: var(--white);
+			animation: floatShape 8s ease-in-out infinite;
+		}
+
+		.hero-floating-shapes span:nth-child(1) { width: 300px; height: 300px; top: -80px; right: -80px; animation-delay: 0s; }
+		.hero-floating-shapes span:nth-child(2) { width: 180px; height: 180px; bottom: 60px; left: 5%; animation-delay: 2s; }
+		.hero-floating-shapes span:nth-child(3) { width: 100px; height: 100px; top: 40%; right: 15%; animation-delay: 4s; }
+
+		@keyframes floatShape {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-24px); }
+		}
+
+		.hero-content {
+			position: relative;
+			z-index: 2;
+			text-align: center;
+			padding: 3rem 2rem;
+			max-width: 820px;
+		}
+
+		.hero-badge {
+			display: inline-block;
+			background: rgba(240, 165, 0, 0.2);
+			color: #f0d080;
+			border: 1px solid rgba(240,165,0,0.35);
+			font-size: 0.78rem;
+			font-weight: 600;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			padding: 6px 18px;
+			border-radius: 50px;
+			margin-bottom: 1.2rem;
+		}
+
+		.hero-content h1 {
+			font-size: clamp(2rem, 5vw, 3.4rem);
+			color: var(--white);
+			font-weight: 700;
+			line-height: 1.2;
+			margin-bottom: 1.2rem;
+		}
+
+		.hero-content h1 span {
+			color: #f0d080;
+		}
+
+		.hero-content p {
+			font-size: clamp(1rem, 2vw, 1.18rem);
+			color: rgba(255,255,255,0.85);
+			max-width: 600px;
+			margin: 0 auto 2rem;
+			line-height: 1.8;
+		}
+
+		.hero-buttons {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.btn-hero-primary {
+			background: var(--accent);
+			color: #1a1a00;
+			padding: 0.85rem 2.2rem;
+			border-radius: 50px;
+			font-weight: 600;
+			font-size: 0.95rem;
+			box-shadow: 0 4px 20px rgba(240,165,0,0.35);
+			transition: var(--transition);
+		}
+
+		.btn-hero-primary:hover {
+			background: #e09500;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 28px rgba(240,165,0,0.45);
+			color: #1a1a00;
+		}
+
+		.btn-hero-secondary {
+			background: rgba(255,255,255,0.12);
+			color: var(--white);
+			padding: 0.85rem 2.2rem;
+			border-radius: 50px;
+			font-weight: 600;
+			font-size: 0.95rem;
+			border: 1px solid rgba(255,255,255,0.3);
+			transition: var(--transition);
+		}
+
+		.btn-hero-secondary:hover {
+			background: rgba(255,255,255,0.22);
+			transform: translateY(-2px);
+			color: var(--white);
+		}
+
+		/* Hero stats bar */
+		.hero-stats {
+			display: flex;
+			justify-content: center;
+			gap: 2.5rem;
+			margin-top: 3rem;
+			flex-wrap: wrap;
+		}
+
+		.hero-stat {
+			text-align: center;
+			border-left: 1px solid rgba(255,255,255,0.2);
+			padding-left: 2rem;
+		}
+
+		.hero-stat:first-child {
+			border-left: none;
+			padding-left: 0;
+		}
+
+		.hero-stat .number {
+			font-size: 2rem;
+			font-weight: 700;
+			color: #f0d080;
+			display: block;
+			line-height: 1;
+		}
+
+		.hero-stat .label {
+			font-size: 0.78rem;
+			color: rgba(255,255,255,0.7);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-top: 4px;
+		}
+
+		/* =============================================
+		   SECTIONS — LAYOUT FIXES
+		   ============================================= */
+		.section {
+			padding: 5rem 2rem;
+		}
+
+		.section:nth-child(even) {
+			background: var(--white);
+		}
+
+		.container {
+			max-width: 1160px;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+		/* FIX: removed gap/flex from .container — only apply to .row */
+		.row-flex {
+			display: flex;
+			gap: 3.5rem;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.row-flex.reverse {
+			flex-direction: row-reverse;
+		}
+
+		.col-text {
+			flex: 1 1 300px;
+			min-width: 280px;
+		}
+
+		.col-image {
+			flex: 1 1 300px;
+			min-width: 280px;
+		}
+
+		.col-text h2 {
+			font-size: clamp(1.5rem, 3vw, 2rem);
+			color: var(--text-dark);
+			margin-bottom: 0.6rem;
+			position: relative;
+			padding-bottom: 0.8rem;
+		}
+
+		.col-text h2::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 50px;
+			height: 3px;
+			background: var(--primary);
+			border-radius: 2px;
+		}
+
+		.col-image img {
+			width: 100%;
+			border-radius: var(--radius-lg);
+			box-shadow: var(--shadow-lg);
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+
+		.col-image img:hover {
+			transform: scale(1.02);
+		}
+
+		/* =============================================
+		   SECTION LABEL
+		   ============================================= */
+		.section-label {
+			display: inline-block;
+			background: var(--primary-light);
+			color: var(--primary);
+			font-size: 0.75rem;
+			font-weight: 600;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			padding: 5px 14px;
+			border-radius: 50px;
+			margin-bottom: 0.8rem;
+		}
+
+		/* =============================================
+		   SHOWCASE / CARDS
+		   ============================================= */
+		.showcase {
+			background: var(--primary-light);
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		.centered h2 {
+			font-size: clamp(1.5rem, 3vw, 2rem);
+			margin-bottom: 0.4rem;
+		}
+
+		.centered p {
+			max-width: 580px;
+			margin: 0 auto 0.5rem;
+			color: var(--text-light);
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 2rem;
+			margin-top: 2.5rem;
+		}
+
+		.card {
+			background: var(--white);
+			padding: 1.8rem 1.5rem;
+			text-align: center;
+			border-radius: var(--radius-md);
+			box-shadow: var(--shadow-sm);
+			transition: var(--transition);
+			border: 1px solid rgba(19,108,168,0.07);
+		}
+
+		.card:hover {
+			transform: translateY(-6px);
+			box-shadow: var(--shadow-md);
+			border-color: rgba(19,108,168,0.15);
+		}
+
+		.card-icon {
+			width: 60px;
+			height: 60px;
+			background: var(--primary-light);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 1.2rem;
+		}
+
+		.card-icon i {
+			font-size: 1.5rem;
+			color: var(--primary);
+		}
+
+		.card img {
+			height: 160px;
+			width: 100%;
+			object-fit: cover;
+			margin-bottom: 1.2rem;
+			border-radius: var(--radius-sm);
+		}
+
+		.card h3 {
+			font-size: 1.05rem;
+			margin-bottom: 0.5rem;
+			color: var(--text-dark);
+		}
+
+		.card p {
+			font-size: 0.9rem;
+			color: var(--text-light);
+			margin: 0;
+		}
+
+		/* =============================================
+		   CTA SECTION
+		   ============================================= */
+		.cta {
+			background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+			color: var(--white);
+			text-align: center;
+			padding: 5rem 2rem;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.cta::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(ellipse at 50% 100%, rgba(255,255,255,0.06) 0%, transparent 60%);
+			pointer-events: none;
+		}
+
+		.cta h2 {
+			color: var(--white);
+			font-size: clamp(1.7rem, 3vw, 2.4rem);
+			margin-bottom: 0.8rem;
+		}
+
+		.cta p {
+			color: rgba(255,255,255,0.82);
+			max-width: 560px;
+			margin: 0 auto 1.8rem;
 			font-size: 1rem;
 		}
 
-		.row {
-			flex-direction: column;
+		.cta-button {
+			background: var(--white);
+			color: var(--primary);
+			padding: 0.85rem 2.4rem;
+			border-radius: 50px;
+			font-weight: 700;
+			font-size: 0.95rem;
+			display: inline-block;
+			transition: var(--transition);
+			box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 		}
 
-		.reverse {
-			flex-direction: column;
+		.cta-button:hover {
+			background: #e8f4fd;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+			color: var(--primary-dark);
 		}
 
-		.section {
-			padding: 2rem 1rem;
+		/* =============================================
+		   FOOTER — FIXED
+		   ============================================= */
+		#footer {
+			background: #1a2b3c;
+			color: #ccc;
+			font-size: 0.875rem;
 		}
-	}
-</style>
+
+		.footer-widget {
+			padding: 60px 0 40px;
+			border-bottom: 1px solid rgba(255,255,255,0.08);
+		}
+
+		/* Fix: footer row uses Bootstrap grid, reset flex conflicts */
+		#footer .row {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		#footer [class*="col-"] {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.footer-widget-title h5 {
+			color: var(--white);
+			font-size: 0.95rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			margin-bottom: 1.2rem;
+			padding-bottom: 0.7rem;
+			position: relative;
+		}
+
+		.footer-widget-title h5::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 30px;
+			height: 2px;
+			background: var(--primary);
+			border-radius: 2px;
+		}
+
+		.footer-widget-content p,
+		.footer-widget-content li,
+		.footer-widget-content a {
+			color: #aab4be;
+			font-size: 0.875rem;
+			line-height: 1.7;
+		}
+
+		.footer-widget-content a:hover {
+			color: var(--white);
+			padding-left: 4px;
+		}
+
+		.footer-widget-content .fa {
+			margin-right: 8px;
+			color: var(--primary);
+			font-size: 0.85rem;
+			width: 16px;
+		}
+
+		.footer-widget-content h6 {
+			color: var(--white);
+			font-size: 0.82rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 6px;
+			margin-top: 14px;
+		}
+
+		.list-unstyled {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.list-unstyled li {
+			margin-bottom: 8px;
+		}
+
+		/* Newsletter */
+		.newsletter-widget .input-group {
+			display: flex;
+			border-radius: var(--radius-sm);
+			overflow: hidden;
+			border: 1px solid rgba(255,255,255,0.12);
+		}
+
+		.newsletter-widget .form-control {
+			flex: 1;
+			background: rgba(255,255,255,0.06);
+			border: none;
+			color: var(--white);
+			padding: 10px 14px;
+			font-size: 0.85rem;
+			outline: none;
+		}
+
+		.newsletter-widget .form-control::placeholder {
+			color: rgba(255,255,255,0.4);
+		}
+
+		.newsletter-widget .input-group-btn .btn {
+			background: var(--primary);
+			color: var(--white);
+			border: none;
+			padding: 10px 18px;
+			font-size: 0.82rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: var(--transition);
+		}
+
+		.newsletter-widget .input-group-btn .btn:hover {
+			background: var(--primary-dark);
+		}
+
+		/* Footer copyright */
+		.footer-copyright {
+			background: #111e2a;
+			padding: 18px 0;
+		}
+
+		.footer-copyright .container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.footer-copyright p {
+			margin: 0;
+			color: #778899;
+			font-size: 0.82rem;
+		}
+
+		.footer-copyright .text-white {
+			color: var(--white);
+			font-weight: 600;
+		}
+
+		/* =============================================
+		   BACK TO TOP
+		   ============================================= */
+		#back-to-top {
+			position: fixed;
+			bottom: 28px;
+			right: 28px;
+			width: 44px;
+			height: 44px;
+			background: var(--primary);
+			color: var(--white);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.1rem;
+			box-shadow: 0 4px 14px rgba(19,108,168,0.4);
+			cursor: pointer;
+			opacity: 0;
+			visibility: hidden;
+			transition: var(--transition);
+			z-index: 999;
+			text-decoration: none;
+		}
+
+		#back-to-top.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		#back-to-top:hover {
+			background: var(--primary-dark);
+			transform: translateY(-3px);
+		}
+
+		/* =============================================
+		   RESPONSIVE
+		   ============================================= */
+		@media (max-width: 991px) {
+			.footer-widget-about,
+			#footer .col-md-8,
+			#footer .col-md-4 {
+				width: 100%;
+			}
+
+			#footer .col-md-3,
+			#footer .col-md-6 {
+				width: 50%;
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.hero-stats {
+				gap: 1.5rem;
+			}
+
+			.hero-stat {
+				border-left: none;
+				padding-left: 0;
+				border-top: 1px solid rgba(255,255,255,0.15);
+				padding-top: 1rem;
+			}
+
+			.hero-stat:first-child {
+				border-top: none;
+				padding-top: 0;
+			}
+
+			.row-flex,
+			.row-flex.reverse {
+				flex-direction: column;
+				gap: 2rem;
+			}
+
+			.section {
+				padding: 3rem 1.2rem;
+			}
+
+			#footer .col-md-3,
+			#footer .col-md-6 {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.hero-buttons {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.footer-copyright .container {
+				justify-content: center;
+				text-align: center;
+			}
+		}
+
+		/* mb utility classes used in footer */
+		.mb-0 { margin-bottom: 0 !important; }
+		.mb-30 { margin-bottom: 30px !important; }
+		.mb-60 { margin-bottom: 40px !important; }
+		.mt-30 { margin-top: 30px !important; }
+		.mt-md { margin-top: 16px; }
+		.mb-30-xs { /* handled by media query */ }
+	</style>
+</head>
 
 <body>
-	<div class="preloader">
+
+	<!-- Preloader -->
+	<div class="preloader" id="preloader">
 		<div class="spinner">
 			<div class="bounce1"></div>
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
 		</div>
 	</div>
-	<!-- Document Wrapper
-	============================================= -->
+
+	<!-- Wrapper -->
 	<div id="wrapper" class="wrapper clearfix">
+
+		<!-- ============ NAVBAR ============ -->
 		<header id="navbar-spy" class="header">
-			<nav id="primary-menu" class="navbar navbar-fixed-top"
-				style="background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2);">
+			<nav id="primary-menu" class="navbar navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -259,72 +821,60 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="logo" href="index.html">
-							<img src="assets/images/logo/logo1.png" style="height: 100px;" alt="Fredun Group"
-								loading="lazy">
+							<img src="assets/images/logo/logo1.png" style="height: 80px;" alt="Fredun Group" loading="lazy">
 						</a>
 					</div>
 
 					<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-left">
 							<li class="inactive">
-								<a href="index.html" class="#" data-hover="Global Presence">Home</a>
+								<a href="index.html" data-hover="Home">Home</a>
 							</li>
-
 							<li class="has-dropdown mega-dropdown">
-								<a href="investorsrelation.html" data-toggle="dropdown"
-									class="dropdown-toggle link-hover" data-hover="investors">Investors</a>
+								<a href="investorsrelation.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Investors">Investors</a>
 								<ul class="dropdown-menu mega-dropdown-menu">
 									<li>
 										<div class="container">
 											<div class="row">
 												<div class="col-md-2">
-													<a href="#">Financial & Fillings</a>
+													<a href="#">Financial &amp; Filings</a>
 													<ul>
-														<li><a href="annualreport.html">Annual reports</a></li>
-														<li><a href="newsandannouncements.html">News & Announcements</a>
-														</li>
+														<li><a href="annualreport.html">Annual Reports</a></li>
+														<li><a href="newsandannouncements.html">News &amp; Announcements</a></li>
 													</ul>
 												</div>
 												<div class="col-md-2">
 													<a href="#">Fredun Group</a>
 													<ul>
 														<li><a href="boardofdirectors2.html">Board of Directors</a></li>
-														<li><a href="corporategovernance.html">Corporate Governance</a>
-														</li>
+														<li><a href="corporategovernance.html">Corporate Governance</a></li>
 													</ul>
 												</div>
 												<div class="col-md-2">
 													<a href="#">Shareholders</a>
 													<ul>
-														<li><a href="/Info for Shareholders.html">Info For
-																Shareholders</a></li>
-														<li><a href="shareholdingpattern.html">Shareholding Pattern</a>
-														</li>
-														<li><a href="generalinformation.html">General Information</a>
-														</li>
+														<li><a href="Info for Shareholders.html">Info For Shareholders</a></li>
+														<li><a href="shareholdingpattern.html">Shareholding Pattern</a></li>
+														<li><a href="generalinformation.html">General Information</a></li>
 													</ul>
 												</div>
 												<div class="col-md-2">
 													<a href="#">Annual Return</a>
 													<ul>
-														<li><a href="extractofannualreturn.html">Extract of annual
-																return</a></li>
+														<li><a href="extractofannualreturn.html">Extract of Annual Return</a></li>
 													</ul>
 												</div>
 												<div class="col-md-2">
 													<a href="#">Financial Results</a>
 													<ul>
-														<li><a href="financialresults.html">Audited & Unaudited</a></li>
-														<li><a href="/investorsrelation.html#unaudited"></a></li>
+														<li><a href="financialresults.html">Audited &amp; Unaudited</a></li>
 													</ul>
 												</div>
 												<div class="col-md-2">
-													<a href="#">Other Fillings</a>
+													<a href="#">Other Filings</a>
 													<ul>
-														<li><a href="otherfillingswithstockexchanges.html">Fillings with
-																Stock Exchanges</a></li>
-														<li><a href="statutorydocumentsandinformation.html">Statutory
-																Documents</a></li>
+														<li><a href="otherfillingswithstockexchanges.html">Filings with Stock Exchanges</a></li>
+														<li><a href="statutorydocumentsandinformation.html">Statutory Documents</a></li>
 														<li><a href="unclaimeddividend.html">Unclaimed Dividend</a></li>
 													</ul>
 												</div>
@@ -333,15 +883,11 @@
 									</li>
 								</ul>
 							</li>
-
 							<li class="inactive">
-								<a href="./globalpresence.html" class="#" data-hover="Global Presence">Global
-									Presence</a>
+								<a href="globalpresence.html" data-hover="Global Presence">Global Presence</a>
 							</li>
-
 							<li class="has-dropdown">
-								<a href="./aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover"
-									data-hover="about">About</a>
+								<a href="aboutus.html" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="About">About</a>
 								<ul class="dropdown-menu">
 									<li><a href="annualreport.html">Investors Relations</a></li>
 									<li><a href="companyprofile.html">Company Profile</a></li>
@@ -349,10 +895,8 @@
 									<li><a href="ourhistory.html">Our History</a></li>
 								</ul>
 							</li>
-
 							<li class="has-dropdown">
-								<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover"
-									data-hover="Pharmaceutical">Pharmaceutical</a>
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Pharmaceutical">Pharmaceutical</a>
 								<ul class="dropdown-menu">
 									<li><a href="listofproducts1.html">Allopathic Formulations</a></li>
 									<li><a href="surgifre.html">Surgifre</a></li>
@@ -361,10 +905,8 @@
 									<li><a href="fredunpellets.html">Fredun Pellets</a></li>
 								</ul>
 							</li>
-
 							<li class="has-dropdown">
-								<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover"
-									data-hover="Healthcare">Healthcare</a>
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover" data-hover="Healthcare">Healthcare</a>
 								<ul class="dropdown-menu">
 									<li><a href="healthcareallopathicformulations.html">Allopathic Formulations</a></li>
 									<li><a href="fredunvet.html">Fredunvet</a></li>
@@ -372,26 +914,15 @@
 									<li><a href="nutraceuticals.html">Nutraceuticals</a></li>
 								</ul>
 							</li>
-
-
 							<li class="inactive">
-								<a href="./contactus.html" class="#" data-hover="Career">Contact Us</a>
+								<a href="contactus.html" data-hover="Contact Us">Contact Us</a>
 							</li>
 						</ul>
 
-						<div class="nav navbar-nav navbar-right">
-							<button id="play-audio" class="nav-link"
-								style="background:none; border:none; cursor:pointer; font-size:20px; color:#000; align-items: center;">
+						<div class="nav navbar-nav navbar-right" style="display:flex; align-items:center; gap:8px;">
+							<button id="play-audio" style="background:none; border:none; cursor:pointer; font-size:1.2rem; color:#136ca8; padding:8px;" title="Play company audio">
 								<i class="fa fa-headphones"></i>
 							</button>
-						</div>
-
-						<div class="module module-search pull-left" id="searchModule">
-							<div class="module-icon search-icon" onclick="toggleSearchBox()">
-								<i class="fa fa-search" style="color: #000;"></i>
-								<span class="title">Search</span>
-							</div>
-							<div id="searchResults" style="margin-bottom: 20px;"></div>
 						</div>
 
 						<audio id="company-audio" src="assets/audios/Speechoncompany.mp3"></audio>
@@ -401,389 +932,435 @@
 		</header>
 
 
-
-
-		<!-- Hero Section -->
+		<!-- ============ HERO SECTION (FIXED: was empty) ============ -->
 		<section class="hero">
+			<div class="hero-floating-shapes">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 
-		</section>
-
-		<!-- About Education Mission -->
-		<section class="section">
-			<div class="container row " data-aos="fade-right" data-aos-delay="500">
-				<div class="text">
-					<h2>Our Mission in Education</h2>
-					<p>
-						Education is the foundation of progress.
-						At Fredun Group, we believe that every individual — regardless of ability or background —
-						deserves
-						the opportunity to learn and grow. We actively support education for the underprivileged,
-						orphaned,
-						and specially-abled communities through dedicated initiatives like <strong>Inkling
-							India</strong>.
-						We provide scholarships, school supplies, and infrastructure support to help bridge the
-						education
-						gap. Our volunteers conduct mentoring sessions, skill-building workshops, and career guidance
-						programs. Inclusive learning environments are fostered to ensure that no child is left behind.
-						Through partnerships with local schools and NGOs, we extend our reach to remote and underserved
-						areas.
-						Our commitment is to nurture young minds and empower future generations with the tools to
-						thrive.
-					</p>
+			<div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+				<div class="hero-badge">CSR · Education Initiative</div>
+				<h1>Education for <span>Every Child,</span><br>Regardless of Ability</h1>
+				<p>
+					At Fredun Group, we believe learning is a fundamental right. Through <strong style="color:#f0d080;">Inkling India</strong>,
+					we empower underprivileged, orphaned, and specially-abled communities with tools and opportunities to thrive.
+				</p>
+				<div class="hero-buttons">
+					<a href="contactus.html" class="btn-hero-primary">Partner With Us</a>
+					<a href="#mission" class="btn-hero-secondary">Learn More</a>
 				</div>
-				<div class="image">
-					<img src="https://img.freepik.com/free-vector/education-doodle-concept_98292-6867.jpg"
-						alt="Education Mission" />
+
+				<div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+					<div class="hero-stat">
+						<span class="number">5000+</span>
+						<span class="label">Students Supported</span>
+					</div>
+					<div class="hero-stat">
+						<span class="number">12+</span>
+						<span class="label">Partner NGOs</span>
+					</div>
+					<div class="hero-stat">
+						<span class="number">8</span>
+						<span class="label">Programs Active</span>
+					</div>
+					<div class="hero-stat">
+						<span class="number">15+</span>
+						<span class="label">Years of Impact</span>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Inkling India Initiative -->
-		<section class="section">
-			<div class="container row reverse" data-aos="fade-left" data-aos-delay="500">
-				<div class="text">
-					<h2>Inkling India – Hope Through Learning</h2>
-					<p>
-						<strong>Inkling India</strong> is our flagship educational initiative aimed at creating
-						inclusive
-						learning environments for disabled individuals and those without families.
-						Through custom-designed curriculums, sign language training, mobility-accessible classrooms, and
-						digital education tools, we break the barriers that stop them from learning.
-						We work closely with special educators and therapists to tailor teaching methods to individual
-						needs.
-						Vocational training programs are also provided to equip students with practical skills for
-						independent living.
-						Regular assessments help track progress and refine our approach for better outcomes.
-						Community engagement events foster awareness and acceptance of differently-abled learners.
-						At Inkling India, we believe education is not just a right — it’s a path to dignity, confidence,
-						and
-						opportunity.
 
-					</p>
-				</div>
-				<div class="image">
-					<img src="assets/images/educational/9.png" alt="Inkling India Program" />
+		<!-- ============ ABOUT EDUCATION MISSION ============ -->
+		<section class="section" id="mission">
+			<div class="container">
+				<div class="row-flex" data-aos="fade-right" data-aos-delay="200">
+					<div class="col-text">
+						<span class="section-label">Our Mission</span>
+						<h2>Education as a Foundation for Progress</h2>
+						<p>
+							At Fredun Group, we believe that every individual — regardless of ability or background — deserves
+							the opportunity to learn and grow. We actively support education for the underprivileged,
+							orphaned, and specially-abled communities through dedicated initiatives like <strong>Inkling India</strong>.
+						</p>
+						<p>
+							We provide scholarships, school supplies, and infrastructure support to help bridge the education gap.
+							Our volunteers conduct mentoring sessions, skill-building workshops, and career guidance programs.
+							Through partnerships with local schools and NGOs, we extend our reach to remote and underserved areas.
+						</p>
+					</div>
+					<div class="col-image">
+						<img src="https://img.freepik.com/free-vector/education-doodle-concept_98292-6867.jpg" alt="Education Mission" />
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Education for Disabled -->
-		<section class="section">
-			<div class="container row" data-aos="fade-right" data-aos-delay="500">
-				<div class="text">
-					<h2>Inclusive Education for Differently-Abled</h2>
-					<p>
-						We provide special training programs, visual aids, and adaptive learning materials that cater to
-						students with hearing, vision, and physical impairments.
-						Our volunteer educators undergo disability sensitization to create a safe and encouraging
-						environment for all learners.
-						We also implement assistive technologies such as screen readers, speecity.
-						Regular workshops are held to build self-esteem and promote social integration among
-						differently-abled students.
-						Parents and caregivers are included in our programs to ensure holistic support at home.
-						Collaboration with rehabilitation centers and special schools strengthens our outreach and
-						expertise.
-						Our goal is to make inclusive education not just available, but truly empowering.
 
-					</p>
-				</div>
-				<div class="image">
-					<img src="assets/images/educational/8 - Copy.png" alt="Disabled Students Learning" />
+		<!-- ============ INKLING INDIA ============ -->
+		<section class="section">
+			<div class="container">
+				<div class="row-flex reverse" data-aos="fade-left" data-aos-delay="200">
+					<div class="col-text">
+						<span class="section-label">Flagship Initiative</span>
+						<h2>Inkling India – Hope Through Learning</h2>
+						<p>
+							<strong>Inkling India</strong> is our flagship educational initiative aimed at creating inclusive
+							learning environments for disabled individuals and those without families.
+							Through custom-designed curriculums, sign language training, mobility-accessible classrooms, and
+							digital education tools, we break the barriers that prevent them from learning.
+						</p>
+						<p>
+							We work closely with special educators and therapists to tailor teaching methods to individual needs.
+							Vocational training programs equip students with practical skills for independent living.
+							Community engagement events foster awareness and acceptance of differently-abled learners.
+						</p>
+					</div>
+					<div class="col-image">
+						<img src="assets/images/educational/9.png" alt="Inkling India Program" />
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Skill Building -->
-		<section class="section">
-			<div class="container row reverse" data-aos="fade-left" data-aos-delay="500">
-				<div class="text">
-					<h2>Vocational Training & Skill Development</h2>
-					<p>
-						Education isn’t limited to books.
-						Our vocational centers teach skills like tailoring, computer literacy, spoken English, art &
-						craft,
-						and basic healthcare training.
-						These practical courses help our students gain employment and build confidence.
-						We focus on hands-on training that aligns with local job market demands and entrepreneurial
-						opportunities.
-						Certification is provided upon course completion, enhancing employability and credibility.
-						Special attention is given to women and differently-abled individuals to promote financial
-						independence.
-						Our trainers are industry professionals who mentor students through real-world projects.
-						By turning skills into livelihoods, we empower individuals to take control of their futures.
 
-					</p>
-				</div>
-				<div class="image">
-					<img src="assets/images/educational/25.jpg" alt="Skill Development Training" />
+		<!-- ============ INCLUSIVE EDUCATION ============ -->
+		<section class="section">
+			<div class="container">
+				<div class="row-flex" data-aos="fade-right" data-aos-delay="200">
+					<div class="col-text">
+						<span class="section-label">Inclusive Learning</span>
+						<h2>Education for Differently-Abled Students</h2>
+						<p>
+							We provide special training programs, visual aids, and adaptive learning materials that cater to
+							students with hearing, vision, and physical impairments.
+							Our volunteer educators undergo disability sensitization to create a safe and encouraging environment for all learners.
+						</p>
+						<p>
+							We implement assistive technologies such as screen readers and audio interfaces to enhance accessibility.
+							Regular workshops build self-esteem and promote social integration among differently-abled students.
+							Collaboration with rehabilitation centers and special schools strengthens our outreach and expertise.
+						</p>
+					</div>
+					<div class="col-image">
+						<img src="assets/images/educational/8 - Copy.png" alt="Disabled Students Learning" />
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Supporting Orphaned Individuals -->
-		<section class="section">
-			<div class="container row" data-aos="fade-right" data-aos-delay="500">
-				<div class="text">
-					<h2>Empowering Orphans & Homeless Youth</h2>
-					<p>
-						We collaborate with local shelters and foster homes to bring structured learning programs and
-						mentorship to children without families.
-						These initiatives provide not only education but also emotional care and guidance for a brighter
-						future.
-						We offer life skills training, career counseling, and personality development workshops to
-						prepare
-						them for independent living.
-						Nutritional support and healthcare checkups ensure their overall well-being.
-						Recreational activities and creative arts help build confidence and emotional resilience.
-						Our mentors act as consistent role models, fostering trust and long-term growth.
-						Through sustained support, we strive to give every child a sense of belonging and the tools to
-						succeed.
 
-					</p>
-				</div>
-				<div class="image">
-					<img src="assets/images/educational/12.jpg" alt="Orphan Support Education" />
+		<!-- ============ SKILL BUILDING ============ -->
+		<section class="section">
+			<div class="container">
+				<div class="row-flex reverse" data-aos="fade-left" data-aos-delay="200">
+					<div class="col-text">
+						<span class="section-label">Beyond the Classroom</span>
+						<h2>Vocational Training &amp; Skill Development</h2>
+						<p>
+							Education isn't limited to books. Our vocational centers teach skills like tailoring, computer literacy,
+							spoken English, art &amp; craft, and basic healthcare training.
+							These practical courses help our students gain employment and build confidence.
+						</p>
+						<p>
+							Certification is provided upon completion, enhancing employability. Special attention is given to women
+							and differently-abled individuals to promote financial independence. Our trainers are industry professionals
+							who mentor students through real-world projects.
+						</p>
+					</div>
+					<div class="col-image">
+						<img src="assets/images/educational/25.jpg" alt="Skill Development Training" />
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Our Learning Tools -->
+
+		<!-- ============ ORPHANS ============ -->
+		<section class="section">
+			<div class="container">
+				<div class="row-flex" data-aos="fade-right" data-aos-delay="200">
+					<div class="col-text">
+						<span class="section-label">Community Care</span>
+						<h2>Empowering Orphans &amp; Homeless Youth</h2>
+						<p>
+							We collaborate with local shelters and foster homes to bring structured learning programs and mentorship
+							to children without families. These initiatives provide not only education but also emotional care and
+							guidance for a brighter future.
+						</p>
+						<p>
+							We offer life skills training, career counseling, and personality development workshops to prepare them
+							for independent living. Nutritional support and healthcare checkups ensure their overall well-being.
+							Our mentors act as consistent role models, fostering trust and long-term growth.
+						</p>
+					</div>
+					<div class="col-image">
+						<img src="assets/images/educational/12.jpg" alt="Orphan Support Education" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- ============ TOOLS / SHOWCASE ============ -->
 		<section class="section showcase">
 			<div class="container">
-				<h2 class="centered">Tools That Power Our Education</h2>
+				<div class="centered">
+					<span class="section-label">Resources</span>
+					<h2>Tools That Power Our Education</h2>
+					<p>We invest in technology and accessible resources to ensure no learner is left behind.</p>
+				</div>
 				<div class="grid">
-					<div class="card">
-						<img src="https://img.freepik.com/free-vector/man-with-tablet_1133-98.jpg"
-							alt="Digital Tablets" />
+					<div class="card" data-aos="fade-up" data-aos-delay="100">
+						<div class="card-icon"><i class="fa fa-tablet"></i></div>
+						<img src="https://img.freepik.com/free-vector/man-with-tablet_1133-98.jpg" alt="Digital Tablets" />
 						<h3>Digital Tablets</h3>
-						<p>Preloaded with learning apps, these tablets offer self-paced and interactive learning.</p>
+						<p>Preloaded with learning apps, these tablets offer self-paced and interactive learning experiences.</p>
 					</div>
-					<div class="card">
-						<img src="https://img.freepik.com/premium-photo/guiding-educators-future-leaders-lasting-impact-take-center-stage-world-teacher39s-day_1279686-16061.jpg"
-							alt="Sign Language" />
+					<div class="card" data-aos="fade-up" data-aos-delay="200">
+						<div class="card-icon"><i class="fa fa-hand-paper-o"></i></div>
+						<img src="https://img.freepik.com/premium-photo/guiding-educators-future-leaders-lasting-impact-take-center-stage-world-teacher39s-day_1279686-16061.jpg" alt="Sign Language" />
 						<h3>Sign Language Classes</h3>
-						<p>Helping hearing-impaired students learn in an inclusive environment.</p>
+						<p>Helping hearing-impaired students communicate and learn in a truly inclusive environment.</p>
 					</div>
-					<div class="card">
-						<img src="https://img.freepik.com/premium-photo/student-reding-book-library_718887-1133.jpg"
-							alt="Braille & Audio Books" />
+					<div class="card" data-aos="fade-up" data-aos-delay="300">
+						<div class="card-icon"><i class="fa fa-book"></i></div>
+						<img src="https://img.freepik.com/premium-photo/student-reding-book-library_718887-1133.jpg" alt="Accessible Books" />
 						<h3>Accessible Books</h3>
-						<p>Braille, large print, and audio books for students with visual impairments.</p>
+						<p>Braille, large print, and audio books designed for students with visual impairments.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- CTA -->
+
+		<!-- ============ CTA ============ -->
 		<section class="cta">
-			<div class="container">
-				<h2 style="color: #fff;">Join the Movement</h2>
-				<p style="color: #e6e6e6;">Together, we can make education accessible and meaningful for all. Connect
-					with
-					us to support or collaborate.</p>
-				<a href="contact.html" class="cta-button">Contact Us</a>
+			<div class="container" data-aos="fade-up">
+				<h2>Join the Movement</h2>
+				<p>Together, we can make education accessible and meaningful for all. Connect with us to support or collaborate.</p>
+				<a href="contactus.html" class="cta-button">Contact Us</a>
 			</div>
 		</section>
 
 
-
-		<!-- Footer #1
-============================================= -->
-		<footer id="footer" class="footer-1">
-			<!-- Social bar
-	============================================= -->
-			<div class="footer-social">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12  col-md-12">
-							<div class="footer-social-bg">
-								<div class="footer-social-info pull-left pull-none-xs">
-									<p class="mb-0">Don’t Miss To Follow Us On Our Social Networks Official Accounts.
-									</p>
-								</div>
-								<div class="footer-social-icon pull-right text-right pull-none-xs">
-									<a class="facebook" href="#">
-										<i class="fa fa-facebook"></i><i class="fa fa-facebook"></i>
-									</a>
-									<a class="twitter" href="#">
-										<i class="fa fa-twitter"></i><i class="fa fa-twitter"></i>
-									</a>
-									<a class="pinterest" href="#">
-										<i class="fa fa-pinterest"></i><i class="fa fa-pinterest"></i>
-									</a>
-									<a class="vimeo" href="#">
-										<i class="fa fa-vimeo-square"></i><i class="fa fa-vimeo-square"></i>
-									</a>
-									<a class="linkedin" href="#">
-										<i class="fa fa-linkedin"></i><i class="fa fa-linkedin"></i>
-									</a>
-									<a class="rss" href="#">
-										<i class="fa fa-rss"></i><i class="fa fa-rss"></i>
-									</a>
-								</div>
-							</div><!-- .footer-social-bg end -->
-						</div>
-					</div>
-				</div><!-- .container end -->
-			</div><!-- .footer-social end -->
-
-			<!-- Widget Section
-	============================================= -->
+		<!-- ============ FOOTER (FIXED) ============ -->
+		<footer id="footer">
 			<div class="footer-widget">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12 col-sm-12  col-md-4 footer-widget-about">
+
+						<!-- Contact Info -->
+						<div class="col-xs-12 col-sm-6 col-md-4 footer-widget-about" style="margin-bottom:30px;">
 							<div class="footer-widget-title">
 								<h5>Contact Us</h5>
 							</div>
 							<div class="footer-widget-content">
-								<p class="mb-0">Lorem ipsum dolor sit amet, adipiscing condimentum tristique vel,
-									eleifend
-									sed turpis. Amet, consectetur adipising elit Integer.</p>
 								<div class="footer-widget-contact-link mt-md">
-									<div class="col-xs-12 col-sm-12 col-md-6 mb-30-xs mb-30-sm">
-										<h6>Phone :</h6>
-										<p><i class="fa fa-phone"></i>+ 2 01065370701</p>
-										<p class="mb-0"><i class="fa fa-fax"></i>+ 2 01065370701</p>
-									</div><!-- .col-md-6 end -->
-									<div class="col-xs-12 col-sm-12 col-md-6">
-										<h6>Email :</h6>
-										<p><i class="fa fa-envelope"></i>7oroof@7oroof.com</p>
-									</div><!-- .col-md-6 end -->
-									<div class="col-xs-12 col-sm-12  col-md-12 mt-30 mb-30-xs mb-30-sm">
-										<h6>Address :</h6>
-										<p class="mb-0"><i class="fa fa-map-marker"></i>2 AlBahr St, Tanta , AlGharbia,
-											Egypt.</p>
-									</div><!-- .col-md-12 end -->
+									<div class="mb-30">
+										<h6>Phone</h6>
+										<p><i class="fa fa-phone"></i>+91-22-40318111</p>
+										<p class="mb-0"><i class="fa fa-fax"></i>+91-22-40318133</p>
+									</div>
+									<div class="mb-30">
+										<h6>Email</h6>
+										<p class="mb-0"><i class="fa fa-envelope"></i>business@fredungroup.com</p>
+									</div>
+									<div>
+										<h6>Address</h6>
+										<p class="mb-0"><i class="fa fa-map-marker"></i>11th Floor, Tower A, Urmi Estate 95, Ganpatrao Kadam Marg, Lower Parel (W), Mumbai 400013</p>
+									</div>
 								</div>
 							</div>
-						</div><!-- .col-md-4 end -->
-						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-flickr flickr-widget mb-30-xs mb-30-sm">
-							<div class="footer-widget-title">
-								<h5>Flickr Stream</h5>
-							</div>
-							<div class="footer-widget-content">
-								<div id="flickr-feed"></div>
-								<a class="flickr-more" href="#">View Stream On Flickr</a>
-							</div>
-						</div><!-- .col-md-3 end -->
-						<div class="col-xs-12 col-sm-12  col-md-2 footer-widget-link">
-							<div class="footer-widget-title">
-								<h5>Links</h5>
-							</div>
-							<div class="footer-widget-content">
-								<ul class="list-unstyled">
-									<li>
-										<a href="#"><i class="fa fa-angle-double-right"></i>Branding</a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-angle-double-right"></i>Typography</a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-angle-double-right"></i>UI Design</a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-angle-double-right"></i>Wordpress</a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-angle-double-right"></i>Development</a>
-									</li>
-									<li>
-										<a href="#"><i class="fa fa-angle-double-right"></i>Photography</a>
-									</li>
-								</ul>
-							</div>
-						</div><!-- .col-md-2 end -->
-						<div class="col-xs-12 col-sm-12  col-md-3 footer-widget-tweets tweets-widget">
-							<div class="footer-widget-title">
-								<h5>Latest Tweets</h5>
-							</div>
-							<div class="footer-widget-content">
-								<div id="twitter-feed"></div>
-							</div>
-						</div><!-- .col-md-3 end -->
-					</div>
-				</div><!-- .container end -->
-			</div><!-- .footer-widget end -->
+						</div>
 
-			<!-- Copyrights
-	============================================= -->
-			<div class="footer-copyright bg-dark3">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12  col-md-12">
-							<div class="powered text-uppercase pull-left pull-none-xs mb-15-xs">
-								<p><span class="text-white">Mount.</span> Made With Love By <a
-										href="http://themeforest.net/user/7oroof/portfolio?ref=7oroof">7oroof.com</a>
-								</p>
+						<!-- Right column: links + newsletter -->
+						<div class="col-xs-12 col-sm-6 col-md-8">
+							<div class="row mb-60">
+
+								<!-- Pharmaceutical -->
+								<div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom:28px;">
+									<div class="footer-widget-title"><h5>Pharmaceutical</h5></div>
+									<div class="footer-widget-content">
+										<ul class="list-unstyled mb-0">
+											<li><a href="listofproducts1.html"><i class="fa fa-angle-double-right"></i> Formulations</a></li>
+											<li><a href="surgifre.html"><i class="fa fa-angle-double-right"></i> Surgifre</a></li>
+											<li><a href="fredunapilist.html"><i class="fa fa-angle-double-right"></i> Fredun API</a></li>
+											<li><a href="fredundcgranules.html"><i class="fa fa-angle-double-right"></i> Fredun DC</a></li>
+											<li><a href="fredunpellets.html"><i class="fa fa-angle-double-right"></i> Fredun Pellets</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Healthcare -->
+								<div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom:28px;">
+									<div class="footer-widget-title"><h5>Healthcare</h5></div>
+									<div class="footer-widget-content">
+										<ul class="list-unstyled mb-0">
+											<li><a href="healthcareallopathicformulations.html"><i class="fa fa-angle-double-right"></i> Allopathic</a></li>
+											<li><a href="fredunvet.html"><i class="fa fa-angle-double-right"></i> Fredunvet</a></li>
+											<li><a href="fredunaqua.html"><i class="fa fa-angle-double-right"></i> Fredun Aqua</a></li>
+											<li><a href="nutraceuticals.html"><i class="fa fa-angle-double-right"></i> Nutraceuticals</a></li>
+											<li><a href="#"><i class="fa fa-angle-double-right"></i> Niche</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Newsletter -->
+								<div class="col-xs-12 col-sm-12 col-md-6" style="margin-bottom:28px;">
+									<div class="footer-widget-newsletter newsletter-widget">
+										<div class="footer-widget-title"><h5>Newsletter</h5></div>
+										<div class="footer-widget-content">
+											<p style="margin-bottom:14px; color:#aab4be;">Stay updated with our latest CSR initiatives and announcements.</p>
+											<div class="input-group">
+												<input type="email" class="form-control" placeholder="Your email address" aria-label="Email address">
+												<span class="input-group-btn">
+													<button class="btn" type="button" onclick="handleNewsletterSubmit(this)">Join</button>
+												</span>
+											</div>
+											<div class="subscribe-alert" style="margin-top:8px; font-size:0.8rem;"></div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="copyright pull-right pull-none-xs">
-								<p class="text-capitalize">
-									<span class="text-uppercase">&copy; 2016. All Rights Reserved</span>
-									<a href="privacy.html">Privacy Policy</a> &ndash; <a href="terms.html">Terms of
-										Use</a>
-								</p>
+
+							<div class="row">
+								<!-- Information -->
+								<div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom:28px;">
+									<div class="footer-widget-title"><h5>Information</h5></div>
+									<div class="footer-widget-content">
+										<ul class="list-unstyled mb-0">
+											<li><a href="contactus.html"><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+											<li><a href="#"><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
+											<li><a href="privacypolicy.html"><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+											<li><a href="termsandconditions.html"><i class="fa fa-angle-double-right"></i> Terms &amp; Conditions</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Investors -->
+								<div class="col-xs-12 col-sm-6 col-md-3" style="margin-bottom:28px;">
+									<div class="footer-widget-title"><h5>Investors</h5></div>
+									<div class="footer-widget-content">
+										<ul class="list-unstyled mb-0">
+											<li><a href="annualreport.html"><i class="fa fa-angle-double-right"></i> Annual Report</a></li>
+											<li><a href="boardofdirectors2.html"><i class="fa fa-angle-double-right"></i> Board of Directors</a></li>
+											<li><a href="newsandannouncements.html"><i class="fa fa-angle-double-right"></i> News &amp; Announcements</a></li>
+											<li><a href="Info for Shareholders.html"><i class="fa fa-angle-double-right"></i> Info for Shareholders</a></li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div><!-- .container end -->
-			</div><!-- .footer-copyright end -->
+
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.footer-widget -->
+
+			<!-- Copyright Bar -->
+			<div class="footer-copyright">
+				<div class="container">
+					<p><span class="text-white">Fredun</span> Group</p>
+					<p>&copy; 2025 Fredun Group. All Rights Reserved.</p>
+				</div>
+			</div>
 		</footer>
+
 	</div><!-- #wrapper end -->
-	<div id="back-to-top" class="backtop">
-		<i class="fa fa-angle-up" aria-hidden="true"></i>
-	</div>
-	<div class="hamburger-panel">
-		<ul class="list-unstyled list-links">
-			<li><a class="active" href="#">Home</a></li>
-			<li><a href="#">Features</a></li>
-			<li><a href="#">Pages</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Shop</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-		<div class="social-share">
-			<a class="share-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i
-					class="fa fa-facebook"></i></a>
-			<a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
-			<a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
-			<a class="share-pinterest" href="#"><i class="fa fa-pinterest"></i></a>
-			<a class="share-dribbble" href="#"><i class="fa fa-dribbble"></i></a>
-		</div>
 
-		<div class="copywright">
-			<span class="text-white">Mount.</span> Made By <a href="#">zytheme.com</a>
-			<p>© 2016. All Rights Reserved</p>
-		</div>
 
-	</div>
-	<!-- Footer Scripts
-============================================= -->
-	<!-- AOS JS -->
+	<!-- Back to Top -->
+	<a href="#" id="back-to-top" aria-label="Back to top">
+		<i class="fa fa-angle-up"></i>
+	</a>
+
+
+	<!-- ============ SCRIPTS ============ -->
 	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 	<script>
-		AOS.init();
-	</script>
+		// AOS init
+		AOS.init({ duration: 700, once: true, offset: 60 });
 
-	<script>
-		const playButton = document.getElementById('play-audio');
-		const audio = document.getElementById('company-audio');
-		const icon = playButton.querySelector('i');
-
-		playButton.addEventListener('click', () => {
-			if (audio.paused) {
-				audio.play();
-				icon.classList.remove('fa-headphones');
-				icon.classList.add('fa-pause');
-			} else {
-				audio.pause();
-				audio.currentTime = 0; // reset to beginning
-				icon.classList.remove('fa-pause');
-				icon.classList.add('fa-headphones');
+		// Preloader — hide after page load
+		window.addEventListener('load', function () {
+			const preloader = document.getElementById('preloader');
+			if (preloader) {
+				preloader.style.opacity = '0';
+				preloader.style.transition = 'opacity 0.5s ease';
+				setTimeout(() => preloader.style.display = 'none', 500);
 			}
 		});
+
+		// Back-to-top visibility
+		window.addEventListener('scroll', function () {
+			const btn = document.getElementById('back-to-top');
+			if (btn) {
+				btn.classList.toggle('visible', window.scrollY > 300);
+			}
+		});
+
+		// Back-to-top smooth scroll
+		document.getElementById('back-to-top').addEventListener('click', function (e) {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+
+		// Smooth scroll for hero "Learn More" anchor
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				const target = document.querySelector(this.getAttribute('href'));
+				if (target) {
+					e.preventDefault();
+					target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+			});
+		});
+
+		// Audio toggle (FIXED: icon toggle bug)
+		const playButton = document.getElementById('play-audio');
+		const audio = document.getElementById('company-audio');
+
+		if (playButton && audio) {
+			const icon = playButton.querySelector('i');
+
+			playButton.addEventListener('click', () => {
+				if (audio.paused) {
+					audio.play();
+					icon.classList.replace('fa-headphones', 'fa-pause');
+				} else {
+					audio.pause();
+					audio.currentTime = 0;
+					icon.classList.replace('fa-pause', 'fa-headphones');
+				}
+			});
+
+			// Reset icon when audio ends naturally
+			audio.addEventListener('ended', () => {
+				icon.classList.replace('fa-pause', 'fa-headphones');
+			});
+		}
+
+		// Newsletter form handler (FIXED: was using <form> which reloads page)
+		function handleNewsletterSubmit(btn) {
+			const input = btn.closest('.input-group').querySelector('input');
+			const alertDiv = btn.closest('.footer-widget-content').querySelector('.subscribe-alert');
+			const email = input ? input.value.trim() : '';
+
+			if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+				alertDiv.style.color = '#e74c3c';
+				alertDiv.textContent = 'Please enter a valid email address.';
+				return;
+			}
+
+			alertDiv.style.color = '#2ecc71';
+			alertDiv.textContent = 'Thank you for subscribing!';
+			if (input) input.value = '';
+		}
 	</script>
+
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/functions.js"></script>
 </body>

@@ -1,0 +1,17 @@
+backends:
+  collection: fredun-group
+  type: chromadb
+palace_dir: C:\Users\user/.mempalace/palaces/fredun-group
+wings:
+  current-session:
+    description: Current Claude Code session
+    source: session
+    type: drawer
+  fredun-project:
+    description: Fredun Group Website project
+    source: project:.
+    type: wing
+  global-memory:
+    description: All Claude Code sessions across projects
+    source: all-sessions
+    type: drawer

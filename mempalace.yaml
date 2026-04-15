@@ -1,0 +1,20 @@
+wing: fredun_group_website
+rooms:
+- name: design
+  description: Files from assets/
+  keywords:
+  - design
+  - assets
+- name: graphify_out
+  description: Files from graphify-out/
+  keywords:
+  - graphify_out
+  - graphify-out
+- name: frontend
+  description: Files from pages/
+  keywords:
+  - frontend
+  - pages
+- name: general
+  description: Files that don't fit other rooms
+  keywords: []

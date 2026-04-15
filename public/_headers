@@ -1,0 +1,19 @@
+# Netlify Custom Headers
+# Add this file to the root of your site (public folder)
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  X-XSS-Protection: 1; mode=block
+
+# Assets - longer cache
+/assets/*
+  Cache-Control: public, max-age=31536000
+
+# HTML - no cache for dynamic content
+/*.html
+  Cache-Control: no-cache
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
